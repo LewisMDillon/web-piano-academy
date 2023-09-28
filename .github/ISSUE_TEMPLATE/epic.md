@@ -11,10 +11,6 @@ As a **role** I can **capability** so that **received benefit**.
 
 # Acceptance Criteria
 - x
-- x
-- x
-- x
-- x
 
 
 # User Stories

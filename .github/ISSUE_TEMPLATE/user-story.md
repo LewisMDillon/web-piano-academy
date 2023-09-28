@@ -13,11 +13,7 @@ As a **role** I can **capability** so that **received benefit**
 
 # Acceptance Criteria
 - x
-- x
-- x
 
 
 # Tasks
-- [ ] x
-- [ ] x
 - [ ] x
