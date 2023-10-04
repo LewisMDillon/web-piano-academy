@@ -2,5 +2,39 @@
 {% load static %}
 
 {% block content %}
-<h1 class="display-4 text-success">Page Working!</h1>
+
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5" id="hero-container-inner">
+        <div class="col-10 col-lg-6">
+            <img src="{% static 'img/piano-brown.jpg' %}" class="d-block mx-lg-auto img-fluid" id="hero-img" alt="Piano Brown" width="700"
+                height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6" id="hero-container-text">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 my-3">Web Piano Academy</h1>
+            <p class="lead">Learn piano in a modern, efficient and exciting way from the comfort
+                of your own home.
+            </p>
+            <ul>
+                <li>
+                    <p>Beginners Welcome</p>
+                    <small>No experience necessary</small>
+                    <br><br>
+                </li>
+                <li>
+                    <p>Easy to Follow</p>
+                    <small>Clear and concise instruction</small>
+                    <br><br>
+                </li>
+                <li>
+                    <p>At Your Own Pace</p>
+                    <small>Tailor the lessons to suit you</small>
+                    <br><br>
+                </li>
+            </ul>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button type="button" class="black-button btn-lg px-4 me-md-2" id="hero-button">View Our Courses</button>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

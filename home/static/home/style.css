@@ -1,0 +1,30 @@
+#hero-img {
+    border-radius: 10px;
+}
+
+#hero-container-inner {
+    flex-direction: column-reverse;
+}
+
+@media (max-width: 991px) {
+    #hero-container-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 460px;
+    }
+}
+
+#hero-container-text li p {
+    font-size: 1.2rem;
+}
+
+#hero-button {
+    margin-bottom: 20px;
+}
+
+.black-button {
+    color: #fff;
+    background-color: black;
+    border-color: grey;
+}
