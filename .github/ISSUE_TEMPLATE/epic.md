@@ -14,11 +14,9 @@ As a **role** I can **capability** so that **received benefit**.
 
 
 # User Stories
-- [User Story - ](URL)
-- [User Story - ](URL)
-- [User Story - ](URL)
-- [User Story - ](URL)
-- [User Story - ](URL)
-- [User Story - ](URL)
-- [User Story - ](URL)
-- [User Story - ](URL)
+- [ ]  - #
+- [ ]  - #
+- [ ]  - #
+- [ ]  - #
+- [ ]  - #
+- [ ]  - #
