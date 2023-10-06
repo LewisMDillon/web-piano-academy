@@ -39,11 +39,39 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top"></header>
 
     {% if messages %}
         <div class="message-container"></div>
     {% endif %}
+
+    <header class="p-3 text-bg-dark" id="main-header">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+            </a>
+
+            <div class="text-start">
+                <a href="{% url 'home' %}" class="nav-link text-white">WEB PIANO ACADEMY</a>
+            </div>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="{% url 'home' %}" class="nav-link px-2 text-secondary">Home</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Our Courses</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+              <li><a href="{% url 'faqs' %}" class="nav-link px-2 text-white">FAQs</a></li>
+            </ul>
+    
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+            </form>
+    
+            <div class="text-end">
+              <a href="{% url 'account_login' %}" class="btn btn-primary">Log-In</a>
+              <a href="{% url 'account_signup' %}" class="btn btn-primary">Sign-Up</a>            </div>
+          </div>
+        </div>
+      </header>
 
     {% block page_header %}
     {% endblock %}
