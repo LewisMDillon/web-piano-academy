@@ -1,1 +1,1 @@
-web: gunicorn_web-piano-academy.wsgi:application
+web: gunicorn config.wsgi
