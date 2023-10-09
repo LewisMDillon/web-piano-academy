@@ -33,6 +33,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     os.getenv("CURRENT_HOST"),
+    "web-piano-academy-16cd779294ab.herokuapp.com",
 ]
 
 
