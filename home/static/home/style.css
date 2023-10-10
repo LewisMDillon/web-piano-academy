@@ -90,4 +90,20 @@ body {
     margin-right: 10px;
 }
 
+/* -------- CUSTOM ERROR PAGES -------- */
+
+.wrap-error {
+    height: 100vh
+}
+
+.wrap-error h1 {
+    font-size: 6.875rem;
+    letter-spacing: -10px;
+    line-height: 1;
+    font-family: montserrat, sans-serif;
+}
+
+.error-number span {
+    color: #000;
+    text-shadow: -8px 0 0 rgb(180, 180, 180);
 }
