@@ -1,3 +1,7 @@
+body {
+    margin-top: 53px;
+}
+
 #hero-img {
     border-radius: 10px;
 }
@@ -29,6 +33,61 @@
     border-color: grey;
 }
 
-#main-header {
-    background-color: black;
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-collapse {
+        display: flex!important;
+        flex-basis: auto;
+        justify-content: flex-end;
+        }
+    
+    body {
+        margin-top: 53px!important;
+      }
+}
+
+@media (max-width: 900px) {
+    body {
+      margin-top: 46px!important;
+    }
+  }
+
+#navbar {
+    background-color: #000!important;
+}
+
+#nav-button {
+    border: 1px solid white;
+}
+
+#hamburger {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+#logo {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.nav-link {
+    color: #fff!important;
+    font-size: larger;
+}
+
+.active>.nav-link {
+    text-decoration: underline;
+}
+
+.nav-link:hover {
+    color: rgb(161, 161, 161)
+}
+
+#piano-logo {
+    width: 29px;
+    height: 29px;
+    margin-right: 10px;
+}
+
 }
