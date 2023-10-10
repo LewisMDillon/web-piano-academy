@@ -6,10 +6,11 @@
     <div class="row flex-lg-row-reverse align-items-center g-5 py-2" id="hero-container-inner">
         <div class="col-10 col-lg-6">
             <img src="{% static 'img/hero-image.jpg' %}" class="d-block mx-lg-auto img-fluid" id="hero-img" alt="Piano Brown" width="700"
-                height="480" loading="lazy">
+                height="500" loading="lazy">
         </div>
         <div class="col-lg-6" id="hero-container-text">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 my-3">Web Piano Academy</h1>
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 my-3"><img src="{% static 'img/piano-logo.jpg' %}"
+                    alt="Piano key logo" id="piano-logo-homepage">Web Piano Academy</h1>
             <p class="lead">Learn piano in a modern, efficient and exciting way from the comfort
                 of your own home.
             </p>
@@ -31,8 +32,8 @@
                 </li>
             </ul>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <button type="button" class="black-button btn-lg px-4 me-md-2" id="hero-button">View Our Courses</button>
-            </div>
+                <a class="btn black-button" href="{% url 'courses' %}" id="hero-button">View Our Courses</a>
+            </div> 
         </div>
     </div>
 </div>

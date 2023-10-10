@@ -1,5 +1,6 @@
 body {
     margin-top: 53px;
+    font-family: 'DM Sans', sans-serif;
 }
 
 #hero-img {
@@ -25,6 +26,8 @@ body {
 
 #hero-button {
     margin-bottom: 20px;
+    margin-left: 20px;
+    font-size: 20px;
 }
 
 .black-button {
@@ -32,6 +35,12 @@ body {
     background-color: black;
     border-color: grey;
 }
+
+.black-button:hover {
+    color: #d6d6d6;
+    border: 2px solid white
+}
+  
 
 @media (min-width: 768px) {
     .navbar-expand-md .navbar-collapse {
@@ -88,6 +97,13 @@ body {
     width: 29px;
     height: 29px;
     margin-right: 10px;
+}
+
+#piano-logo-homepage {
+    width: 34px;
+    height: 34px;
+    margin-right: 10px;
+    margin-bottom: 7px;
 }
 
 /* -------- CUSTOM ERROR PAGES -------- */
