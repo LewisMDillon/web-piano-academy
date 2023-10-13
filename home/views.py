@@ -11,9 +11,5 @@ def faqs(request):
     return render(request, 'home/faqs.html')
 
 
-def courses(request):
-    return render(request, 'home/courses.html')
-
-
 def about(request):
     return render(request, 'home/about.html')
