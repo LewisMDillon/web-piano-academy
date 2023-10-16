@@ -106,6 +106,29 @@ body {
     margin-bottom: 7px;
 }
 
+
+/* -------- OUR COURSES PAGE -------- */
+
+.course-price {
+    text-align: center;
+}
+
+.course-title {
+    font-weight: 700;
+    text-align: center;
+}
+
+.course-level {
+    margin-bottom: 0;
+    font-weight: 200;
+    text-align: center;
+}
+
+.card-body {
+    min-height: 0;
+}
+
+
 /* -------- CUSTOM ERROR PAGES -------- */
 
 .wrap-error {
