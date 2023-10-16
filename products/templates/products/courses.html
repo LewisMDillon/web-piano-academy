@@ -11,6 +11,19 @@
                 <hr class="w-50 mb-1">
             </div>
         </div>
+        <div>
+            <h3>Sorting</h3>
+            <a href="{% url 'courses' %}?sort=price&direction=asc">Sort by price</a>
+            <br>
+            <a href="{% url 'courses' %}?sort=level&direction=asc">Sort by level</a>
+            <br>
+            <a href="{% url 'courses' %}?sort=name&direction=asc">Sort by name</a>
+            <br>
+            <a href="{% url 'courses' %}?sort=date_created&direction=desc">Sort by newest</a>
+            <br>
+            <a href="{% url 'courses' %}?sort=category&direction=asc">Sort by category</a>
+            <br>
+        </div>
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
