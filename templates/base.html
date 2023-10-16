@@ -62,8 +62,15 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'home' %}">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'courses' %}">Our Courses</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Our Courses</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'courses' %}">All Courses</a></li>
+              <li><a class="dropdown-item" href="{% url 'courses' %}?category=classical">Classical</a></li>
+              <li><a class="dropdown-item" href="{% url 'courses' %}?category=jazz">Jazz</a></li>
+              <li><a class="dropdown-item" href="{% url 'courses' %}?category=pop">Pop</a></li>
+              <li><a class="dropdown-item" href="{% url 'courses' %}?category=theory">Music Theory</a></li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'about' %}">About</a>
