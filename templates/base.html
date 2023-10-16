@@ -86,10 +86,20 @@
         {% endif %}
         </ul>
 
-        <!-- <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> -->
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+          <form method="GET" action="{% url 'courses' %}">
+              <div class="input-group w-100">
+                  <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search for courses">
+                  <div class="input-group-append">
+                      <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                          <span class="icon">
+                              <i class="fas fa-search"></i>
+                          </span>
+                      </button>
+                  </div>
+              </div>
+          </form>
+      </div>
 
       </div>
     </div>
