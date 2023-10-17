@@ -129,6 +129,14 @@ body {
     min-height: 0;
 }
 
+.product-cards {
+    text-align: center;
+}
+
+.product-admin-links {
+    text-align: center;
+}
+
 
 /* -------- CUSTOM ERROR PAGES -------- */
 

@@ -40,7 +40,7 @@
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
-                                <div class="card-body pb-0">
+                                <div class="card-body pb-0 product-cards">
                                     <a class="course-title" href="{% url 'product_detail' product.id %}">{{ product.name }}</a>
                                     <p class="small course-level">Level: {{ product.level }}</p>
                                 </div>
@@ -53,14 +53,16 @@
                                             {% else %}
                                                 <small class="text-muted"></small>
                                             {% endif %}
-                                            {% if request.user.is_superuser %}
-                                                <small class="ml-3">
-                                                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                                </small>
-                                            {% endif %}
                                         </div>
                                     </div>
+                                    {% if request.user.is_superuser %}
+                                        <div class="product-admin-links">
+                                            <small>
+                                                <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                            </small>
+                                        </div>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
