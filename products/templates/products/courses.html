@@ -41,7 +41,7 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0 course-title">{{ product.name }}</p>
+                                    <a class="course-title" href="{% url 'product_detail' product.id %}">{{ product.name }}</a>
                                     <p class="small course-level">Level: {{ product.level }}</p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">

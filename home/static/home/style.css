@@ -116,6 +116,7 @@ body {
 .course-title {
     font-weight: 700;
     text-align: center;
+    color: #000;
 }
 
 .course-level {
