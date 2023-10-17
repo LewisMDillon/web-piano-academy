@@ -146,3 +146,18 @@ body {
     color: #000;
     text-shadow: -8px 0 0 rgb(180, 180, 180);
 }
+
+
+
+/* -------- MESSAGES -------- */
+
+#message-container-outer {
+    display: flex;
+    justify-content: center;
+  }
+
+#message-container {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 20px;
+}

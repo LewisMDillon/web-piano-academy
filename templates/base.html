@@ -91,6 +91,16 @@
           <a class="nav-item nav-link" href="{% url 'account_signup' %}">Register</a>
           <a class="nav-item nav-link" href="{% url 'account_login' %}">Login</a>
         {% endif %}
+
+        {% if user.is_superuser %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Product Management</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'add_product' %}">Add New Product</a></li>
+            </ul>
+          </li>
+        {% endif %}
+
         </ul>
 
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -113,9 +123,19 @@
   </nav>
 
 
-  {% if messages %}
-  <div class="message-container"></div>
-  {% endif %}
+  <main class="container">
+    <div class="row" id="message-container-outer">
+        <div class="col-md-8">
+            {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}" id="message-container">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</main>
 
   {% block page_header %}
   {% endblock %}
