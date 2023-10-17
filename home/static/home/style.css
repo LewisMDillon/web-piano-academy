@@ -82,7 +82,6 @@ body {
 
 .nav-link {
     color: #fff!important;
-    font-size: larger;
 }
 
 .active>.nav-link {
@@ -91,6 +90,10 @@ body {
 
 .nav-link:hover {
     color: rgb(161, 161, 161)
+}
+
+#search-icon {
+    color: white;
 }
 
 #piano-logo {
