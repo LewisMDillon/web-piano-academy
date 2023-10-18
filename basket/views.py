@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
+from django.http import HttpResponse
 
 
 def view_basket(request):
@@ -19,3 +20,30 @@ def add_to_basket(request, item_id):
 
     request.session['basket'] = basket
     return redirect(redirect_url)
+
+
+def adjust_basket(request, item_id):
+
+    quantity = int(request.POST.get('quantity'))
+    basket = request.session.get('basket', {})
+
+    if quantity > 0:
+        basket[item_id] = quantity
+    else:
+        basket.pop[item_id]
+
+    request.session['basket'] = basket
+    return redirect(reverse('view_basket'))
+
+
+def remove_from_basket(request, item_id):
+    try:
+        basket = request.session.get('basket', {})
+
+        basket.pop(item_id)
+
+        request.session['basket'] = basket
+        # return HttpResponse(status=200)
+        return redirect(reverse('view_basket'))
+    except Exception as e:
+        return HttpResponse(status=500)
