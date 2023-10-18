@@ -78,8 +78,8 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'faqs' %}">FAQs</a>
           </li>
-        
-        {% if user.is_authenticated %}
+
+          {% if user.is_authenticated %}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">My Account</a>
             <ul class="dropdown-menu">
@@ -87,35 +87,52 @@
               <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
             </ul>
           </li>
-        {% else %}
+          {% else %}
           <a class="nav-item nav-link" href="{% url 'account_signup' %}">Register</a>
           <a class="nav-item nav-link" href="{% url 'account_login' %}">Login</a>
-        {% endif %}
+          {% endif %}
 
-        {% if user.is_superuser %}
+          {% if user.is_superuser %}
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Product Management</a>
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Product
+              Management</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{% url 'add_product' %}">Add New Product</a></li>
               <li><a class="dropdown-item" href="{% url 'courses' %}">Edit A Product</a></li>
               <li><a class="dropdown-item" href="{% url 'courses' %}">Delete A Product</a></li>
             </ul>
           </li>
-        {% endif %}
+          {% endif %}
 
         </ul>
         <form class="d-flex" role="search" method="GET" action="{% url 'courses' %}">
-            <div class="input-group w-100">
-                <input class="form-control me-2" type="search" name="q" placeholder="Search for courses" aria-label="Search">
-                <div class="input-group-append">
-                    <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                        <span class="icon" id="search-icon">
-                            <i class="fas fa-search"></i>
-                        </span>
-                    </button>
-                </div>
+          <div class="input-group w-100">
+            <input class="form-control me-2" type="search" name="q" placeholder="Search for courses"
+              aria-label="Search">
+            <div class="input-group-append">
+              <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                <span class="icon" id="search-icon">
+                  <i class="fas fa-search"></i>
+                </span>
+              </button>
             </div>
+          </div>
         </form>
+        <li class="list-inline-item">
+          <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+            href="{% url 'view_basket' %}">
+            <div class="text-center">
+              <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+              <p class="my-0">
+                {% if grand_total %}
+                ${{ grand_total|floatformat:2 }}
+                {% else %}
+                $0.00
+                {% endif %}
+              </p>
+            </div>
+          </a>
+        </li>
       </div>
     </div>
   </nav>
@@ -123,17 +140,17 @@
 
   <main class="container">
     <div class="row" id="message-container-outer">
-        <div class="col-md-8">
-            {% if messages %}
-                {% for message in messages %}
-                <div class="alert alert-{{ message.tags }}" id="message-container">
-                    {{ message }}
-                </div>
-                {% endfor %}
-            {% endif %}
+      <div class="col-md-8">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" id="message-container">
+          {{ message }}
         </div>
+        {% endfor %}
+        {% endif %}
+      </div>
     </div>
-</main>
+  </main>
 
   {% block page_header %}
   {% endblock %}
