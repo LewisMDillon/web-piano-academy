@@ -36,9 +36,14 @@ body {
     border-color: grey;
 }
 
+.white-button {
+    color: #000;
+    background-color: #fff;
+    border-color: grey;
+}
+
 .black-button:hover {
     color: #d6d6d6;
-    border: 2px solid white
 }
   
 
@@ -140,6 +145,15 @@ body {
     text-align: center;
 }
 
+/* -------- COURSE DETAILS PAGE -------- */
+
+#basket-buttons-container {
+    display: flex;
+}
+
+#details-img {
+    max-width: 360px;
+}
 
 /* -------- CUSTOM ERROR PAGES -------- */
 
@@ -172,4 +186,15 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     margin-top: 20px;
+}
+
+
+/* -------- SHOPPING BASKET -------- */
+
+#checkout-button-container {
+    padding: 0;
+}
+
+.qty_input {
+    display: none;
 }
