@@ -60,7 +60,7 @@ class StripeWH_Handler:
                     street_address2__iexact=shipping_details.address.line2,
                     county__iexact=shipping_details.address.state,
                     grand_total=grand_total,
-                    original_bag=bag,
+                    original_basket=basket,
                     stripe_pid=pid,
                 )
                 order_exists = True
