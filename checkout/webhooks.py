@@ -6,6 +6,9 @@ from django.views.decorators.csrf import csrf_exempt
 from checkout.webhook_handler import StripeWH_Handler
 
 import stripe
+import os
+if os.path.isfile('env.py'):
+    import env
 
 
 @require_POST
@@ -13,8 +16,8 @@ import stripe
 def webhook(request):
     """Listen for webhooks from Stripe"""
     # Setup
-    wh_secret = settings.STRIPE_WH_SECRET
-    stripe.api_key = settings.STRIPE_SECRET_KEY
+    wh_secret = os.getenv('STRIPE_WH_SECRET')
+    stripe.api_key = os.getenv('STRIPE_SECRET_KEY')
 
     # Get the webhook data and verify its signature
     payload = request.body

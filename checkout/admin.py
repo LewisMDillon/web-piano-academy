@@ -14,6 +14,8 @@ class OrderAdmin(admin.ModelAdmin):
         'date',
         'order_total',
         'grand_total',
+        'original_basket',
+        'stripe_pid',
     )
 
     fields = (
@@ -29,7 +31,9 @@ class OrderAdmin(admin.ModelAdmin):
         'street_address2',
         'county',
         'order_total',
-        'grand_total'
+        'grand_total',
+        'original_basket',
+        'stripe_pid',
     )
 
     list_display = (
