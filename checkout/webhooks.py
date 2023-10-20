@@ -4,11 +4,13 @@ from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_exempt
 
 from checkout.webhook_handler import StripeWH_Handler
+import os
 
 import stripe
-import os
-if os.path.isfile('env.py'):
-    import env
+
+if os.path.exists(".env"):
+    from dotenv import load_dotenv
+    load_dotenv()
 
 
 @require_POST

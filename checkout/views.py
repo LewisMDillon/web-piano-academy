@@ -15,13 +15,14 @@ from .models import Order, OrderLineItem
 from products.models import Product
 from basket.contexts import basket_contents
 
-from dotenv import load_dotenv
 import os
 
 import stripe
 import json
 
-load_dotenv()
+if os.path.exists(".env"):
+    from dotenv import load_dotenv
+    load_dotenv()
 
 
 @require_POST
