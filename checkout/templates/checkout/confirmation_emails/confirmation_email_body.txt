@@ -5,14 +5,21 @@ This is a confirmation of your order at Web Piano Academy. Your order informatio
 Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
 
-Order Total: €{{ order.order_total }}
-
-YOU PURCHASED THIS:
+Order Summary:
 
 {% for item in order.lineitems.all %}
     {{ item.product.name }}
 {% endfor %}
 
+Order Total: €{{ order.order_total }}
+
+
+You can view your newly purchased course(s) at the link below:
+{% for item in order.lineitems.all %}
+    {{ item.product.name }} - {{ item.product.course_url }}
+{% endfor %}
+
+We wish you the best of luck with the course!
 If you have any questions, feel free to contact us at {{ contact_email }}
 
 Thank you for your order!
