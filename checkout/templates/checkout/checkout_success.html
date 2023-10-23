@@ -17,15 +17,16 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col" id="confirmation-header">
                 <hr>
-                <h2 class="logo-font mb-4">Thank You</h2>
+                <h2 class="logo-font mb-4"><i class="fa-solid fa-music"></i> Thank You</h2>
                 <hr>
                 <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+                <p class="text-black">Your confirmation email contains the links you need to view your course material.</p>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="order-summary-container">
             <div class="col-12 col-lg-7">
                 <div class="order-confirmation-wrapper p-2 border">
                     <div class="row">
@@ -51,6 +52,7 @@
                             <p class="mb-0">{{ order.date }}</p>
                         </div>
                     </div>
+                    <br>
 
                     <div class="row">
                         <div class="col">
@@ -66,14 +68,15 @@
                             </p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
-                            <p class="small mb-0">{{ item.quantity }} @ €{{ item.product.price }} each</p>
+                            <p class="small mb-0">€{{ item.product.price }}</p>
                         </div>
                     </div>
+                    <br>
                     {% endfor %}
 
                     <div class="row">
                         <div class="col">
-                            <small class="text-muted">Delivering To:</small>
+                            <small class="text-muted">Your Details:</small>
                         </div>
                     </div>
 
@@ -154,7 +157,8 @@
                             <p class="mb-0">{{ order.phone_number }}</p>
                         </div>
                     </div>
-
+                    
+                    <br>
                     <div class="row">
                         <div class="col">
                             <small class="text-muted">Billing Info:</small>
@@ -166,37 +170,19 @@
                             <p class="mb-0 text-black font-weight-bold">Order Total</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0">{{ order.order_total }}</p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12 col-md-4">
-                            <p class="mb-0 text-black font-weight-bold">Delivery</p>
-                        </div>
-                        <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0">{{ order.delivery_cost }}</p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12 col-md-4">
-                            <p class="mb-0 text-black font-weight-bold">Grand Total</p>
-                        </div>
-                        <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0">{{ order.grand_total }}</p>
+                            <p class="mb-0">€{{ order.order_total }}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-			<div class="col-12 col-lg-7 text-right">
-				<a href="{% url 'courses' %}?category=new_arrivals,deals,clearance" class="btn btn-black rounded-0 my-2">
+			<div class="col-12 text-center">
+				<a href="{% url 'courses' %}" class="btn black-button rounded-0 my-2">
 					<span class="icon mr-2">
-						<i class="fas fa-gifts"></i>
+						<i class="fa-solid fa-music"></i>
 					</span>
-					<span class="text-uppercase">Now check out the latest deals!</span>
+					<span class="text-uppercase">Browse for other courses!</span>
 				</a>
 			</div>
 		</div>

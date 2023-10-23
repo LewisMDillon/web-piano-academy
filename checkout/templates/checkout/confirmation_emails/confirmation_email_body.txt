@@ -14,7 +14,7 @@ Order Summary:
 Order Total: €{{ order.order_total }}
 
 
-You can view your newly purchased course(s) at the link below:
+You can view your newly purchased course(s) by clicking the link below:
 {% for item in order.lineitems.all %}
     {{ item.product.name }} - {{ item.product.course_url }}
 {% endfor %}

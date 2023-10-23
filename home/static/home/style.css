@@ -414,3 +414,18 @@ ul li i:after {
         transform: rotateX(0deg);
     }
 }
+
+/* -------- CHECKOUT SUCCESS PAGE -------- */
+
+#confirmation-header {
+    text-align: center;
+}
+
+#order-summary-container {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: center;
+}
