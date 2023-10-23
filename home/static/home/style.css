@@ -202,6 +202,11 @@ body {
 
 /* -------- FAQ PAGE -------- */
 
+#faq-accordion-container {
+    display: flex;
+    justify-content: center;
+}
+
 .transition,
 .faq-ul li i:before,
 .faq-ul li i:after,
@@ -231,12 +236,10 @@ body {
     min-height: 0;
     display: inline-block;
     position: relative;
-    left: 50%;
-    margin: 90px 0;
-    transform: translate(-50%, 0);
-    box-shadow: 0 10px 0 0 #ff6873 inset;
-    background-color: #fefffa;
-    max-width: 450px;
+    margin: 90px 90px;
+    box-shadow: 0 10px 0 0 #000 inset;
+    background-color: #fff;
+    max-width: 900px;
     padding: 30px;
 }
 
@@ -272,7 +275,7 @@ body {
 }
 
 .faq-text {
-    color: rgba(48, 69, 92, 0.8);
+    color: rgba(75, 75, 75, 0.9);
     font-size: 17px;
     line-height: 26px;
     letter-spacing: 1px;
@@ -299,18 +302,35 @@ body {
     margin: 0;
     padding-bottom: 4px;
     padding-top: 18px;
-    border-top: 1px dotted #dce7eb;
+    padding-right: 20px;
+    border-top: 1px dotted #cfcfcf;
 }
 
 .faq-ul li:nth-of-type(1) {
+    animation-delay: 0.2s;
+}
+.faq-ul li:nth-of-type(2) {
+    animation-delay: 0.3s;
+}
+.faq-ul li:nth-of-type(3) {
+    animation-delay: 0.4s;
+}
+.faq-ul li:nth-of-type(4) {
     animation-delay: 0.5s;
 }
-
-.faq-ul li:nth-of-type(2) {
-    animation-delay: 0.75s;
+.faq-ul li:nth-of-type(5) {
+    animation-delay: 0.6s;
 }
-
-.faq-ul li:nth-of-type(3) {
+.faq-ul li:nth-of-type(6) {
+    animation-delay: 0.7s;
+}
+.faq-ul li:nth-of-type(7) {
+    animation-delay: 0.8s;
+}
+.faq-ul li:nth-of-type(8) {
+    animation-delay: 0.9s;
+}
+.faq-ul li:nth-of-type(9) {
     animation-delay: 1s;
 }
 
@@ -329,7 +349,7 @@ body {
 ul li i:after {
     content: "";
     position: absolute;
-    background-color: #ff6873;
+    background-color: #000;
     width: 3px;
     height: 9px;
 }

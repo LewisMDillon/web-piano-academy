@@ -3,9 +3,11 @@
 
 {% block content %}
 
-<section id="faq-accordion">
-    <h1 id="faq-heading">Faqs</h1>
-    <ul class="faq-ul">
+
+<div id="faq-accordion-container">
+    <div id="faq-accordion">
+        <h1 id="faq-heading">Faqs</h1>
+        <ul class="faq-ul">
         {% for faq in faqs %}
             <li class="faq-li">
                 <input type="checkbox" checked class="faq-input">
@@ -14,6 +16,7 @@
                 <p class="faq-text">{{ faq.answer }}</p>
             </li>
         {% endfor %}
-</section>
+    </div>
+</div>
 
 {% endblock %}
