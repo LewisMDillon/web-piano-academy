@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section id="faq-accordion">
+    <h1 id="faq-heading">Faqs</h1>
+    <ul class="faq-ul">
+      <li class="faq-li">
+        <input type="checkbox" checked class="faq-input">
+        <i></i>
+        <h2 class="faq-h2">Question</h2>
+        <p class="faq-text">Answer which is really long, like longer than 1 line at least.</p>
+      </li>
+      <li class="faq-li">
+        <input type="checkbox" checked class="faq-input">
+        <i></i>
+        <h2 class="faq-h2">Question</h2>
+        <p class="faq-text">Answer</p>
+      </li>
+      <li class="faq-li">
+        <input type="checkbox" checked class="faq-input">
+        <i></i>
+        <h2 class="faq-h2">Question</h2>
+        <p class="faq-text">Answer</p>
+      </li>
+    </ul>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'home/js/faq.js' %}"></script>
+{% endblock %}
