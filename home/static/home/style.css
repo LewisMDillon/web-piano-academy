@@ -485,3 +485,28 @@ ul li i:after {
 .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
 }
+
+
+/* -------- CUSTOM FORMS -------- */
+
+.custom-form-outer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    margin-bottom: 100px;
+  }
+  
+  .custom-form-inner-container {
+    max-width: 500px;
+  }
+  
+  .custom-form-inner-container input {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+  
+  .custom-form-button-container {
+    display: flex;
+    justify-content: center;
+  }
