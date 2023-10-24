@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<!-- FORM FOR NEW POSTS -->
+    <div class="content-section custom-form-outer-container">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group custom-form-inner-container">
+                <h1 class="my-5 text-center">New Post</h1>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group my-2 custom-form-button-container">
+                <button class="btn green-button" type="submit">Post</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
