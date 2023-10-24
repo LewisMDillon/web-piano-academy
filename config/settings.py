@@ -197,6 +197,7 @@ if 'USE_AWS' in os.environ:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+ACCOUNT_EMAIL_SUBJECT_PREFIX = ''
 
 # Stripe
 STRIPE_CURRENCY = 'eur'
