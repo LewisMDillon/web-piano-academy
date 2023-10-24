@@ -178,12 +178,21 @@
         </div>
         <div class="row">
 			<div class="col-12 text-center">
-				<a href="{% url 'courses' %}" class="btn black-button rounded-0 my-2">
-					<span class="icon mr-2">
-						<i class="fa-solid fa-music"></i>
-					</span>
-					<span class="text-uppercase">Browse for other courses!</span>
-				</a>
+                {% if from_profile %}
+                    <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-angle-left"></i>
+                        </span>
+                        <span class="text-uppercase">Back to Profile</span>
+                    </a>
+                {% else %}
+                    <a href="{% url 'courses' %}" class="btn black-button rounded-0 my-2">
+                        <span class="icon mr-2">
+                            <i class="fa-solid fa-music"></i>
+                        </span>
+                        <span class="text-uppercase">Browse for other courses!</span>
+                    </a>
+                {% endif %}
 			</div>
 		</div>
     </div>
