@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.http import HttpResponse
 from django.contrib import messages
 
@@ -12,7 +12,7 @@ def view_basket(request):
 
 def add_to_basket(request, item_id):
 
-    product = Product.objects.get(pk=item_id)
+    product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     basket = request.session.get('basket', {})
@@ -44,6 +44,7 @@ def adjust_basket(request, item_id):
 
 
 def remove_from_basket(request, item_id):
+
     try:
         basket = request.session.get('basket', {})
 
