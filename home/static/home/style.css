@@ -415,6 +415,14 @@ ul li i:after {
     }
 }
 
+
+/* -------- CHECKOUT SUCCESS PAGE -------- */
+
+.update-link, .remove-item {
+    cursor: pointer;
+}
+
+
 /* -------- CHECKOUT SUCCESS PAGE -------- */
 
 #confirmation-header {
@@ -510,3 +518,20 @@ ul li i:after {
     display: flex;
     justify-content: center;
   }
+
+/* -------- TOASTS -------- */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
