@@ -416,10 +416,18 @@ ul li i:after {
 }
 
 
-/* -------- CHECKOUT SUCCESS PAGE -------- */
+/* -------- CHECKOUT PAGE -------- */
 
 .update-link, .remove-item {
     cursor: pointer;
+}
+
+.tooltip-button {
+    border: none;
+    color: black;
+    background: white;
+    padding: 0;
+    margin-left: 2px;
 }
 
 
@@ -488,10 +496,6 @@ ul li i:after {
 	color: #fff;
     background-color: #222;
     border-color: #222;
-}
-
-.allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
 }
 
 
@@ -589,3 +593,7 @@ ul li i:after {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+
+
+
