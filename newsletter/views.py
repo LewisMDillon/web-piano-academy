@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.contrib import messages
+
 
 from django.views.generic import CreateView
 
@@ -13,4 +15,10 @@ class MailingListCreateView(CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
+        messages.info(
+            self.request,
+            "Thanks for subscribing to our newsletter!"
+            " Be on the lookout for exciting news from"
+            " Web Piano Academy!"
+            )
         return super().form_valid(form)
