@@ -181,6 +181,7 @@ a:hover {
 
 .course-price {
     text-align: center;
+    color: #000;
 }
 
 .course-title {
@@ -193,6 +194,7 @@ a:hover {
     margin-bottom: 0;
     font-weight: 200;
     text-align: center;
+    color: #000;
 }
 
 .card-body {
