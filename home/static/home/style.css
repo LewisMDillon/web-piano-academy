@@ -86,9 +86,12 @@ a:hover {
     }
 }
 
-#navbar {
-    /* background-color: transparent !important; */
+@media (max-width: 768px) {
+    #navbar {
+        background-color: #52958c;
+    }
 }
+
 
 
 #nav-button {
@@ -657,18 +660,20 @@ ul li i:after {
     text-shadow: 5px 3px 6px #00000099;
 }
 
+@media (min-width: 768px) {
+    .navbar {
+        background-color: rgba(0, 0, 0, 0) !important;
+        transition-property: background-color, color;
+        transition-duration: 0.5s;
+      }
+      
+      .navbar-dark {
+        background-color: rgba(0, 0, 0, 0.9) !important;
+        color: #ffffff !important;
+      }
+      
+      .navbar-collapse, .navbar-nav, .nav-item {
+        color: inherit !important;
+      }    
+}
 
-.navbar {
-    background-color: rgba(0, 0, 0, 0) !important;
-    transition-property: background-color, color;
-    transition-duration: 0.5s;
-  }
-  
-  .navbar-dark {
-    background-color: rgba(0, 0, 0, 0.9) !important;
-    color: #ffffff !important;
-  }
-  
-  .navbar-collapse, .navbar-nav, .nav-item {
-    color: inherit !important;
-  }
