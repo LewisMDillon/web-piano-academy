@@ -20,6 +20,10 @@ a:hover {
     color: #f5c98f;
 }
 
+.text-muted {
+    color: #fff !important;
+}
+
 #hero-img {
     border-radius: 10px;
 }
@@ -157,9 +161,10 @@ a:hover {
 .default-page-container {
     background: linear-gradient(#6da19a, #2c6967);
     min-height: 100vh;
+    min-width: 100vw;
 }
 
-.default-page-header {
+.default-page-header, .logo-font {
     margin-top: 85px;
     color: #ed8500;
     font-size: 3rem;
@@ -516,7 +521,7 @@ ul li i:after {
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    color: #fff; /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -608,9 +613,10 @@ ul li i:after {
     color: black;
 }
 
-.bg-info {
+.bg-info, .bg-success {
     background-color: #ed8500 !important;
 }
+
 
 
 .bag-notification-wrapper {
