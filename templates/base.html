@@ -49,7 +49,7 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="navbar">
+  <nav class="navbar navbar-expand-md navbar-trans fixed-top" id="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'home' %}" id="logo"><img src="https://web-piano-academy.s3.eu-west-1.amazonaws.com/static/img/piano-logo-orange.png"
           alt="Piano key logo" id="piano-logo">Web Piano Academy</a>
@@ -173,7 +173,9 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
   </script>
 
-
+  <script src="{% static 'home/js/navbar.js' %}"></script>
+  
+  
   <!-- FONTAWESOME SCRIPT -->
   <script src="https://kit.fontawesome.com/f514539dfd.js" crossorigin="anonymous"></script>
 
@@ -188,6 +190,9 @@
   <script type="text/javascript">
     $('.toast').toast('show');
   </script>
+
+  <script src="{% static 'checkout/js/tooltips.js' %}"></script>
+
 
   {% endblock %}
 
