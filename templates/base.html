@@ -51,7 +51,7 @@
 
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'home' %}" id="logo"><img src="https://web-piano-academy.s3.eu-west-1.amazonaws.com/static/img/piano-logo.png"
+      <a class="navbar-brand" href="{% url 'home' %}" id="logo"><img src="https://web-piano-academy.s3.eu-west-1.amazonaws.com/static/img/piano-logo-orange.png"
           alt="Piano key logo" id="piano-logo">Web Piano Academy</a>
       <button class="navbar-toggler custom-toggler" id="nav-button" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
@@ -95,8 +95,7 @@
 
           {% if user.is_superuser %}
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Product
-              Management</a>
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Admin</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{% url 'add_product' %}">Add New Product</a></li>
               <li><a class="dropdown-item" href="{% url 'courses' %}">Edit A Product</a></li>
@@ -111,7 +110,7 @@
             <input class="form-control me-2" type="search" name="q" placeholder="Search for courses"
               aria-label="Search">
             <div class="input-group-append">
-              <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+              <button class="form-control btn border border-black rounded-0" id="search-button" type="submit">
                 <span class="icon" id="search-icon">
                   <i class="fas fa-search"></i>
                 </span>

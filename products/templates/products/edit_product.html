@@ -10,28 +10,27 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <hr>
-                <h2 class="logo-font mb-4">Product Management</h2>
-                <h5 class="text-muted">Edit a Product</h5>
-                <hr>
+    <div class="default-page-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <h2 class="default-page-header">Edit A Course</h2>
+                    <hr>
+                </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {{ form | crispy }}
-                    <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'courses' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Update Product</button>
-                    </div>
-                </form>
-            </div>            
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form | crispy }}
+                        <div class="text-right">
+                            <a class="btn white-button rounded-0" href="{% url 'courses' %}">Cancel</a>
+                            <button class="btn black-button rounded-0" type="submit">Update Product</button>
+                        </div>
+                    </form>
+                </div>            
+            </div>
         </div>
     </div>
 {% endblock %}

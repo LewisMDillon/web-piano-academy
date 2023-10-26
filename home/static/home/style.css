@@ -1,6 +1,23 @@
 body {
-    margin-top: 53px;
+    /* margin-top: 53px; */
     font-family: 'DM Sans', sans-serif;
+    color: #fff;
+}
+
+.table {
+    color: #fff;
+}
+
+.table-hover tbody tr:hover {
+    color: #fff;
+}
+
+a {
+    color: #ed8500;
+}
+
+a:hover {
+    color: #f5c98f;
 }
 
 #hero-img {
@@ -55,18 +72,18 @@ body {
     }
 
     body {
-        margin-top: 53px !important;
+        /* margin-top: 53px !important; */
     }
 }
 
 @media (max-width: 900px) {
     body {
-        margin-top: 46px !important;
+        /* margin-top: 46px !important; */
     }
 }
 
 #navbar {
-    /* background-color: transparent !important; */
+    background-color: transparent !important;
 }
 
 #nav-button {
@@ -89,16 +106,39 @@ body {
     color: #fff !important;
 }
 
-.active>.nav-link {
-    text-decoration: underline;
+
+.nav-link:hover, #logo:hover, a.text-info:focus, a.text-info:hover {
+    color: #ed8500 !important;
+    font-weight: bolder;
 }
 
-.nav-link:hover {
-    color: rgb(161, 161, 161)
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ed8500;
 }
+
 
 #search-icon {
-    color: white;
+    color: #ed8500;
+}
+
+#search-icon:hover, #search-icon:focus {
+    color: #ed8500;
+}
+
+#search-button:focus {
+    background: transparent;
+    color: #ed8500;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgb(237 144 5 / 98%);
+
+}
+
+.btn.focus, .btn:focus {
+    box-shadow: 0 0 2px 0.2rem #d9933a94;
 }
 
 #piano-logo {
@@ -112,6 +152,22 @@ body {
     height: 34px;
     margin-right: 10px;
     margin-bottom: 7px;
+}
+
+.default-page-container {
+    background: linear-gradient(#6da19a, #2c6967);
+    min-height: 100vh;
+}
+
+.default-page-header {
+    margin-top: 85px;
+    color: #ed8500;
+    font-size: 3rem;
+    text-shadow: 1px 2px 6px #00000099;
+}
+
+.orange-text {
+    color: #ed8500;
 }
 
 
@@ -153,6 +209,10 @@ body {
 
 #details-img {
     max-width: 360px;
+}
+
+#product-details-container-outer {
+    padding-top: 85px;
 }
 
 /* -------- CUSTOM ERROR PAGES -------- */
@@ -200,11 +260,13 @@ body {
 }
 
 
+
 /* -------- FAQ PAGE -------- */
 
 #faq-accordion-container {
     display: flex;
     justify-content: center;
+    min-height: 100vh;
 }
 
 .transition,
@@ -236,11 +298,13 @@ body {
     min-height: 0;
     display: inline-block;
     position: relative;
-    margin: 90px 90px;
-    box-shadow: 0 10px 0 0 #000 inset;
+    margin: 140px 90px 205px 90px;
+    box-shadow: 0 10px 0 0 #ed8500 inset;
     background-color: #fff;
+    color: #000;
     max-width: 900px;
     padding: 30px;
+    border-radius: 20px
 }
 
 @media (max-width: 550px) {
@@ -349,7 +413,7 @@ body {
 ul li i:after {
     content: "";
     position: absolute;
-    background-color: #000;
+    background-color: #ed8500;
     width: 3px;
     height: 9px;
 }
@@ -424,8 +488,8 @@ ul li i:after {
 
 .tooltip-button {
     border: none;
-    color: black;
-    background: white;
+    color: #ed8500;
+    background: transparent;
     padding: 0;
     margin-left: 2px;
 }
@@ -540,9 +604,13 @@ ul li i:after {
     height: 2px;
 }
 
+.toast-body {
+    color: black;
+}
 
-
-
+.bg-info {
+    background-color: #ed8500 !important;
+}
 
 
 .bag-notification-wrapper {
@@ -556,20 +624,20 @@ ul li i:after {
 
 
 #hero-container {
-    background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0)), url('https://web-piano-academy.s3.eu-west-1.amazonaws.com/static/img/colourful-hero-image.jpg');
-    background-color: #cccccc; /* Used if the image is unavailable */
-    height: 500px; /* You must set a specified height */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    /* background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0)), url('https://web-piano-academy.s3.eu-west-1.amazonaws.com/static/img/colourful-hero-image.jpg'); */
+    background: linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0)), url('https://i.imgur.com/ynZSuRX.png');
+    background-color: #337277; /* Used if the image is unavailable */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
     min-height: 100vh;
-    margin-top: -53px;
   }
 
 #hero-heading {
     color: #ed8500;
     font-size: 5rem;
     padding-top: 106px;
-    text-shadow: 5px 3px 6px black;
+    text-shadow: 5px 3px 6px #00000099;
 }
 

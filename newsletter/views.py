@@ -17,7 +17,6 @@ class MailingListCreateView(CreateView):
         if self.request.user.is_authenticated:
             # Get the initial dictionary from the superclass method
             initial = super(MailingListCreateView, self).get_initial()
-            # Copy the dictionary so we don't accidentally change a mutable dict
             initial = initial.copy()
             initial['email'] = self.request.user.email
             return initial
