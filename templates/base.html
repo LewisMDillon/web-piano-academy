@@ -42,6 +42,7 @@
   {% endblock %}
 
   {% block extra_js %}
+  <script src="{% static 'home/js/navbar.js' %}"></script>
   {% endblock %}
 
   <title>Web Piano Academy {% block extra_title %}{% endblock %}</title>
@@ -222,8 +223,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
   </script>
-
-  <script src="{% static 'home/js/navbar.js' %}"></script>
   
   
   <!-- FONTAWESOME SCRIPT -->
@@ -244,6 +243,9 @@
   <script src="{% static 'checkout/js/tooltips.js' %}"></script>
 
 
+  {% endblock %}
+
+  {% block extra_postloadjs %}
   {% endblock %}
 
 </body>

@@ -85,7 +85,7 @@
 </div>
 {% endblock %}
 
-{% block extrajs %}
+{% block extra_postloadjs %}
 <script type="text/javascript">
     $('.btt-link').click(function(e) {
         window.scrollTo(0,0)
@@ -93,6 +93,8 @@
 </script>
 
 <script type="text/javascript">
+    console.log('Sorting is online!')
+    console.log('Sorting is online at step 2!')
     $('#sort-selector').change(function() {
         var selector = $(this);
         var currentUrl = new URL(window.location);
