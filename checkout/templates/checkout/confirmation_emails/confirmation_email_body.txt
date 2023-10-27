@@ -20,9 +20,7 @@ You can view your newly purchased course(s) by clicking the link below:
 {% endfor %}
 
 We wish you the best of luck with the course!
-If you have any questions, feel free to contact us at {{ contact_email }}
 
-Thank you for your order!
 
 Sincerely,
 
