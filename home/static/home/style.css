@@ -568,6 +568,12 @@ ul li i:after {
 
 /* -------- ALLAUTH FORMS -------- */
 
+.allauth-form-inner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #fff; /* text-secondary */
