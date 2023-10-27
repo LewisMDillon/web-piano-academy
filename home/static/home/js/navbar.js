@@ -6,7 +6,7 @@ document.onreadystatechange = function() {
     window.addEventListener('scroll', function(e) {
       lastScrollPosition = window.scrollY;
       
-      if (lastScrollPosition > 100)
+      if (lastScrollPosition > 50)
         navbar.classList.add('navbar-dark');
       else
         navbar.classList.remove('navbar-dark');
