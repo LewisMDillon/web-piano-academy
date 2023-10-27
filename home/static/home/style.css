@@ -25,6 +25,11 @@ a:hover {
     color: #fff !important;
 }
 
+.invalid-feedback {
+    color: #fff;
+    text-shadow: 0px 1px 1px red
+}
+
 #hero-img {
     border-radius: 10px;
 }
