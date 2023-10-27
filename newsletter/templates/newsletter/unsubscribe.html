@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+    <div class="default-page-container">
+        <h1 class="default-page-header">Unsub</h1>
+        <a href="{% url 'mailing-list-delete' user.pk %}">unsub</a>
+    </div>
+{% endblock %}

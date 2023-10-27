@@ -1,15 +1,22 @@
 from django.shortcuts import render
+from django.urls import reverse_lazy
 from django.contrib import messages
 from django.template.loader import render_to_string
 from django.core.mail import send_mail
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.messages.views import SuccessMessageMixin
 
 from django.conf import settings
 
-from django.views.generic import CreateView
+from django.views.generic import CreateView, DeleteView
 
 from .models import Email
 
 # Create your views here.
+
+
+def unsub(request):
+    return render(request, 'newsletter/unsubscribe.html')
 
 
 class MailingListCreateView(CreateView):
@@ -52,3 +59,28 @@ class MailingListCreateView(CreateView):
             )
         self._send_confirmation_email()
         return super().form_valid(form)
+
+
+class MailingListDeleteView(
+    LoginRequiredMixin,
+    UserPassesTestMixin,
+    SuccessMessageMixin,
+    DeleteView
+        ):
+    model = Email
+    success_url = reverse_lazy('home')
+    success_message = (
+        'You have unsubscribed from the mailing list.'
+    )
+
+    def test_func(self):
+        email = self.get_object()
+        if self.request.user.email == email.email:
+            return True
+        return False
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(
+            MailingListDeleteView, self
+            ).delete(request, *args, **kwargs)
