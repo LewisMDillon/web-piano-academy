@@ -199,7 +199,7 @@ a:hover {
     color: #000;
 }
 
-.course-level {
+.course-level, .course-category {
     margin-bottom: 0;
     font-weight: 200;
     text-align: center;
@@ -239,6 +239,16 @@ a:hover {
 
 .sorting-link-section:hover {
     color: #fff;
+}
+
+#sorting-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sort-select-wrapper {
+    min-width: 200px;
 }
 
 /* -------- COURSE DETAILS PAGE -------- */
