@@ -11,27 +11,25 @@
 
 {% block content %}
     <div class="default-page-container">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <hr>
-                    <h2 class="default-page-header">Add a Course</h2>
-                    <hr>
-                </div>
+        <div class="row justify-content-center mx-3">
+            <div class="col-12 col-md-6">
+                <hr>
+                <h2 class="text-center default-page-header">Add a Course</h2>
+                <hr>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        {{ form | crispy }}
-                        <div class="text-right">
-                            <a class="btn white-button rounded-0" href="{% url 'courses' %}">Cancel</a>
-                            <button class="btn black-button rounded-0" type="submit">Add Product</button>
-                        </div>
-                    </form>
-                </div>            
-            </div>
+        <div class="row justify-content-center mx-3">
+            <div class="col-12 col-md-6">
+                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="text-right mb-5">
+                        <a class="btn white-button rounded-0" href="{% url 'courses' %}">Cancel</a>
+                        <button class="btn black-button rounded-0" type="submit">Add Product</button>
+                    </div>
+                </form>
+            </div>            
         </div>
     </div>
 {% endblock %}
