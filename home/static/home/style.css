@@ -553,6 +553,13 @@ ul li i:after {
     margin-left: 2px;
 }
 
+.submit-button p.text-danger {
+    color: #fff !important;
+}
+
+input[type=checkbox]:checked {
+    accent-color: #ed8500;
+}
 
 /* -------- CHECKOUT SUCCESS PAGE -------- */
 
