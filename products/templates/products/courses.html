@@ -11,18 +11,18 @@
                 <hr class="w-50 mb-1">
             </div>
         </div>
-        <div>
-            <div class="dropdown">
+        <div class="container-fluid ml-3">
+            <div class="dropdown" id="sorting-dropdown">
                 <a class="btn black-button dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                   Sort Courses
                 </a>
               
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a href="{% url 'courses' %}?sort=price&direction=asc">by price</a></li>
-                  <li><a href="{% url 'courses' %}?sort=level&direction=asc">by level</a></li>
-                  <li><a href="{% url 'courses' %}?sort=name&direction=asc">by name</a></li>
-                  <li><a href="{% url 'courses' %}?sort=date_created&direction=desc">by newest</a></li>
-                  <li><a href="{% url 'courses' %}?sort=category&direction=asc">by category</a></li>
+                  <li class="sorting-link-section"><a href="{% url 'courses' %}?sort=price&direction=asc" class="sorting-link">by price</a></li>
+                  <li class="sorting-link-section"><a href="{% url 'courses' %}?sort=level&direction=asc" class="sorting-link">by level</a></li>
+                  <li class="sorting-link-section"><a href="{% url 'courses' %}?sort=name&direction=asc" class="sorting-link">by name</a></li>
+                  <li class="sorting-link-section"><a href="{% url 'courses' %}?sort=date_created&direction=desc" class="sorting-link">by newest</a></li>
+                  <li class="sorting-link-section"><a href="{% url 'courses' %}?sort=category&direction=asc" class="sorting-link">by category</a></li>
                 </ul>
             </div>
         </div>

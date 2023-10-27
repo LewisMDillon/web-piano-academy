@@ -2,6 +2,7 @@ body {
     /* margin-top: 53px; */
     font-family: 'DM Sans', sans-serif;
     color: #fff;
+    background-color: #2c6967;
 }
 
 .table {
@@ -212,6 +213,29 @@ a:hover {
     text-align: center;
 }
 
+#sorting-dropdown {
+    margin-left: 6%;
+}
+
+.sorting-link {
+    margin-left: 5px;
+    color: #000;
+}
+
+#sorting-dropdown li:hover {
+    color: #fff;
+    background-color: #ed8500;
+}
+
+.sorting-link:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sorting-link-section:hover {
+    color: #fff;
+}
+
 /* -------- COURSE DETAILS PAGE -------- */
 
 #basket-buttons-container {
@@ -323,17 +347,6 @@ a:hover {
     max-width: 900px;
     padding: 30px;
     border-radius: 20px
-}
-
-@media (max-width: 550px) {
-    #faq-accordion {
-        box-sizing: border-box;
-        transform: translate(0, 0);
-        max-width: 100%;
-        min-height: 100%;
-        margin: 0;
-        left: 0;
-    }
 }
 
 
@@ -528,6 +541,14 @@ ul li i:after {
     justify-content: center;
 }
 
+
+/* -------- FOOTER -------- */
+
+#footer-container {
+    background-color: #2c6967;
+    border-top: 5px solid #ed8500;
+    min-width: 100vw;
+}
 
 
 /* -------- ALLAUTH FORMS -------- */
