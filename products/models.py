@@ -19,10 +19,17 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    LEVEL_CHOICES = (
+        ('1-Beginner', '1-Beginnner'),
+        ('2-Intermediate', '2-Intermediate'),
+        ('3-Advanced', '3-Advanced')
+    )
+
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL
         )
-    level = models.CharField(max_length=254, null=True, blank=True)
+    level = models.CharField(choices=LEVEL_CHOICES, max_length=254, null=True, blank=True)
+    level_display_name = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
