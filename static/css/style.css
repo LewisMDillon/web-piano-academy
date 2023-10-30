@@ -823,3 +823,7 @@ input[type=checkbox]:checked {
 #message-delete-button {
     margin-right: 10px;
 }
+
+#message-success-text {
+    margin-bottom: 60px;
+}
