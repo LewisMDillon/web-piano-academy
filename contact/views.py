@@ -2,8 +2,16 @@ from django.shortcuts import render, reverse
 from .models import Contact
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.messages.views import SuccessMessageMixin
+from django.urls import reverse_lazy
 
-from django.views.generic import CreateView, ListView, DetailView, UpdateView
+from django.views.generic import (
+    CreateView,
+    ListView,
+    DetailView,
+    UpdateView,
+    DeleteView
+)
 
 
 class ContactFormCreateView(CreateView):
@@ -77,3 +85,29 @@ class ContactUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def get_success_url(self):
         return reverse('contact-update', kwargs={'pk': self.object.pk})
+
+
+class ContactDeleteView(
+    LoginRequiredMixin,
+    UserPassesTestMixin,
+    SuccessMessageMixin,
+    DeleteView
+        ):
+    model = Contact
+    success_url = reverse_lazy('contact_list')
+    success_message = (
+        'Message Deleted.'
+    )
+
+    def test_func(self):
+        contact = self.get_object()
+        if self.request.user.is_staff:
+            return True
+        return False
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(
+            ContactDeleteView, self
+            ).delete(request, *args, **kwargs)
+
