@@ -44,7 +44,7 @@ class Order(models.Model):
         """
         Generate a random, unique order number using UUID
         """
-        return uuid.uuid4().hex.upper()
+        return (f'WPA{(uuid.uuid4().hex.upper())[-10:]}')
 
     def update_total(self):
         """
