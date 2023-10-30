@@ -82,7 +82,7 @@
             <a class="nav-link" href="{% url 'faq' %}">FAQs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'contact_form' %}">Contact</a>
+            <a class="nav-link" href="{% url 'contact-form' %}">Contact</a>
           </li>
 
           {% if user.is_authenticated %}
@@ -173,6 +173,8 @@
   {% block content %}
   {% endblock %}
 
+  <hr class="footer-separator">
+
   <footer class="container py-5" id="footer-container">
     <div class="row">
       <div class="col-6 col-md-2 mb-3">
@@ -182,7 +184,7 @@
           <li class="nav-item mb-2"><a href="{% url 'courses' %}" class="nav-link p-0 text-body-secondary">Our Courses</a></li>
           <li class="nav-item mb-2"><a href="{% url 'about' %}" class="nav-link p-0 text-body-secondary">About</a></li>
           <li class="nav-item mb-2"><a href="{% url 'faq' %}" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="{% url 'contact_form' %}" class="nav-link p-0 text-body-secondary">Contact</a></li>
+          <li class="nav-item mb-2"><a href="{% url 'contact-form' %}" class="nav-link p-0 text-body-secondary">Contact</a></li>
         </ul>
       </div>
 

@@ -5,21 +5,13 @@
     <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
 
 {% block content %}
     <div class="default-page-container">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2 class="default-page-header">My Profile</h2>
-                    <hr>
+                    <h1 class="default-page-header" id="profile-header">My Profile</h1>
                 </div>
             </div>
             <div class="row">
@@ -70,6 +62,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </div>
 {% endblock %}
 

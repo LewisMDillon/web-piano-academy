@@ -540,6 +540,15 @@ ul li i:after {
 }
 
 
+
+/* -------- OUR COURSES PAGE -------- */
+
+#profile-header {
+    margin-bottom: 50px;
+}
+
+
+
 /* -------- CHECKOUT PAGE -------- */
 
 .update-link, .remove-item {
@@ -580,10 +589,9 @@ input[type=checkbox]:checked {
 
 /* -------- FOOTER -------- */
 
-#footer-container {
-    background-color: #2c6967;
+.footer-separator {
     border-top: 5px solid #ed8500;
-    min-width: 100vw;
+    margin: 0;
 }
 
 
@@ -658,7 +666,9 @@ input[type=checkbox]:checked {
     max-width: 500px;
   }
   
-  .custom-form-inner-container input {
+  .custom-form-inner-container input,
+  .custom-form-inner-container select,
+  .custom-form-inner-container textarea {
     width: 300px;
     margin-bottom: 10px;
   }
@@ -800,4 +810,13 @@ input[type=checkbox]:checked {
     height: 18px;
     width: 18px;
     margin-top: 5px;
+}
+
+#contact-delete-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+#message-delete-button {
+    margin-right: 10px;
 }
