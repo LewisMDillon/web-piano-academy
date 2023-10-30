@@ -176,7 +176,8 @@ a:hover {
 
 .default-page-header, .logo-font {
     text-align: center;
-    margin-top: 85px;
+    padding-top: 85px;
+    margin-bottom: 40px;
     color: #ed8500;
     font-size: 3rem;
     text-shadow: 1px 2px 6px #00000099;
@@ -666,12 +667,14 @@ input[type=checkbox]:checked {
     max-width: 500px;
   }
   
+@media (max-width: 768px) {
   .custom-form-inner-container input,
   .custom-form-inner-container select,
   .custom-form-inner-container textarea {
     width: 300px;
     margin-bottom: 10px;
   }
+}
   
   .custom-form-button-container {
     display: flex;
