@@ -1,6 +1,8 @@
 from django.db import models
 from django.shortcuts import reverse
 
+from django.utils import timezone
+
 
 class Contact(models.Model):
     class Meta:
@@ -20,6 +22,7 @@ class Contact(models.Model):
     email = models.EmailField()
     subject = models.CharField(choices=SUBJECTS, max_length=254,)
     message = models.TextField(max_length=1024)
+    date_created = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.email

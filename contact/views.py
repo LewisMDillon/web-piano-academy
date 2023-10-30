@@ -3,7 +3,7 @@ from .models import Contact
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, DetailView
 
 
 class ContactFormCreateView(CreateView):
@@ -51,3 +51,7 @@ class ContactListView(LoginRequiredMixin, UserPassesTestMixin, ListView):
         if self.request.user.is_staff:
             return True
         return False
+
+
+class ContactDetailView(DetailView):
+    model = Contact

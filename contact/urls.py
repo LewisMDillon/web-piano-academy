@@ -5,6 +5,9 @@ from . import views
 urlpatterns = [
     path('', views.ContactFormCreateView.as_view(), name='contact_form'),
     path('list/', views.ContactListView.as_view(), name='contact_list'),
+    path(
+        '<int:pk>/', views.ContactDetailView.as_view(), name='contact-detail'
+        ),
     path('success/', views.ContactSuccess, name='contact_success'),
 
 ]

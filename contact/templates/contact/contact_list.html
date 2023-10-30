@@ -21,7 +21,7 @@
                     <!-- AUTO-POPULATES THE TABLE -->
                     {% for contact in contacts %}
                         <tr>
-                            <th scope="row"><a href="{% url 'home' %}">View</a></th>
+                            <th scope="row"><a href="{% url 'contact-detail' contact.id %}">View</a></th>
                             <td>{{ contact.subject }}</td>
                             <td class="contact-list-name">{{ contact.name }}</td>
                             <td class="contact-list-email">{{ contact.email }}</td>

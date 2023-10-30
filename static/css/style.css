@@ -766,3 +766,16 @@ input[type=checkbox]:checked {
         display: none;
     }
 }
+
+#message-detail-container-outer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#message-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+}
