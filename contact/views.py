@@ -31,6 +31,9 @@ class ContactFormCreateView(CreateView):
             initial['email'] = self.request.user.email
             return initial
 
+    def get_success_url(self):
+        return reverse('contact-success')
+
     def form_valid(self, form):
         form.instance.author = self.request.user
         messages.info(
