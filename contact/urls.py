@@ -8,10 +8,18 @@ urlpatterns = [
     path(
         '<int:pk>/', views.ContactDetailView.as_view(), name='contact-detail'
         ),
-    path('<pk>/update', views.ContactUpdateView.as_view(), name='contact-update'),
+
     path(
-        '<int:pk>/delete', views.ContactDeleteView.as_view(), name='contact-delete'
+        '<pk>/update',
+        views.ContactUpdateView.as_view(),
+        name='contact-update'),
+
+    path(
+        '<int:pk>/delete',
+        views.ContactDeleteView.as_view(),
+        name='contact-delete'
         ),
+
     path('success/', views.ContactSuccess, name='contact-success'),
 
 ]
