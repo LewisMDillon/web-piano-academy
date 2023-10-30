@@ -739,3 +739,30 @@ input[type=checkbox]:checked {
       }    
 }
 
+
+
+
+/* -------- CONTACT PAGES -------- */
+
+#contact-table-container-outer {
+    display: flex;
+    justify-content: center;
+}
+
+#contact-table-container {
+    max-width: 800px;
+    margin: 50px 0px;
+}
+
+#contact-table {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .contact-list-email,
+    .contact-list-name,
+    .contact-list-header-name,
+    .contact-list-header-email {
+        display: none;
+    }
+}

@@ -7,13 +7,13 @@ class Contact(models.Model):
         verbose_name_plural = 'Contact Requests'
 
     SUBJECTS = (
-        ('1', 'Courses for schools/education'),
-        ('2', 'Pricing Inquiry'),
-        ('3', 'Business Inquiry'),
-        ('4', 'Trouble using the site'),
-        ('5', "Trouble accessing my course"),
-        ('6', "Recover my account"),
-        ('7', "Other"),
+        ('Courses for schools/education', 'Courses for schools/education'),
+        ('Pricing Inquiry', 'Pricing Inquiry'),
+        ('Business Inquiry', 'Business Inquiry'),
+        ('Trouble using the site', 'Trouble using the site'),
+        ('Trouble accessing my course', "Trouble accessing my course"),
+        ('Account Issues', "Account Issues"),
+        ('Other', "Other"),
     )
 
     name = models.CharField(max_length=254)

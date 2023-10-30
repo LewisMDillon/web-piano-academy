@@ -4,9 +4,9 @@ from .models import Contact
 
 class ContactAdmin(admin.ModelAdmin):
     list_display = (
+        'subject',
         'email',
         'name',
-        'subject',
     )
 
 
