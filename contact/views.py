@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse
 from .models import Contact
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
-from django.views.generic import CreateView, ListView, DetailView
+from django.views.generic import CreateView, ListView, DetailView, UpdateView
 
 
 class ContactFormCreateView(CreateView):
@@ -55,3 +55,25 @@ class ContactListView(LoginRequiredMixin, UserPassesTestMixin, ListView):
 
 class ContactDetailView(DetailView):
     model = Contact
+
+
+class ContactUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Contact
+    fields = ["responded"]
+    template_name_suffix = "_update_form"
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        messages.info(
+            self.request,
+            "Successfully Updated!"
+            )
+        return super().form_valid(form)
+
+    def test_func(self):
+        if self.request.user.is_staff:
+            return True
+        return False
+
+    def get_success_url(self):
+        return reverse('contact-update', kwargs={'pk': self.object.pk})

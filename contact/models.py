@@ -23,9 +23,10 @@ class Contact(models.Model):
     subject = models.CharField(choices=SUBJECTS, max_length=254,)
     message = models.TextField(max_length=1024)
     date_created = models.DateTimeField(default=timezone.now)
+    responded = models.BooleanField(default=False)
 
     def __str__(self):
         return self.email
 
-    def get_absolute_url(self):
-        return reverse('contact_success')
+    # def get_absolute_url(self):
+    #     return reverse('contact_success')

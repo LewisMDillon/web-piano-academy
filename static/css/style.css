@@ -175,6 +175,7 @@ a:hover {
 }
 
 .default-page-header, .logo-font {
+    text-align: center;
     margin-top: 85px;
     color: #ed8500;
     font-size: 3rem;
@@ -778,4 +779,25 @@ input[type=checkbox]:checked {
     flex-direction: column;
     align-items: center;
     max-width: 800px;
+}
+
+#responded-form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#responded-update-button {
+    margin-left: 20px;
+    padding: 3px 10px;
+}
+
+#responded-form label {
+    display: none;
+}
+
+#id_responded {
+    height: 18px;
+    width: 18px;
+    margin-top: 5px;
 }

@@ -8,6 +8,7 @@ urlpatterns = [
     path(
         '<int:pk>/', views.ContactDetailView.as_view(), name='contact-detail'
         ),
+    path('<pk>/update', views.ContactUpdateView.as_view(), name='contact-update'),
     path('success/', views.ContactSuccess, name='contact_success'),
 
 ]

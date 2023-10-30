@@ -1,7 +1,11 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
 {% block content %}
-<!-- RESERVATION DETAIL PAGE -->
-    <article class="mx-5 mt-5" id="message-detail-container-outer">
+
+    <article class="mx-5 mt-5" class="default-page-container" id="message-detail-container-outer">
         <h1 class="text-center default-page-header">Message Details</h1>
         <!-- RESERVATION DETAILS -->
         <div id="message-detail-container">
@@ -35,20 +39,23 @@
                     </tr>
                     <tr>
                         <th scope="row">Responded:</th>
-                        {% if object.responded == False %}
-                        <td>No</td>
-                        {% else %}
-                        <td>Yes</td>
-                        {% endif %}
+                        <td>
+                            <form method="post" id="responded-form">  
+                                {% csrf_token %}  
+                                {{ form.as_p }}  
+                                <input class="btn black-button" id="responded-update-button" type="submit" value="Update">  
+                            </form>
+                        </td>
+                        
                     </tr>
                 </tbody>
                 </table>
                 <div class="text-center my-5" id="message-detail-button-container">
                     <a class="btn black-button" href="mailto:{{ object.email }}" target="_blank">Respond To Message</a>
-                    <a class="btn black-button" href="mailto:{{ object.email }}" target="_blank">Change Responded Status</a>
-                    <a class="btn black-button" href="mailto:{{ object.email }}" target="_blank">Delete Message</a>
+                    <a class="btn white-button" href="mailto:{{ object.email }}" target="_blank">Delete Message</a>
                 </div>
                 <!-- CHECK IF RESERVATION WAS CREATED BY THIS USER -->
         </div>
     </article>
-{% endblock content %}
+
+{% endblock %}
