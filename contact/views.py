@@ -97,7 +97,7 @@ class ContactDeleteView(
     DeleteView
         ):
     model = Contact
-    success_url = reverse_lazy('contact_list')
+    success_url = reverse_lazy('contact-list')
     success_message = (
         'Message Deleted.'
     )
