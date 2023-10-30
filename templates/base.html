@@ -81,6 +81,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'faq' %}">FAQs</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact_form' %}">Contact</a>
+          </li>
 
           {% if user.is_authenticated %}
           <li class="nav-item dropdown">
@@ -179,6 +182,7 @@
           <li class="nav-item mb-2"><a href="{% url 'courses' %}" class="nav-link p-0 text-body-secondary">Our Courses</a></li>
           <li class="nav-item mb-2"><a href="{% url 'about' %}" class="nav-link p-0 text-body-secondary">About</a></li>
           <li class="nav-item mb-2"><a href="{% url 'faq' %}" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="{% url 'contact_form' %}" class="nav-link p-0 text-body-secondary">Contact</a></li>
         </ul>
       </div>
 
