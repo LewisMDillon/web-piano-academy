@@ -176,7 +176,7 @@ a:hover {
 
 .default-page-header, .logo-font {
     margin-top: 85px;
-    color: #ed8500;
+    color: red;
     font-size: 3rem;
     text-shadow: 1px 2px 6px #00000099;
 }
