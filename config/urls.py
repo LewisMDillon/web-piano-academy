@@ -34,4 +34,5 @@ urlpatterns = [
     path('faq/', include('faq.urls')),
     path('profile/', include('profiles.urls')),
     path('newsletter/', include('newsletter.urls')),
+    path('contact/', include('contact.urls')),
 ]
