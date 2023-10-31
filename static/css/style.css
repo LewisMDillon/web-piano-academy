@@ -293,8 +293,8 @@ a:hover {
 }
 
 .error-number span {
-    color: #000;
-    text-shadow: -8px 0 0 rgb(180, 180, 180);
+    color: #fff;
+    text-shadow: -8px 0 0 rgb(215 125 10);
 }
 
 
@@ -773,10 +773,10 @@ input[type=checkbox]:checked {
     min-height: 100vh;
   }
 
-@media (max-width: 426px) {
+/* @media (max-width: 426px) {
     #hero-container {
         background: url('https://i.imgur.com/ynZSuRX.png');
-        background-color: #337277; /* Used if the image is unavailable */
+        background-color: #337277;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -784,7 +784,7 @@ input[type=checkbox]:checked {
         min-height: 100vh;
         background-position-x: -296px;
     }
-}
+} */
 
 #hero-heading {
     color: #ed8500;
