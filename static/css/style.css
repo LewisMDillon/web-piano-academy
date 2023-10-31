@@ -92,13 +92,12 @@ a:hover {
     }
 }
 
-@media (max-width: 768px) {
-    #navbar {
-        background-color: #52958c;
-    }
+#search-dropdown {
+    min-width: 262px;
+    background: transparent;
+    border: 2px solid #ed8500;
+    padding: 10px;
 }
-
-
 
 #nav-button {
     border: 1px solid white;
@@ -147,7 +146,7 @@ a:hover {
 }
 
 .form-control:focus {
-    box-shadow: 0 0 0 0.2rem rgb(237 144 5 / 98%);
+    box-shadow: 0 0 0 0.1rem rgb(237 144 5 / 98%);
 
 }
 
@@ -419,6 +418,7 @@ a:hover {
     background-color: #fff;
     color: #000;
     max-width: 900px;
+    min-width: 320px;
     padding: 30px;
     border-radius: 20px
 }
@@ -515,7 +515,7 @@ a:hover {
 }
 
 .faq-ul li i:before,
-ul li i:after {
+.faq-ul li i:after {
     content: "";
     position: absolute;
     background-color: #ed8500;
@@ -773,6 +773,19 @@ input[type=checkbox]:checked {
     min-height: 100vh;
   }
 
+@media (max-width: 426px) {
+    #hero-container {
+        background: url('https://i.imgur.com/ynZSuRX.png');
+        background-color: #337277; /* Used if the image is unavailable */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        min-height: 100vh;
+        background-position-x: -296px;
+    }
+}
+
 #hero-heading {
     color: #ed8500;
     font-size: 5rem;
@@ -797,7 +810,34 @@ input[type=checkbox]:checked {
       }    
 }
 
+@media (max-width: 767px) {
+    #navbar {
+        background-color: transparent;
+    }
 
+    #navbarCollapse {
+        background-color: #337277;
+        border-radius: 5px;
+        padding: 7px;
+        box-shadow: 5px 5px 5px #00000099;
+    }
+}
+
+@media (max-width: 900px) {
+    #navbarCollapse {
+        font-size: 0.9rem;
+    }
+    
+    #piano-logo {
+        width: 26px;
+        height: 26px;
+        margin-right: 7px;
+    }
+
+    #logo {
+        font-size: 0.8rem;
+    }
+}
 
 
 /* -------- CONTACT PAGES -------- */

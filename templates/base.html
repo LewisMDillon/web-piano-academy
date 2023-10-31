@@ -62,11 +62,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'home' %}">Home</a>
-          </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Our Courses</a>
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Courses</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{% url 'courses' %}">All Courses</a></li>
               <li><a class="dropdown-item" href="{% url 'courses' %}?category=classical">Classical</a></li>
@@ -75,14 +72,36 @@
               <li><a class="dropdown-item" href="{% url 'courses' %}?category=theory">Music Theory</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'about' %}">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'faq' %}">FAQs</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'about' %}">About Us</a></li>
+              <li><a class="dropdown-item" href="{% url 'faq' %}">FAQs</a></li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'contact-form' %}">Contact</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Search</a>
+            <ul class="dropdown-menu" id="search-dropdown">
+              <li>
+                <form class="d-flex" role="search" method="GET" action="{% url 'courses' %}">
+                  <div class="input-group w-100">
+                    <input class="form-control me-2" type="search" name="q" placeholder="Search for courses"
+                      aria-label="Search">
+                    <div class="input-group-append">
+                      <button class="form-control btn border border-black rounded-0" id="search-button" type="submit">
+                        <span class="icon" id="search-icon">
+                          <i class="fas fa-search"></i>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </li>
+            </ul>
           </li>
 
           {% if user.is_authenticated %}
@@ -111,7 +130,7 @@
           {% endif %}
 
         </ul>
-        <form class="d-flex" role="search" method="GET" action="{% url 'courses' %}">
+        <!-- <form class="d-flex" role="search" method="GET" action="{% url 'courses' %}">
           <div class="input-group w-100">
             <input class="form-control me-2" type="search" name="q" placeholder="Search for courses"
               aria-label="Search">
@@ -123,7 +142,7 @@
               </button>
             </div>
           </div>
-        </form>
+        </form> -->
         <li class="list-inline-item">
           <a class="{% if grand_total %}text-info font-weight-bolder{% else %}text-black{% endif %} nav-link"
             href="{% url 'view_basket' %}">
