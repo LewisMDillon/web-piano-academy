@@ -4,21 +4,57 @@
 {% block content %}
 <div class="default-page-container">
     <h1 class="text-center default-page-header" id="about-header">About</h1>
-    <div>
-        <p class="my-5 mx-5">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum."
-        </p>
-        <p class="my-5 mx-5">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum."
-        </p>
+
+    <!-- ABOUT US FEATURES -->
+    <div class="container marketing">
+        
+        <!-- FIRST FEATURE -->
+        <div class="row featurette">
+            <div class="col-md-7 about-section-container">
+                <h2 class="about-subheading fw-normal lh-1">Who We Are</h2>
+                <p class="lead">
+                    We are a group of music teachers and pianists who, after decades of teaching had a thought: "Just because we're teaching classical music, doesn't mean our teaching itself
+                    has to be old-fashioned!" We created Web Piano Academy to embody that idea; to use all of the knowledge & technology that exists today in order to modernize the way we
+                    teach the piano.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="https://web-piano-academy.s3.eu-west-1.amazonaws.com/static/img/who-we-are-optimised.webp" alt="" class="about-img img-fluid mx-auto">
+            </div>
+        </div>
+
+        <hr class="about-separator">
+
+        <!-- SECOND FEATURE -->
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2 about-section-container">
+                <h2 class="about-subheading fw-normal lh-1">What We Do</h2>
+                <p class="lead">Here at Web Piano Academy, we believe that there is no one correct way of learning the piano. Too many teachers are stuck in the "old-fashioned" way of teaching which,
+                    while it has its benefits, fails to take advantage of the wonderful technological resources that we all have at our fingertips. We have so many helpful tools at our disposal
+                    to make learning the piano fun, engaging and FAST!</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="https://web-piano-academy.s3.eu-west-1.amazonaws.com/static/img/what-we-do-optimised.webp" alt="" class="about-img img-fluid mx-auto">
+            </div>
+        </div>
+
+        <hr class="about-separator">
+
+        <!-- THIRD FEATURE -->
+        <div class="row featurette">
+            <div class="col-md-7 about-section-container">
+                <h2 class="about-subheading fw-normal lh-1">Your Journey With Us</h2>
+                <p class="lead">We are so proud of our courses and we know you'll love them too. Each course has extensive video material that you can progress through at whatever pace you wish.
+                    At Web Piano Academy, we know that everybody learns in different ways, that's why all of our courses have accompanying
+                    digital music sheets, worksheets, games and many other resources to ensure that you have all the tools you need to learn in the way that is the most
+                    productive and enjoyable for you.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="https://web-piano-academy.s3.eu-west-1.amazonaws.com/static/img/your-journey-optimised.webp" alt="" class="about-img img-fluid mx-auto" id="about-last-img">
+            </div>
+        </div>
+    </div>
+    <div id="about-button-container">
+        <a class="btn black-button" href="{% url 'courses' %}">Check Out Our Courses!</a>
     </div>
 </div>
     {% endblock %}

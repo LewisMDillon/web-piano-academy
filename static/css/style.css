@@ -306,6 +306,50 @@ a:hover {
     margin-top: 0;
 }
 
+.about-text {
+    max-width: 500px;
+}
+
+.about-text-container-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.about-text-container-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-separator {
+    border-top: 5px solid #ed8500;
+    margin: 25px 0;
+}
+
+.about-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-subheading {
+    color: #ed8500;
+}
+
+.about-img {
+    margin-top: 53px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px #00000099;
+}
+
+#about-last-img {
+    margin-bottom: 25px;
+}
+
+#about-button-container {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
 
 /* -------- MESSAGES -------- */
 
