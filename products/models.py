@@ -35,6 +35,7 @@ class Product(models.Model):
         max_length=254, null=True, blank=True
         )
     name = models.CharField(max_length=254)
+    subtitle = models.CharField(max_length=254, null=True, blank=True)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     date_created = models.DateTimeField(default=timezone.now)

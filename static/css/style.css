@@ -200,6 +200,10 @@ a:hover {
     color: #000;
 }
 
+.course-subtitle {
+    color: #000;
+}
+
 .course-level, .course-category {
     margin-bottom: 0;
     font-weight: 200;
@@ -264,6 +268,83 @@ a:hover {
 #sort-selector {
     border-color: #ed8500;
 }
+
+.card-img-top-fluid {
+    width: 100%;
+    height: 100%;
+}
+
+figcaption {
+    position: absolute;
+    top: 1%;
+    bottom: 62%;
+    left: 2%;
+    max-width: 41%;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    z-index: 99;
+    color: #fff;
+    font-family: 'Bebas Neue';
+}
+
+figcaption span {
+    color: #fff;
+    font-size: 0.7rem;
+    font-family: 'Bebas Neue';
+}
+
+@media (min-width: 1200px) {
+    figcaption {
+        font-size: 1rem;
+    }
+
+    figcaption span {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 1350px) {
+    figcaption {
+        font-size: 2rem;
+    }
+
+    figcaption span {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 1661px) {
+    figcaption {
+        font-size: 2rem;
+    }
+
+    figcaption span {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+.course-img-overlay {
+    position:relative;
+    border-bottom: 3px solid #ed8500;
+  }
+  
+  .course-img-overlay:before {
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background: linear-gradient(
+    to right,
+    black 20%,
+    black 20% 41%,
+    transparent 45% 80%
+  );
+    z-index:9;
+  }
 
 /* -------- COURSE DETAILS PAGE -------- */
 
