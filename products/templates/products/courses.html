@@ -51,11 +51,13 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0 product-cards">
-                                    <a class="course-title" href="{% url 'product_detail' product.id %}">{{ product.name }}</a>
-                                    {% if product.subtitle %}
-                                        <br>
-                                        <a class="course-subtitle" href="{% url 'product_detail' product.id %}">{{ product.subtitle }}</a>
-                                    {% endif %}
+                                    <a class="course-title" href="{% url 'product_detail' product.id %}">
+                                        {{ product.name }}
+                                        {% if product.subtitle %}
+                                            <br>
+                                            <span>{{ product.subtitle }}</span>
+                                        {% endif %}
+                                    </a>
                                     <p class="small course-level">Level: {{ product.level_display_name }}</p>
                                     <p class="small course-category">Category: {{ product.category.display_name }}</p>
                                 </div>
