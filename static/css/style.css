@@ -372,6 +372,7 @@ figcaption span {
 
 
 /* -------- MODALS -------- */
+
 .modal-body, .modal-title {
     color: #000;
 }
@@ -398,6 +399,15 @@ figcaption span {
     color: #fff;
     text-shadow: -8px 0 0 rgb(215 125 10);
 }
+
+/* -------- UNSUBSCRIBE PAGE -------- */
+
+#unsubscribe-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+
 
 
 /* -------- ABOUT PAGE -------- */

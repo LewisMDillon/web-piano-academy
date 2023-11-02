@@ -1,10 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.template.loader import render_to_string
 from django.core.mail import send_mail
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
+from django.core.exceptions import ObjectDoesNotExist
 
 from django.conf import settings
 
@@ -15,7 +17,8 @@ from .models import Email
 # Create your views here.
 
 
-def unsub(request):
+@login_required
+def unsubscribe(request):
     return render(request, 'newsletter/unsubscribe.html')
 
 
@@ -41,7 +44,7 @@ class MailingListCreateView(CreateView):
         body = render_to_string(
             'newsletter/confirmation_emails/confirmation_email_body.txt',
             {'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+
         send_mail(
             subject,
             body,
@@ -61,26 +64,31 @@ class MailingListCreateView(CreateView):
         return super().form_valid(form)
 
 
-class MailingListDeleteView(
-    LoginRequiredMixin,
-    UserPassesTestMixin,
-    SuccessMessageMixin,
-    DeleteView
-        ):
+@login_required
+def mailing_list_delete(request, email):
+
     model = Email
-    success_url = reverse_lazy('home')
-    success_message = (
-        'You have unsubscribed from the mailing list.'
-    )
+    addresses = Email.objects.all()
+    try:
+        Email.objects.get(email=request.user.email)
+    except ObjectDoesNotExist:
+        messages.error(
+            request,
+            "You are not subscribed"
+            )
+        return redirect(reverse('home'))
 
-    def test_func(self):
-        email = self.get_object()
-        if self.request.user.email == email.email:
-            return True
-        return False
+    thisEmail = Email.objects.get(email=request.user.email)
 
-    def delete(self, request, *args, **kwargs):
-        messages.success(self.request, self.success_message)
-        return super(
-            MailingListDeleteView, self
-            ).delete(request, *args, **kwargs)
+    if request.user.email == email:
+        email = get_object_or_404(Email, email=email)
+        email.delete()
+        messages.info(request, 'You have unsubscribed from the mailing list')
+        return redirect(reverse('home'))
+    else:
+        messages.error(
+            request,
+            "Sorry, that didn't work. Please double check"
+            " that you are logged in, then try that again."
+            )
+        return redirect(reverse('home'))

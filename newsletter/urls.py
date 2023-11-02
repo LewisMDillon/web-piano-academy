@@ -1,13 +1,14 @@
 from django.contrib import admin
 from django.urls import path
 from . import views
-from .views import MailingListCreateView, MailingListDeleteView
+from .views import MailingListCreateView
 
 urlpatterns = [
     path('', MailingListCreateView.as_view(), name='mailing-list-subscribe'),
-    path('unsub/', views.unsub, name='unsub'),
+    path('unsubscribe/', views.unsubscribe, name='unsubscribe'),
     path(
-        '<int:pk>/delete/',
-        MailingListDeleteView.as_view(), name='mailing-list-delete'
+        'unsubscribe/<str:email>',
+        views.mailing_list_delete,
+        name='mailing-list-unsubscribe'
         ),
 ]

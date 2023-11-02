@@ -7,3 +7,6 @@ Keep an eye out for exciting news from Web Piano Academy, and don't forget to ch
 
 
 Web Piano Academy
+
+If you wish to unsubscribe from these emails, click the link below (you may need to log in to your account)
+https://web-piano-academy-16cd779294ab.herokuapp.com/newsletter/unsubscribe
