@@ -7,7 +7,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-5">
-                <h2 class="default-page-header"><i class="fa-solid fa-music" style="font-size: 34px;"></i> Our Courses</h2>
+                <h2 class="default-page-header"><i class="fa-solid fa-music" style="font-size: 34px;"></i> Our Courses
+                </h2>
                 <hr class="w-50 mb-1">
             </div>
         </div>
@@ -15,47 +16,55 @@
             <div class="row mt-1 mb-2 mx-5">
                 <div class="col-12 col-md-6" id="sorting-container">
                     <div class="sort-select-wrapper w-50">
-                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name</option>
-                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category</option>
-                            <option value="level_asc" {% if current_sorting == 'level_asc' %}selected{% endif %}>Level</option>
+                        <select id="sort-selector"
+                            class="custom-select custom-select-sm rounded-0 border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
+                            </option>
+                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price
+                                (low to high)</option>
+                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
+                                (high to low)</option>
+                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name
+                            </option>
+                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
+                                Category</option>
+                            <option value="level_asc" {% if current_sorting == 'level_asc' %}selected{% endif %}>Level
+                            </option>
                         </select>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
-                            <span class="small"><a href="{% url 'courses' %}">Courses Home</a> | </span>
+                        <span class="small"><a href="{% url 'courses' %}">Courses Home</a> | </span>
                         {% endif %}
-                        {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                        {{ products|length }} Products{% if search_term %} found for
+                        <strong>"{{ search_term }}"</strong>{% endif %}
                     </p>
                 </div>
             </div>
-        <div class="row">
-            <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2"></div>
-                <div class="row">
-                    {% for product in products %}
+            <div class="row">
+                <div class="product-container col-10 offset-1">
+                    <div class="row mt-1 mb-2"></div>
+                    <div class="row">
+                        {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="card h-100 border-0">
                                 {% if product.image_url %}
                                 <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
+                                    <img class="card-img-top img-fluid" src="{{ product.image_url }}"
+                                        alt="{{ product.name }}">
                                 </a>
                                 {% else %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                    alt="{{ product.name }}">
                                 {% endif %}
                                 <div class="card-body pb-0 product-cards">
                                     <a class="course-title" href="{% url 'product_detail' product.id %}">
                                         {{ product.name }}
                                         {% if product.subtitle %}
-                                            <br>
-                                            <span>{{ product.subtitle }}</span>
+                                        <br>
+                                        <span>{{ product.subtitle }}</span>
                                         {% endif %}
                                     </a>
                                     <p class="small course-level">Level: {{ product.level_display_name }}</p>
@@ -66,60 +75,82 @@
                                         <div class="col">
                                             <p class="mb-0 course-price">€{{ product.price }}</p>
                                             {% if product.rating %}
-                                                <small><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                            <small><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                             {% else %}
-                                                <small></small>
+                                            <small></small>
                                             {% endif %}
                                         </div>
                                     </div>
                                     {% if request.user.is_superuser %}
-                                        <div class="product-admin-links">
-                                            <small>
-                                                <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                            </small>
-                                        </div>
+                                    <div class="product-admin-links">
+                                        <small>
+                                            <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                            <a class="text-danger" href="#" data-toggle="modal"
+                                                data-target="#modal-delete-{{ product.id }}">Delete</a>
+                                        </small>
+                                    </div>
                                     {% endif %}
                                 </div>
                             </div>
                         </div>
-                    {% endfor %}
+                        {% if request.user.is_superuser %}
+                        <div class="modal fade text-black" id="modal-delete-{{ product.id }}" tabindex="-1"
+                            aria-labelledby="modal-label-{{ product.id }}" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modal-label-{{ product.id }}">Delete Course</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure you want to delete {{ product.name }}?
+                                        <small>This action is permanent and cannot be undone</small>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                                        <a href="{% url 'delete_product' product.id %}" class="btn btn-primary">Yes</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-{% endblock %}
+    {% endblock %}
 
-{% block extra_postloadjs %}
-<script type="text/javascript">
-    $('.btt-link').click(function(e) {
-        window.scrollTo(0,0)
-    })
-</script>
+    {% block extra_postloadjs %}
+    <script>
+        $('.btt-link').click(function (e) {
+            window.scrollTo(0, 0);
+        });
+    </script>
 
-<script type="text/javascript">
-    console.log('Sorting is online!')
-    console.log('Sorting is online at step 2!')
-    $('#sort-selector').change(function() {
-        var selector = $(this);
-        var currentUrl = new URL(window.location);
+    <script>
+        $('#sort-selector').change(function () {
+            let selector = $(this);
+            let currentUrl = new URL(window.location);
 
-        var selectedVal = selector.val();
-        if(selectedVal != "reset"){
-            var sort = selectedVal.split("_")[0];
-            var direction = selectedVal.split("_")[1];
+            let selectedVal = selector.val();
+            if (selectedVal != "reset") {
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
 
-            currentUrl.searchParams.set("sort", sort);
-            currentUrl.searchParams.set("direction", direction);
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
 
-            window.location.replace(currentUrl);
-        } else {
-            currentUrl.searchParams.delete("sort");
-            currentUrl.searchParams.delete("direction");
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
 
-            window.location.replace(currentUrl);
-        }
-    })
-</script>
-{% endblock %}
+                window.location.replace(currentUrl);
+            }
+        });
+    </script>
+    {% endblock %}
