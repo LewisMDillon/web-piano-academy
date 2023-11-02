@@ -170,7 +170,7 @@ a:hover {
 .default-page-container {
     background: linear-gradient(#6da19a, #2c6967);
     min-height: 100vh;
-    min-width: 100vw;
+    min-width: 100%;
 }
 
 .default-page-header, .logo-font {
@@ -369,6 +369,17 @@ figcaption span {
 #product-details-container-outer {
     padding-top: 85px;
 }
+
+
+/* -------- MODALS -------- */
+.modal-body, .modal-title {
+    color: #000;
+}
+
+.modal-footer {
+    justify-content: space-around;
+}
+
 
 /* -------- CUSTOM ERROR PAGES -------- */
 
