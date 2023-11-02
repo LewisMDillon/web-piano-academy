@@ -837,6 +837,14 @@ input[type=checkbox]:checked {
     justify-content: center;
   }
 
+/* -------- PRODUCT FORMS -------- */
+
+#id_date_created, #div_id_date_created {
+    display: none;
+}
+
+
+
 /* -------- TOASTS -------- */
 
 .message-container {
