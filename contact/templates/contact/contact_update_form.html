@@ -69,7 +69,7 @@
             </div>
         </div>
     </div>
-    <div id="myDIV">
+    <div id="formDiv" style="display: none;">
         <div class="custom-form-outer-container"> 
             <div class="custom-form-inner-container">
                 <form method="POST" id="response-form">
@@ -94,7 +94,7 @@
 
 <script>
     function responseForm() {
-      var form = document.getElementById("myDIV");
+      var form = document.getElementById("formDiv");
       if (form.style.display === "none") {
         form.style.display = "block";
       } else {
