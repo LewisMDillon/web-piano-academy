@@ -932,9 +932,16 @@ input[type=checkbox]:checked {
 }
 
 @media (max-width: 767px) {
-    #navbar {
-        background-color: transparent;
-    }
+    .navbar {
+        background-color: rgba(0, 0, 0, 0) !important;
+        transition-property: background-color, color;
+        transition-duration: 0.5s;
+      }
+      
+      .navbar-dark {
+        background-color: rgba(0, 0, 0, 0.9) !important;
+        color: #ffffff !important;
+      }
 
     #navbarCollapse {
         background-color: #337277;
