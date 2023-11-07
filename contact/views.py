@@ -4,6 +4,10 @@ from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
+from django.core.mail import send_mail
+
+from django.conf import settings
+
 
 from django.views.generic import (
     CreateView,
@@ -51,7 +55,7 @@ class ContactListView(LoginRequiredMixin, UserPassesTestMixin, ListView):
     model = Contact
     template_name = 'contact/contact_list.html'
     context_object_name = 'contacts'
-    ordering = ['-pk']
+    ordering = ['responded', '-pk']
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -73,12 +77,26 @@ class ContactUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     fields = ["responded"]
     template_name_suffix = "_update_form"
 
+    def _send_email(self):
+        """Send the user a confirmation email"""
+        email = self.object.email
+        subject = self.object.subject
+        body = self.request.POST.get('email_body')
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [email]
+        )
+
+
     def form_valid(self, form):
         form.instance.author = self.request.user
         messages.info(
             self.request,
-            "Successfully Updated!"
+            "Response sent via email"
             )
+        self._send_email()
         return super().form_valid(form)
 
     def test_func(self):

@@ -33,6 +33,7 @@ DEBUG = os.getenv("DEBUG", False)
 
 ALLOWED_HOSTS = [
     os.getenv("CURRENT_HOST"),
+    "8000-lewismdillo-webpianoaca-p5b7u5614u2.ws-eu106.gitpod.io",
     "web-piano-academy-16cd779294ab.herokuapp.com",
 ]
 

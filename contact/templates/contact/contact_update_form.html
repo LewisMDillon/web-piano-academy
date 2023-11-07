@@ -5,58 +5,105 @@
 
 {% block content %}
 
-    <div class="default-page-container">
-        <div id="message-detail-container-outer">
-            <h1 class="text-center default-page-header">Message Details</h1>
-            <!-- RESERVATION DETAILS -->
-            <div id="message-detail-container">
-                <br>
-                <small class="text-muted">Message sent on: <strong>{{ object.date_created }}</strong></small>
-                <!-- DETAILS TABLE -->
-                <table class="table" id="reservation-detail-table">
-                    <thead>
-                        <tr>
+<div class="default-page-container">
+    <div id="message-detail-container-outer">
+        <h1 class="text-center default-page-header">Message Details</h1>
+        <!-- RESERVATION DETAILS -->
+        <div id="message-detail-container">
+            <br>
+            <small class="text-muted">Message sent on: <strong>{{ object.date_created }}</strong></small>
+            <!-- DETAILS TABLE -->
+            <table class="table" id="reservation-detail-table">
+                <thead>
+                    <tr>
                         <th scope="col"></th>
                         <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Email:</th>
-                            <td>{{ object.email }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Name:</th>
-                            <td>{{ object.name }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Subject:</th>
-                            <td>{{ object.subject }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Message:</th>
-                            <td>{{ object.message }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Responded:</th>
-                            <td>
-                                <form method="post" id="responded-form">
-                                    {% csrf_token %}
-                                    {{ form.as_p }}
-                                    <input class="btn black-button" id="responded-update-button" type="submit" value="Update">
-                                </form>
-                            </td>
-        
-                        </tr>
-                    </tbody>
-                    </table>
-                    <div class="text-center my-5" id="message-detail-button-container">
-                        <a class="btn black-button" href="mailto:{{ object.email }}" target="_blank">Respond To Message</a>
-                        <a class="btn btn-danger" href="{% url 'contact-delete' object.id %}">Delete Message</a>
-                    </div>
-                    <!-- CHECK IF RESERVATION WAS CREATED BY THIS USER -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Email:</th>
+                        <td>{{ object.email }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Name:</th>
+                        <td>{{ object.name }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Subject:</th>
+                        <td>{{ object.subject }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Message:</th>
+                        <td>{{ object.message }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Responded:</th>
+                        {% if object.responded %}
+                            <td>Yes</td>
+                        {% else %}
+                            <td>No</td>
+                        {% endif %}
+                    </tr>
+                    <!-- <tr>
+                        <th scope="row">Responded:</th>
+                        <td>
+                            <form method="post" id="responded-form">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <input class="btn black-button" id="responded-update-button" type="submit"
+                                    value="Update">
+                            </form>
+                        </td>
+
+                    </tr> -->
+                </tbody>
+            </table>
+            <div class="text-center my-5" id="message-detail-button-container">
+                <!-- <a class="btn black-button" href="mailto:{{ object.email }}" target="_blank">Respond To Message</a> -->
+                {% if object.responded %}
+                {% else %}
+                    <a class="btn black-button" onclick="responseForm()" target="_blank">Respond To Message <i class="fa-solid fa-caret-down"></i></a>
+                {% endif %}
+                <a class="btn btn-danger" href="{% url 'contact-delete' object.id %}">Delete Message</a>
             </div>
         </div>
     </div>
+    <div id="myDIV">
+        <div class="custom-form-outer-container"> 
+            <div class="custom-form-inner-container">
+                <form method="POST" id="response-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="form-group">
+                        <label for="email">Email To:</label>
+                        <input type="email" id="email" placeholder="Email" readonly value="{{ object.email }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" placeholder="Subject" readonly value="{{ object.subject }}">
+                    </div>
+                    <textarea id="email_body" name="email_body" rows="10" cols="50">Dear {{ object.name }},</textarea>
+                    <input class="btn black-button" id="responded-update-button" type="submit"
+                    value="Send Email">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function responseForm() {
+      var form = document.getElementById("myDIV");
+      if (form.style.display === "none") {
+        form.style.display = "block";
+      } else {
+        form.style.display = "none";
+      }
+
+      let checkBox = document.getElementById("id_responded")
+      checkBox.checked = true;
+    }
+</script>
 
 {% endblock %}
