@@ -6,10 +6,6 @@ urlpatterns = [
     path('', views.ContactFormCreateView.as_view(), name='contact-form'),
     path('list/', views.ContactListView.as_view(), name='contact-list'),
     path(
-        '<int:pk>/', views.ContactDetailView.as_view(), name='contact-detail'
-        ),
-
-    path(
         '<pk>/update',
         views.ContactUpdateView.as_view(),
         name='contact-update'),

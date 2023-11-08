@@ -68,10 +68,6 @@ class ContactListView(LoginRequiredMixin, UserPassesTestMixin, ListView):
         return False
 
 
-class ContactDetailView(DetailView):
-    model = Contact
-
-
 class ContactUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Contact
     fields = ["responded"]
