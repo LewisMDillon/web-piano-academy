@@ -55,7 +55,7 @@ class TestProduct(TestCase):
         product1.save()
 
     def test_str(self):
-        """Tests the string method on the category."""
+        """Tests the string method on the product."""
         # Retrieves the most recently created email and gets its string
         product1 = Product.objects.latest('pk')
         product_string = str(product1.name)

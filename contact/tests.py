@@ -326,4 +326,3 @@ class ContactViewTestCase(TestCase):
             # same one that we tried to delete, if not, that
             # means the deletion was successful
             self.assertNotEqual(deletedContactId, newLastContactId)
-        

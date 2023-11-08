@@ -5,6 +5,7 @@ from django.test import TestCase
 from django.contrib.auth.models import User
 from profiles.models import UserProfile
 from .models import Email
+from django.utils.html import escape
 from django.utils import timezone
 
 # ------------ MODEL TESTING ------------
@@ -131,6 +132,9 @@ class NewslettterViewTestCase(TestCase):
 
         # Check if the confirmation email is sent
         self.assertEqual(len(mail.outbox), 1)
+
+         # Check if the confirmation email is sent to the correct address
+        self.assertIn(escape('testuser@test.com'), mail.outbox[0].to)
 
         # Get the most recent email
         # (should be new_test_email that we just created)

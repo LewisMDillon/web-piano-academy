@@ -4,7 +4,7 @@ from .models import Faq
 # ------------ MODEL TESTING ------------
 
 class TestFaq(TestCase):
-    """Tests the faq model in the faq app."""
+    """Tests the Faq model in the faq app."""
     def setUp(self):
         """
         Makes a sample Faq object
@@ -20,7 +20,7 @@ class TestFaq(TestCase):
         faq1.save()
 
     def test_str(self):
-        """Tests the string method on the post."""
+        """Tests the string method on the faq."""
         # Retrieves the most recently created faq and gets its string
         faq1 = Faq.objects.latest('pk')
         faq_string_question = str(faq1.question)
