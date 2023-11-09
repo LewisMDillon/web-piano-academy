@@ -13,6 +13,7 @@ from django.utils import timezone
 
 class TestContact(TestCase):
     """Tests the Contact model in the contact app."""
+    
     def setUp(self):
         """
         Makes a sample Contact object
@@ -125,10 +126,8 @@ class ContactViewTestCase(TestCase):
 
     def test_contact_create_render_form(self):
         """
-        Creates a sample email subscription using the page form. Then, 
-        checks that that sample email object was created successfully by
-        checking that the newest object is not the same
-        as the object that existed previously
+        Creates a new test contact object using the page form.
+        Checks that the object was successfully created.
         """
 
         # Get the ID of the most recently created contact object
@@ -150,8 +149,8 @@ class ContactViewTestCase(TestCase):
         newTestContact = Contact.objects.latest('pk')
         newTestContactId = newTestContact.pk
         
-        # Check that the most recent reservation created is
-        # not the original reservation, meaning a new one
+        # Check that the most recent contact object created is
+        # not the original contact object, meaning a new one
         # was successfully created
         self.assertNotEqual((originalContactId), (newTestContactId))
 
@@ -177,11 +176,14 @@ class ContactViewTestCase(TestCase):
         # Log in as testUser (no staff privileges)
         self.client.force_login(test_user)
 
-        # Try to access reservation list page (staff-only)
+        # Try to access contact list page (staff-only)
         response = self.client.get('/contact/list/')
 
         # Check that page access is forbidden
         self.assertEqual(response.status_code, 403)
+
+        # Check that we do not reach the contact list page
+        self.assertTemplateNotUsed('contact/contact_list.html')
 
         # Log in as testUserStaff (has staff privileges)
         self.client.force_login(test_user_staff)
@@ -231,7 +233,7 @@ class ContactViewTestCase(TestCase):
         self.assertEqual(test_user_staff.username, 'testUserStaff')
         self.assertEqual(test_user.username, 'testUser')
 
-        # Tests the url path
+        # Get the pk of the object
         contact1 = Contact.objects.latest('pk')
 
         # Log in as testUser (no staff privileges)
@@ -242,6 +244,9 @@ class ContactViewTestCase(TestCase):
 
         # Check that page access is forbidden
         self.assertEqual(response.status_code, 403)
+
+        # Check that we do not reach the contact details page
+        self.assertTemplateNotUsed('contact/contact_update_form.html')
 
         # Log in as testUserStaff (has staff privileges)
         self.client.force_login(test_user_staff)
@@ -260,8 +265,8 @@ class ContactViewTestCase(TestCase):
             'base.html'
             )
 
-        # Cofirms that the update view is
-        # displaying the correct reservation.
+        # Cofirms that the view is
+        # displaying the correct contact object.
         contact_string_name = str(contact1.name)
         contact_string_email = str(contact1.email)
 

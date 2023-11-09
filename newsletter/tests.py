@@ -12,6 +12,7 @@ from django.utils import timezone
 
 class TestEmail(TestCase):
     """Tests the Email model in the newsletter app."""
+
     def setUp(self):
         """
         Makes a sample Email object
@@ -45,6 +46,7 @@ class NewslettterViewTestCase(TestCase):
         """
         Creates two sample users, one of whom has staff & superuser
         privileges (testUserStaff) and another who does not (testUser).
+        Next, creates a sample email object.
         """
 
         username1 = "testUser"
@@ -193,16 +195,16 @@ class NewslettterViewTestCase(TestCase):
             )
         self.assertEqual(response.status_code, 200)
 
-        # Check if there are any reservations in the database,
+        # Check if there are any email objects in the database,
         # if not, that means that the deletion was successful
         if Email.objects.exists():
             # If there are email objects remaining, we need to
             # check that the one we tried to delete has been deleted.
-            # Get the ID of the last reservation in the database
+            # Get the ID of the latest email object in the database
             newLastEmail = Email.objects.latest('pk')
             newLastEmailId = newLastEmail.pk
 
-            # Check if the last reservation in the database is the
+            # Check if the latest email object in the database is the
             # same one that we tried to delete, if not, that
             # means the deletion was successful
             print(deletedEmailId)

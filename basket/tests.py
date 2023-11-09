@@ -11,9 +11,9 @@ from django.utils import timezone
 
 # ------------ VIEWS TESTING ------------
 
-class ContactViewTestCase(TestCase):
+class BasketViewTestCase(TestCase):
     """
-    Test case for testing Contact views.
+    Test case for testing basket views.
     """
 
     def setUp(self):
@@ -89,10 +89,9 @@ class ContactViewTestCase(TestCase):
 
     def test_basket_add(self):
         """
-        Creates a sample email subscription using the page form. Then, 
-        checks that that sample email object was created successfully by
-        checking that the newest object is not the same
-        as the object that existed previously
+        Adds the test product to the basket, tests whether it has been
+        added successfully. Then attempts to add a duplicate item to
+        the basket, checks that it is not successful.
         """
 
         # Get the most recently created product (test product)
@@ -130,7 +129,14 @@ class ContactViewTestCase(TestCase):
         self.assertEqual(session['basket'], {'1': 1})
 
 
+
     def test_basket_remove(self):
+        """
+        Adds the test product to the basket, checks that it was added.
+        Then deletes the product from the basket, checks that the
+        basket is empty. Next, attempts to delete a non-existant item
+        from the basket, checks that it is unsuccessful.
+        """
 
         # Get the most recently created product (test product)
         product1 = Product.objects.latest('pk')

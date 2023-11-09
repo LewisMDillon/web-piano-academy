@@ -9,8 +9,9 @@ from django.utils import timezone
 
 # ------------ MODEL TESTING ------------
 
-class TestCategory(TestCase):
-    """Tests the Category model in the products app."""
+class TestUserProfile(TestCase):
+    """Tests the UserProfile model in the profiles app."""
+
 
     def setUp(self):
         """
@@ -41,16 +42,16 @@ class TestCategory(TestCase):
         profile1 = UserProfile.objects.latest('pk')
         profile_string = str(profile1.user.username)
 
-        # Cofirms the email string is correct.
+        # Cofirms the profile string is correct.
         self.assertEqual((profile_string), (profile1.user.username))
 
 
 
 # ------------ VIEWS TESTING ------------
 
-class ProductViewTestCase(TestCase):
+class ProfilesViewTestCase(TestCase):
     """
-    Test case for testing product views.
+    Test case for testing profiles views.
     """
 
     def setUp(self):
@@ -133,6 +134,7 @@ class ProductViewTestCase(TestCase):
     def test_profile_render_context(self):
         """
         Tests that the profile page is rendered properly
+        with the correct context passed in.
         """
 
          # Get the most recently created user (testUserStaff)
@@ -169,10 +171,9 @@ class ProductViewTestCase(TestCase):
     
     def test_edit_profile_render_form(self):
         """
-        Tests the url path by passing in the primary key of new test
-        product. Checks that the product detail page is rendered properly.
-        Checks that the product detail view matches the test product passed
-        into the url.
+        Updates the test user's profile information.
+        Checks that the profile information has been
+        successfully updated.
         """
 
         # Get the most recently created user (testUserStaff)

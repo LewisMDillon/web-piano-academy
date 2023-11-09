@@ -10,6 +10,7 @@ from django.utils import timezone
 
 class TestCategory(TestCase):
     """Tests the Category model in the products app."""
+
     def setUp(self):
         """
         Makes a sample Category object
@@ -26,16 +27,17 @@ class TestCategory(TestCase):
 
     def test_str(self):
         """Tests the string method on the category."""
-        # Retrieves the most recently created email and gets its string
+        # Retrieves the most recently created category and gets its string
         category1 = Category.objects.latest('pk')
         category_string = str(category1.name)
 
-        # Cofirms the email string is correct.
+        # Cofirms the category string is correct.
         self.assertEqual((category_string), (category1.name))
 
 
 class TestProduct(TestCase):
     """Tests the Product model in the products app."""
+
     def setUp(self):
         """
         Makes a sample Product object
@@ -56,11 +58,11 @@ class TestProduct(TestCase):
 
     def test_str(self):
         """Tests the string method on the product."""
-        # Retrieves the most recently created email and gets its string
+        # Retrieves the most recently created product and gets its string
         product1 = Product.objects.latest('pk')
         product_string = str(product1.name)
 
-        # Cofirms the email string is correct.
+        # Cofirms the product string is correct.
         self.assertEqual((product_string), (product1.name))
 
 
@@ -144,6 +146,7 @@ class ProductViewTestCase(TestCase):
     
     def test_edit_product_render_form(self):
         """
+        Checks that the edit product page cannot be accessed by non-superusers.
         Tests the url path by passing in the primary key of new test
         product. Checks that the product detail page is rendered properly.
         Checks that the product detail view matches the test product passed
@@ -171,6 +174,9 @@ class ProductViewTestCase(TestCase):
 
         # Check that page access is not granted
         self.assertNotEqual(response.status_code, 200)
+
+        # Check that we do not reach the edit product page
+        self.assertTemplateNotUsed('products/edit_product.html')
 
         # Log in as testUserStaff (has staff privileges)
         self.client.force_login(test_user_staff)
@@ -218,10 +224,11 @@ class ProductViewTestCase(TestCase):
 
     def test_add_product_render_form(self):
         """
-        Tests the url path by passing in the primary key of new test
-        product. Checks that the product detail page is rendered properly.
-        Checks that the product detail view matches the test product passed
-        into the url.
+        Checks that the add product page cannot be accessed by non-superusers.
+        Checks that the page is rendered properly.
+        Creates a new test product using the page form.
+        Tests that the product was created successfully
+        
         """
 
         # Get the most recently created user (testUserStaff)
@@ -234,7 +241,7 @@ class ProductViewTestCase(TestCase):
         self.assertEqual(test_user_staff.username, 'testUserStaff')
         self.assertEqual(test_user.username, 'testUser')
 
-        # Tests the url path
+        # Get the object's pk
         product1 = Product.objects.latest('pk')
 
         # Log in as testUser (no staff privileges)
@@ -245,6 +252,9 @@ class ProductViewTestCase(TestCase):
 
         # Check that page access is not granted
         self.assertNotEqual(response.status_code, 200)
+
+        # Check that we do not reach the add product page
+        self.assertTemplateNotUsed('products/add_product.html')
 
         # Log in as testUserStaff (has staff privileges)
         self.client.force_login(test_user_staff)
@@ -289,12 +299,12 @@ class ProductViewTestCase(TestCase):
         self.assertEqual('test_product_created', Product.objects.latest('pk').name)
 
 
+
     def test_delete_product_render_form(self):
         """
-        Tests the url path by passing in the primary key of new test
-        product. Checks that the product detail page is rendered properly.
-        Checks that the product detail view matches the test product passed
-        into the url.
+        Checks that products cannot be deleted by non-superusers.
+        Deletes the test object.
+        Checks that the test object was successfully deleted.
         """
 
         # Get the most recently created user (testUserStaff)

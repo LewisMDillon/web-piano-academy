@@ -35,7 +35,7 @@ class HomeViewTestCase(TestCase):
         page ID is entered.
         """
 
-        response = self.client.get('/invalidtestpage/')
+        response = self.client.get('/invalidtestpage123/')
         self.assertEqual(response.status_code, 404)
         self.assertTemplateUsed(
             response, '404.html', 'base.html'

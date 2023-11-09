@@ -12,12 +12,11 @@ if os.path.exists(".env"):
     load_dotenv()
 
 
-# Create your tests here.
-
 # ------------ MODEL TESTING ------------
 
 class TestOrder(TestCase):
     """Tests the Order model in the checkout app."""
+    
     def setUp(self):
         """
         Makes a sample user with a linked UserProfile.
@@ -96,7 +95,7 @@ class CheckoutViewTestCase(TestCase):
         """
         Creates two sample users, one of whom has staff & superuser
         privileges (testUserStaff) and another who does not (testUser).
-        Then creates a sample order.
+        Then creates a test product.
         """
 
         username1 = "testUser"
@@ -207,6 +206,9 @@ class CheckoutViewTestCase(TestCase):
 
 
     def test_checkout_process(self):
+        """
+        Attempts to checkout and simulate purchase of the test product
+        """
 
         # Check that the test item (id = 1) was added to the basket
         session = self.client.session
