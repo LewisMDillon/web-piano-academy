@@ -1,5 +1,6 @@
+/* -------- GENERAL STYLES -------- */
+
 body {
-    /* margin-top: 53px; */
     font-family: 'DM Sans', sans-serif;
     color: #fff;
     background-color: #2c6967;
@@ -25,10 +26,16 @@ a:hover {
     color: #fff !important;
 }
 
+.orange-text {
+    color: #ed8500;
+}
+
 .invalid-feedback {
     color: #fff;
     text-shadow: 0px 1px 1px red
 }
+
+/* -------- HERO IMAGE -------- */
 
 #hero-img {
     border-radius: 10px;
@@ -57,6 +64,26 @@ a:hover {
     font-size: 20px;
 }
 
+#hero-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0)), url('https://web-piano-academy.s3.eu-west-1.amazonaws.com/static/img/hero-image-optimised.webp');
+    background-color: #337277; /* Used if the image is unavailable */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+  }
+
+
+#hero-heading {
+    color: #ed8500;
+    font-size: 5rem;
+    padding-top: 106px;
+    text-shadow: 5px 3px 6px #00000099;
+}
+
+/* -------- CUSTOM BUTTONS -------- */
+
 .black-button {
     color: #fff;
     background-color: black;
@@ -74,6 +101,7 @@ a:hover {
     border: 1px solid #ed8500 !important;
 }
 
+/* -------- NAVBAR -------- */
 
 @media (min-width: 768px) {
     .navbar-expand-md .navbar-collapse {
@@ -82,15 +110,6 @@ a:hover {
         justify-content: flex-end;
     }
 
-    body {
-        /* margin-top: 53px !important; */
-    }
-}
-
-@media (max-width: 900px) {
-    body {
-        /* margin-top: 46px !important; */
-    }
 }
 
 #search-dropdown {
@@ -168,6 +187,61 @@ a:hover {
     margin-bottom: 7px;
 }
 
+@media (min-width: 768px) {
+    .navbar {
+        background-color: rgba(0, 0, 0, 0) !important;
+        transition-property: background-color, color;
+        transition-duration: 0.5s;
+      }
+      
+      .navbar-dark {
+        background-color: rgba(0, 0, 0, 0.9) !important;
+        color: #ffffff !important;
+      }
+      
+      .navbar-collapse, .navbar-nav, .nav-item {
+        color: inherit !important;
+      }    
+}
+
+@media (max-width: 767px) {
+    .navbar {
+        background-color: rgba(0, 0, 0, 0) !important;
+        transition-property: background-color, color;
+        transition-duration: 0.5s;
+      }
+      
+      .navbar-dark {
+        background-color: rgba(0, 0, 0, 0.9) !important;
+        color: #ffffff !important;
+      }
+
+    #navbarCollapse {
+        background-color: #337277;
+        border-radius: 5px;
+        padding: 7px;
+        box-shadow: 5px 5px 5px #00000099;
+    }
+}
+
+@media (max-width: 900px) {
+    #navbarCollapse {
+        font-size: 0.9rem;
+    }
+    
+    #piano-logo {
+        width: 26px;
+        height: 26px;
+        margin-right: 7px;
+    }
+
+    #logo {
+        font-size: 0.8rem;
+    }
+}
+
+/* -------- CUSTOM PAGE CONTAINERS -------- */
+
 .default-page-container {
     background: linear-gradient(#6da19a, #2c6967);
     min-height: 100vh;
@@ -183,9 +257,7 @@ a:hover {
     text-shadow: 1px 2px 6px #00000099;
 }
 
-.orange-text {
-    color: #ed8500;
-}
+
 
 
 /* -------- OUR COURSES PAGE -------- */
@@ -285,77 +357,6 @@ a:hover {
     height: 100%;
 }
 
-figcaption {
-    position: absolute;
-    top: 1%;
-    bottom: 62%;
-    left: 2%;
-    max-width: 41%;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    z-index: 99;
-    color: #fff;
-    font-family: 'Bebas Neue';
-}
-
-figcaption span {
-    color: #fff;
-    font-size: 0.7rem;
-    font-family: 'Bebas Neue';
-}
-
-@media (min-width: 1200px) {
-    figcaption {
-        font-size: 1rem;
-    }
-
-    figcaption span {
-        font-size: 0.7rem;
-    }
-}
-
-@media (min-width: 1350px) {
-    figcaption {
-        font-size: 2rem;
-    }
-
-    figcaption span {
-        font-size: 0.7rem;
-    }
-}
-
-@media (min-width: 1661px) {
-    figcaption {
-        font-size: 2rem;
-    }
-
-    figcaption span {
-        font-size: 1.1rem;
-    }
-}
-
-
-
-.course-img-overlay {
-    position:relative;
-    border-bottom: 3px solid #ed8500;
-  }
-  
-  .course-img-overlay:before {
-    content:"";
-    position: absolute;
-    top:0;
-    left:0;
-    height:100%;
-    width:100%;
-    background: linear-gradient(
-    to right,
-    black 20%,
-    black 20% 41%,
-    transparent 45% 80%
-  );
-    z-index:9;
-  }
 
 /* -------- COURSE DETAILS PAGE -------- */
 
@@ -407,7 +408,6 @@ figcaption span {
     display: flex;
     justify-content: center;
 }
-
 
 
 
@@ -871,100 +871,10 @@ input[type=checkbox]:checked {
     background-color: #ed8500 !important;
 }
 
-
-
 .bag-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
-}
-
-
-
-
-
-#hero-container {
-    /* background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0)), url('https://web-piano-academy.s3.eu-west-1.amazonaws.com/static/img/colourful-hero-image.jpg'); */
-    background: linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0)), url('https://i.imgur.com/ynZSuRX.png');
-    background-color: #337277; /* Used if the image is unavailable */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    min-height: 100vh;
-  }
-
-/* @media (max-width: 426px) {
-    #hero-container {
-        background: url('https://i.imgur.com/ynZSuRX.png');
-        background-color: #337277;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        min-height: 100vh;
-        background-position-x: -296px;
-    }
-} */
-
-#hero-heading {
-    color: #ed8500;
-    font-size: 5rem;
-    padding-top: 106px;
-    text-shadow: 5px 3px 6px #00000099;
-}
-
-@media (min-width: 768px) {
-    .navbar {
-        background-color: rgba(0, 0, 0, 0) !important;
-        transition-property: background-color, color;
-        transition-duration: 0.5s;
-      }
-      
-      .navbar-dark {
-        background-color: rgba(0, 0, 0, 0.9) !important;
-        color: #ffffff !important;
-      }
-      
-      .navbar-collapse, .navbar-nav, .nav-item {
-        color: inherit !important;
-      }    
-}
-
-@media (max-width: 767px) {
-    .navbar {
-        background-color: rgba(0, 0, 0, 0) !important;
-        transition-property: background-color, color;
-        transition-duration: 0.5s;
-      }
-      
-      .navbar-dark {
-        background-color: rgba(0, 0, 0, 0.9) !important;
-        color: #ffffff !important;
-      }
-
-    #navbarCollapse {
-        background-color: #337277;
-        border-radius: 5px;
-        padding: 7px;
-        box-shadow: 5px 5px 5px #00000099;
-    }
-}
-
-@media (max-width: 900px) {
-    #navbarCollapse {
-        font-size: 0.9rem;
-    }
-    
-    #piano-logo {
-        width: 26px;
-        height: 26px;
-        margin-right: 7px;
-    }
-
-    #logo {
-        font-size: 0.8rem;
-    }
 }
 
 
