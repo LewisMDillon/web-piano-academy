@@ -74,11 +74,6 @@
                                     <div class="row">
                                         <div class="col">
                                             <p class="mb-0 course-price">€{{ product.price }}</p>
-                                            {% if product.rating %}
-                                            <small><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                            {% else %}
-                                            <small></small>
-                                            {% endif %}
                                         </div>
                                     </div>
                                     {% if request.user.is_superuser %}
