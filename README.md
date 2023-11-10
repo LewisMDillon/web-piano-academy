@@ -82,9 +82,9 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 
 ![screenshot](documentation/features/sitepages/contact-details.png)
 
-- **Contact Details Page - Delete - Admin Only**
+- **Contact Delete Page - Delete - Admin Only**
 
-    - Contact Mesage Delete Page. An admin sees this page after clicking the delete message button on the Contact Details Page. This page double checks that deletion of the contact message is the intended course of action and allows an admin to either confirm the action or return to the contact message's detail page.
+    - Contact Message Delete Page. An admin sees this page after clicking the delete message button on the Contact Details Page. This page double checks that deletion of the contact message is the intended course of action and allows an admin to either confirm the action or return to the contact message's detail page.
 
 ![screenshot](documentation/features/sitepages/contact-delete.png)
 
@@ -116,13 +116,15 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 
     - Shopping Basket page. Displays all items currently in the user's shopping basket. Users get a message if their basket is empty, otherwise they will see a list of courses that they have selected with a button to navigate to the courses page, and another to navigate to the checkout page.
 
-![screenshot](documentation/features/sitepages/shopping-basket.png)
+![screenshot](documentation/features/sitepages/basket.png)
 
 - **Checkout Page**
 
     - Checkout page. Displays an order summary of the items that are being prepared for purchase with accompanying item details. Displays a total cost of the order to the user. The user also sees a form to fill in their personal details. For logged in users, these details will be pre-filled if the user has provided that information in the past. A tooltip explains to users why their address details might be nedd despite ordring a digital product. A checkbox allows users to save entered information to their profile. A payment input form exists at the bottom of the page for a user to enter their payment card information. A message below this warns the user that advancing will complete the purchase and incur a charge to their card.
 
-![screenshot](documentation/features/sitepages/checkout.png)
+![screenshot](documentation/features/sitepages/checkout1.png)
+![screenshot](documentation/features/sitepages/checkout2.png)
+![screenshot](documentation/features/sitepages/checkout3.png)
 
 - **Checkout Success Page**
 
@@ -134,11 +136,13 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 
     - Add Product Page. Admins can use this form to add new products to the site. User-friendly form inputs allow product objects to be created simply and quickly.
 
+![screenshot](documentation/features/sitepages/add-product.png)
+
 - **Edit Product Page - Admin Only**
 
     - Edit Product Page. Admins can use this form to add edit products to the site. User-friendly form inputs allow product objects to be edited simply and quickly. A message at the top of the page informs the admin which product they are editing.
 
-![screenshot](documentation/features/sitepages/checkout-success.png)
+![screenshot](documentation/features/sitepages/edit-product.png)
 
 - **Custom Error Pages**
 
@@ -148,8 +152,6 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 ![screenshot](documentation/features/sitepages/403.png)
 ![screenshot](documentation/features/sitepages/404.png)
 ![screenshot](documentation/features/sitepages/500.png)
-
-### User Features
 
 ### User Features
 
@@ -187,16 +189,17 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 
 - **Basket Updates**
 
-    - Via Toasts, users can see a summary of their basket whenever an item is added, allowing the user to quickly see the new state of their basket, without having to navigate away from the page they are currently on.
+    - Via toasts, users can see a summary of their basket whenever an item is added, allowing the user to quickly see the new state of their basket, without having to navigate away from the page they are currently on.
 
-![screenshot](documentation/features/user/baske-update.png)
+![screenshot](documentation/features/user/basket-update.png)
 
 
 - **Login Dependant Navbar Links**
 
     - Users who are logged in see new links in the navbar. 'Register' and 'Login' links are replaced with 'My Account' links. This provides the user with visual feedback upon logging in, as well as removing links that they will not need.
 
-![screenshot](documentation/features/user/login-navbar-links.png)
+![screenshot](documentation/features/user/login-navbar-links1.png)
+![screenshot](documentation/features/user/login-navbar-links2.png)
 
 - **Login Redirect**
 
@@ -241,6 +244,21 @@ All user stories can be found in a linked GitHub project [here](https://github.c
     - Users can use a front-end dropdown to enter search criteria for the purposes of searching for courses to purchase. This allows users to instantly find courses related to their search keywords, allowing them to navigate straight to the relevant products.
 
 ![screenshot](documentation/features/user/course-search.png)
+
+- **Newsletter Subscribe**
+
+    - Users can use a button in the footer of all site pages to subscribe to the site newsletter. If the user is logged in, the email input field will pre-fill with the user's email. Users see a confirmation screen after subscribing, and receive a confirmation email to the address they provided.
+
+![screenshot](documentation/features/user/newsletter1.png)
+![screenshot](documentation/features/user/newsletter2.png)
+
+- **Newsletter Unsubscribe**
+
+    - Users can click the link in their newsletter email to unsubscribe from the site newsletter. Once the user is logged in, the email input field will pre-fill with the user's email. Users see a confirmation screen after unsubscribing.
+
+![screenshot](documentation/features/user/newsletter-unsubscribe1.png)
+![screenshot](documentation/features/user/newsletter-unsubscribe2.png)
+![screenshot](documentation/features/user/newsletter-unsubscribe3.png)
 
 ### Admin/Staff Features
 
