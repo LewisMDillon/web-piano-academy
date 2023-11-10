@@ -215,21 +215,21 @@ class CheckoutViewTestCase(TestCase):
         self.assertEqual(session['basket'], {'1': 1})
 
         # Attempt to checkout
-        # response = self.client.post((f'/checkout/'), {
-        #     'stripe_public_key': os.getenv("STRIPE_PUBLIC_KEY"),
-        #     'stripe_secret_key': os.getenv("STRIPE_SECRET_KEY"),
-        #     'full_name': 'test_full_name',
-        #     'email': 'test@testemail.com',
-        #     'phone_number': '0000000000',
-        #     'country': 'US',
-        #     'postcode': '42424',
-        #     'town_or_city': 'test_town',
-        #     'street_address1': 'test_street_1',
-        #     'street_address2': 'test_street_2',
-        #     'county': 'test_county',
-        #     'stripe_pid': 'test_stripe_pid',
-        #     'pid': 'test_pid'
-        # }, follow=True)
-
-
-
+        # To get this to work a pid must be explicitly
+        # declared in the checkout view. This test
+        # will not override the pid variable from the view
+        response = self.client.post((f'/checkout/'), {
+            'stripe_public_key': os.getenv("STRIPE_PUBLIC_KEY"),
+            'stripe_secret_key': os.getenv("STRIPE_SECRET_KEY"),
+            'full_name': 'test_full_name',
+            'email': 'test@testemail.com',
+            'phone_number': '0000000000',
+            'country': 'US',
+            'postcode': '42424',
+            'town_or_city': 'test_town',
+            'street_address1': 'test_street_1',
+            'street_address2': 'test_street_2',
+            'county': 'test_county',
+            'pid': 'test_pid',
+            'stripe_pid': 'test_stripe_pid',
+        }, follow=True)

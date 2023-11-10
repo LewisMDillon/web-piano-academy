@@ -66,6 +66,7 @@ def checkout(request):
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
+            # pid = os.getenv('TEST_PID')  # For test purposes only
             order.stripe_pid = pid
             order.original_basket = json.dumps(basket)
             order.save()
