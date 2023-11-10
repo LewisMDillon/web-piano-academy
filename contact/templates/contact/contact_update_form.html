@@ -84,14 +84,8 @@
                         <label for="subject">Subject:</label>
                         <input type="text" id="subject" placeholder="Subject" readonly value="{{ object.subject }}">
                     </div>
-                    <textarea id="email_body" name="email_body" rows="10" cols="50">Dear {{ object.name }},
-
-...
-
-
-Web Piano Academy
-https://web-piano-academy-16cd779294ab.herokuapp.com/
-                    </textarea>
+                    <textarea id="email_body" name="email_body" rows="10" cols="50">Dear {{ object.name }},&#10;&#10;...&#10;&#10;&#10;Web Piano Academy&#10;https://web-piano-academy-16cd779294ab.herokuapp.com/</textarea>
+                    
                     <input class="btn black-button" id="responded-update-button" type="submit"
                     value="Send Email">
                 </form>
