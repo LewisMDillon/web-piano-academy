@@ -113,8 +113,9 @@
             </ul>
           </li>
           {% else %}
-          <a class="nav-item nav-link" href="{% url 'account_signup' %}">Register</a>
-          <a class="nav-item nav-link" href="{% url 'account_login' %}">Login</a>
+          <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}">Register</a></li>
+          <li><a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
+          
           {% endif %}
 
           {% if user.is_superuser %}
@@ -129,39 +130,25 @@
           </li>
           {% endif %}
 
+          <li class="list-inline-item">
+            <a class="{% if grand_total %}text-info font-weight-bolder{% else %}text-black{% endif %} nav-link"
+              href="{% url 'view_basket' %}">
+              <div class="text-center">
+                <div><i class="fa-solid fa-basket-shopping"></i></div>
+                <p class="my-0">
+                  {% if grand_total %}
+                  €{{ grand_total|floatformat:2 }}
+                  {% else %}
+                  €0.00
+                  {% endif %}
+                </p>
+              </div>
+            </a>
+          </li>
         </ul>
-        <!-- <form class="d-flex" role="search" method="GET" action="{% url 'courses' %}">
-          <div class="input-group w-100">
-            <input class="form-control me-2" type="search" name="q" placeholder="Search for courses"
-              aria-label="Search">
-            <div class="input-group-append">
-              <button class="form-control btn border border-black rounded-0" id="search-button" type="submit">
-                <span class="icon" id="search-icon">
-                  <i class="fas fa-search"></i>
-                </span>
-              </button>
-            </div>
-          </div>
-        </form> -->
-        <li class="list-inline-item">
-          <a class="{% if grand_total %}text-info font-weight-bolder{% else %}text-black{% endif %} nav-link"
-            href="{% url 'view_basket' %}">
-            <div class="text-center">
-              <div><i class="fa-solid fa-basket-shopping"></i></div>
-              <p class="my-0">
-                {% if grand_total %}
-                €{{ grand_total|floatformat:2 }}
-                {% else %}
-                €0.00
-                {% endif %}
-              </p>
-            </div>
-          </a>
-        </li>
       </div>
     </div>
   </nav>
-
 
   <main class="container">
     <div class="row" id="message-container-outer">
