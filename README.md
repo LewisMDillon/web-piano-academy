@@ -815,4 +815,36 @@ You can fork this repository by using the following steps:
 | [Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1) | entire site | Various code sections taken from the CI Boutique Ado Walkthrough Project |
 | [Rory Sheridan](https://github.com/Ri-Dearg/neverlost-thrift/blob/master/products/views.py) | Testing | My mentor's code repository - various code snippets taken from tests.py for automated python testing |
 | [Lewis Dillon (me)](https://github.com/LewisMDillon/bushy-park-tennis-club-ld) | entire site | Various code snippets taken from my previous project |
-| [alvarotrigo](https://alvarotrigo.com/blog/css-accordion/) | FAQ page | HTML & CSS for FAQ Accordion |
+| [Alvarotrigo](https://alvarotrigo.com/blog/css-accordion/) | FAQ page | HTML & CSS for FAQ Accordion |
+
+### Media
+
+| Source | Location | Type | Notes |
+| --- | --- | --- | --- |
+| [Leonardo.ai](https://app.leonardo.ai) | Landing Page | image | hero image on homepage |
+| [Pexels](https://www.pexels.com/photo/music-teacher-looking-at-a-boy-playing-piano-8520467/) | About Page | image | 'who we are' image |
+| [Gear4Music](https://www.gear4music.com/blog/piano-learning-apps/) | About Page | image | 'what we do' image |
+| [Unsplash](https://images.unsplash.com/photo-1626541650317-6ac1c2325995?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) | About Page | image | 'your journey' image |
+| [Wikipedia](https://en.wikipedia.org/wiki/Johann_Sebastian_Bach) | courses page | image | course image |
+| [Wikipedia](https://en.wikipedia.org/wiki/Ludwig_van_Beethoven) | courses page | image | course image |
+| [Wikipedia](https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin) | courses page | image | course image |
+| [Wikipedia](https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart) | courses page | image | course image |
+| [Dreamstime](https://www.dreamstime.com/stock-image-hand-pen-music-sheet-pointing-to-book-handwritten-notes-image38899901) | courses page | image | course image |
+| [Getty Images](https://www.gettyimages.ie/photos/composer) | courses page | image | course image |
+| [Unsplash](https://unsplash.com/s/photos/music-writing) | courses page | image | course image |
+| [Freepik](https://www.freepik.com/premium-photo/close-up-young-beautiful-redhead-caucasian-girl-playing-piano_2017729.htm) | courses page | image | course image |
+| [Facebook](https://m.facebook.com/AlexaPianoSinger/) | courses page | image | course image |
+| [Istockphoto](https://www.istockphoto.com/photo/african-male-playing-beautiful-song-on-piano-gm1255997445-367613276) | courses page | image | course image |
+| [Unsplash](https://unsplash.com/s/photos/guitar-singer-composer) | courses page | image | course image |
+| [Unsplash](https://unsplash.com/s/photos/piano-hands) | courses page | image | course image |
+| [Last Minute Musicians](https://www.lastminutemusicians.com/blog/how-to-maximize-efficiency-in-your-piano-practice/) | courses page | image | course image |
+| [Getty Images](https://www.gettyimages.ie/photos/composer) | courses page | image | course image |
+| [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
+
+### Acknowledgements
+
+
+- I would like to thank my partner Rachel, for believing in me, and helping me to make this transition into software development.
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
+- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
