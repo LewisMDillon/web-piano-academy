@@ -357,3 +357,48 @@ While planning this project, I drew up an Entity Relationship Diagram to help me
 
 ![screenshot](documentation/erd.png)
 
+
+## Agile Development Process
+
+### GitHub Projects
+
+[GitHub Projects](https://github.com/LewisMDillon/web-piano-academy/projects) served as an Agile tool for this project.
+It isn't a specialized tool, but with the right tags and project creation/issue assignments, it can be made to work.
+
+Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
+
+The MoSCoW method was used with accompanying custom Github project labels to help me to prioritise the important tasks in the time I had available.
+
+Epics were decomposed into smaller User Stories, which were themselves further broken down into Tasks. The Github issue linking system was utilised to ensure that user stories which were children of an epic were kept organised and easily accessible through these links
+
+
+![screenshot](documentation/github/project.png)
+![screenshot](documentation/github/milestones.png)
+![screenshot](documentation/github/epic.png)
+![screenshot](documentation/github/user-story.png)
+
+### GitHub Issues
+
+[GitHub Issues](https://github.com/LewisMDillon/web-piano-academy/issues) served as an another Agile tool.
+There, I used my own **User Story Template** and **Epic Template** to manage user stories.
+
+It also helped with milestone iterations on a weekly basis.
+
+- [Open Issues](https://github.com/LewisMDillon/web-piano-academy/issues)
+
+    ![screenshot](documentation/github/issues-open.png)
+
+- [Closed Issues](https://github.com/LewisMDillon/web-piano-academy/issues?q=is%3Aissue+is%3Aclosed)
+
+    ![screenshot](documentation/github/issues-closed.png)
+
+### MoSCoW Prioritization
+
+I've decomposed my Epics into stories prior to prioritizing and implementing them.
+Using this approach, I was able to apply the MoSCow prioritization and labels to my user stories within the Issues tab.
+
+- ![screenshot](documentation/github/must-have.png)  : guaranteed to be delivered (*max 60% of stories*) 
+- ![screenshot](documentation/github/should-have.png)  : adds significant value, but not vital (*the rest ~20% of stories*) 
+- ![screenshot](documentation/github/could-have.png)  : has small impact if left out (*20% of stories*) 
+- ![screenshot](documentation/github/wont-have.png)  : not a priority for this iteration 
+
