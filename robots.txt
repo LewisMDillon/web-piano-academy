@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://web-piano-academy-16cd779294ab.herokuapp.com/sitemap.xml
