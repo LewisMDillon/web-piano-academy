@@ -351,3 +351,9 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) used for auto-formatting of front-end forms
 
 
+## Database Design
+
+While planning this project, I drew up an Entity Relationship Diagram to help me to visualise the database models and their relationships.
+
+![screenshot](documentation/erd.png)
+
