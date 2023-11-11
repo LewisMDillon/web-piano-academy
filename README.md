@@ -260,7 +260,7 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 ![screenshot](documentation/features/user/newsletter-unsubscribe2.png)
 ![screenshot](documentation/features/user/newsletter-unsubscribe3.png)
 
-### Admin/Staff Features
+### Admin Features
 
 - **Create Products**
 
@@ -305,5 +305,14 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 
     The contact message is then automatically marked as 'Responded' and the 'respond to message' button no longer appears on that message's details page.
 
-![screenshot](documentation/features/admin/contact-respond.png)
+![screenshot](documentation/features/admin/contact-respond1.png)
+![screenshot](documentation/features/admin/contact-respond2.png)
+![screenshot](documentation/features/admin/contact-respond3.png)
+
+- **Newsletter Confirmation Emails**
+
+    - Emails are automatically sent out to all new subscribers of the site newsletter. The email contains a 'thank you' message, as well as a link to allow users to unsubscribe from the mailing list.
+
+![screenshot](documentation/features/admin/newsletter-confirmation-email.png)
+
 
