@@ -798,3 +798,21 @@ You can fork this repository by using the following steps:
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
 
+## Credits
+
+### Content
+
+
+| Source | Location | Notes |
+| --- | --- | --- |
+| [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
+| [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
+| [StackOverflow](https://stackoverflow.com/questions/3578882) | Django Authentication | How to specify the login_required redirect url in django |
+| [StackOverflow](https://stackoverflow.com/questions/47089450) | automated testing | How to test content of a Django email |
+| [Cornell Music Academy](https://cornellmusicacademy.com/) | entire site | Used as a basis for text on various site pages |
+| [Bootstrap Components](https://getbootstrap.com/docs/5.3/examples/) | entire site | Bootstrap stock components used as a base for various site features such as navbar & footer |
+| [Codepen](https://codepen.io/AramayisO/pen/xzoYeM) | Navbar | Scrolling transition navbar |
+| [Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1) | entire site | Various code sections taken from the CI Boutique Ado Walkthrough Project |
+| [Rory Sheridan](https://github.com/Ri-Dearg/neverlost-thrift/blob/master/products/views.py) | Testing | My mentor's code repository - various code snippets taken from tests.py for automated python testing |
+| [Lewis Dillon (me)](https://github.com/LewisMDillon/bushy-park-tennis-club-ld) | entire site | Various code snippets taken from my previous project |
+| [alvarotrigo](https://alvarotrigo.com/blog/css-accordion/) | FAQ page | HTML & CSS for FAQ Accordion |
