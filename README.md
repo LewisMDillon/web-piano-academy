@@ -325,3 +325,29 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 - Digital Music Sheet Sales
     - Sale of digital music sheets to accompany the course material. Could sell the music sheets in PDF format or as interactive sheets as part of another interactive music learning app. This would not be difficult to implement, but would need some revision of the user shopping experience as shopping for courses and for digital sheets is quite different. Things like item quantity would need to be revised.
 
+## Tools & Technologies Used
+
+- [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
+- [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
+- [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) used for an enhanced responsive layout.
+- [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
+- [JavaScript](https://www.javascript.com) used for user interaction on the site.
+- [Python](https://www.python.org) used as the back-end programming language.
+- [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
+- [GitHub](https://github.com) used for secure online code storage.
+- [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
+- [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
+- [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
+- [Django](https://www.djangoproject.com) used as the Python framework for the site.
+- [PostgreSQL](https://www.postgresql.org) used as the relational database management.
+- [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
+- [Psycopg2](https://pypi.org/project/psycopg2/) used as a PostgreSQL database adapter
+- [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
+- [Stripe](https://stripe.com) used for online secure payments of ecommerce products/services.
+- [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
+- [Allauth](https://docs.allauth.org/en/latest/) used as the user authentication system
+- [Pillow](https://pypi.org/project/Pillow/) used as the Python framework for the site.
+- [Gunicorn](https://docs.gunicorn.org/en/stable/index.html) used for WSGI server
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) used for auto-formatting of front-end forms
+
+
