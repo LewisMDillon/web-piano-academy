@@ -14,7 +14,7 @@
                                 beginner, intermediate, advanced, classical, jazz, pop, pianist, musician, education, 
                                 learning, school, kids, online piano lessons for kids, 
                                 online piano lessons advanced, best online piano lessons,">
-  <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
+  <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}">
   {% endblock %}
 
   {% block extra_meta %}
@@ -135,7 +135,7 @@
           </li>
           {% endif %}
         </ul>
-          <li class="list-inline-item">
+          <div class="list-inline-item">
             <a class="{% if grand_total %}text-info font-weight-bolder{% else %}text-black{% endif %} nav-link"
               href="{% url 'view_basket' %}" id="navbar-basket-link">
               <div class="text-center">
@@ -149,7 +149,7 @@
                 </p>
               </div>
             </a>
-          </li>
+          </div>
       </div>
     </div>
   </nav>
