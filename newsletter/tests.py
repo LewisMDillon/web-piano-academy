@@ -128,7 +128,7 @@ class NewslettterViewTestCase(TestCase):
         # Check if the confirmation email is sent
         self.assertEqual(len(mail.outbox), 1)
 
-         # Check if the confirmation email is sent to the correct address
+        # Check if the confirmation email is sent to the correct address
         self.assertIn(escape('testuser@test.com'), mail.outbox[0].to)
 
         # Get the most recent email
@@ -144,11 +144,11 @@ class NewslettterViewTestCase(TestCase):
     def test_email_delete_render_form(self):
         """
         First, logs in as user who is not the owner
-        of the subscribed email address & tries to 
-        delete the email. Next, checks that the email 
-        was not deleted. Next, logs in as the email's 
-        owner and deletes the most recent email using 
-        the delete view. Lastly, checks that the email 
+        of the subscribed email address & tries to
+        delete the email. Next, checks that the email
+        was not deleted. Next, logs in as the email's
+        owner and deletes the most recent email using
+        the delete view. Lastly, checks that the email
         was deleted successfully.
         """
 
