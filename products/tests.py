@@ -124,7 +124,7 @@ class ProductViewTestCase(TestCase):
             )
 
         product1.save()
-  
+
     def test_courses_render_context(self):
         """
         Tests that the courses page is rendered properly
@@ -138,7 +138,7 @@ class ProductViewTestCase(TestCase):
 
         # Checks whether the context item is passed in
         self.assertTrue(response.context['products'])
- 
+
     def test_edit_product_render_form(self):
         """
         Checks that the edit product page cannot be accessed by non-superusers.
@@ -193,7 +193,7 @@ class ProductViewTestCase(TestCase):
         # Get the most recent product
         # (should be test_product that was just created)
         productToUpdate = Product.objects.latest('date_created')
-       
+
         # update the product
         response = self.client.post((
             f'/products/courses/edit/{productToUpdate.pk}/'
@@ -228,7 +228,7 @@ class ProductViewTestCase(TestCase):
         Checks that the add product page cannot be accessed by non-superusers.
         Checks that the page is rendered properly.
         Creates a new test product using the page form.
-        Tests that the product was created successfully.      
+        Tests that the product was created successfully.
         """
 
         # Get the most recently created user (testUserStaff)
@@ -289,13 +289,13 @@ class ProductViewTestCase(TestCase):
         # (should be test_product_created that was just created)
         newTestProduct = Product.objects.latest('pk')
         newTestProductId = newTestProduct.pk
-        
+
         # Check that the most recent product created is
         # not the original product, meaning a new one
         # was successfully created
         self.assertNotEqual((originalProductId), (newTestProductId))
 
-        # Check that the most recently created object 
+        # Check that the most recently created object
         # is our test product object
         self.assertEqual(
             'test_product_created', Product.objects.latest('pk').name

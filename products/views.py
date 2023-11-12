@@ -113,7 +113,7 @@ def edit_product(request, product_id):
             request, 'Sorry, you do not have permission to accesss that page.'
             )
         return redirect(reverse('home'))
-        
+
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -145,7 +145,7 @@ def delete_product(request, product_id):
             request, 'Sorry, you do not have permission to accesss that page.'
             )
         return redirect(reverse('home'))
-    
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.info(request, 'Product deleted!')
