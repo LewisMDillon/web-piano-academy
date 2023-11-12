@@ -113,7 +113,7 @@ class BasketViewTestCase(TestCase):
 
         # Check that we are redirected
         self.assertEqual(response.status_code, 302)
-        
+
         # Check that the exception is raised
         self.assertRaises(
             Exception, msg=f'{product1.name} is already in your basket!'
