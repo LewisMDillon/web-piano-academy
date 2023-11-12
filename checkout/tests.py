@@ -16,7 +16,7 @@ if os.path.exists(".env"):
 
 class TestOrder(TestCase):
     """Tests the Order model in the checkout app."""
-    
+
     def setUp(self):
         """
         Makes a sample user with a linked UserProfile.
@@ -189,7 +189,7 @@ class CheckoutViewTestCase(TestCase):
         session = self.client.session
         self.assertEqual(session['basket'], {})
 
-        # Check that we are redirected when attempting to 
+        # Check that we are redirected when attempting to
         # access checkout with an empty basket
         response = self.client.get('/checkout/')
         self.assertEqual(response.status_code, 302)
