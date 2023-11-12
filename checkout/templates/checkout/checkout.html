@@ -39,7 +39,7 @@
                     <div class="col-2 mb-1">
                         <a href="{% url 'product_detail' item.product.id %}">
                             {% if item.product.image_url %}
-                            <img class="w-100" src="{{ item.product.image_url }}" alt="{{ product.name }}">
+                            <img class="w-100" aria-label="See this product's details" src="{{ item.product.image_url }}" alt="{{ product.name }}">
                             {% else %}
                             <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                             {% endif %}
@@ -75,7 +75,7 @@
                     </fieldset>
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Address Details
-                            <button class="tooltip-button" type="button" data-toggle="tooltip" data-placement="right"
+                            <button class="tooltip-button" aria-label="tooltip button" type="button" data-toggle="tooltip" data-placement="right"
                                 title="Address details are required for tax reasons and for our records.
                                 We may also use this to send any physical materials related to your course.">
                                 <i class="fa-solid fa-circle-question"></i>
@@ -104,7 +104,6 @@
                     </fieldset>
                     <fieldset class="px-3">
                         <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
-                        <!-- A Stripe card element will go here -->
                         <div class="mb-3" id="card-element"></div>
 
                         <!-- Used to display form errors -->
