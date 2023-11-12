@@ -451,3 +451,55 @@ While testing the checkout process of the checkout app, I could not seem to rede
 ![screenshot](documentation/unittest-code-line.png)
 
 
+## Bugs
+
+
+- Nav Hamburger Menu Does Not Open When Clicked
+
+    ![screenshot](https://user-images.githubusercontent.com/122794277/273968525-4b07fc54-aec3-41c7-b157-47a5fde0142f.png)
+
+    - The issue was that the incorrect script was being imported in the base.html file. Popper (which Bootstrap relies on for things like the hamburger menu functionality) was not being imported. Fixed by swapping the bootstrap import script for the script which includes Popper
+
+- Category filter in Navbar not filtering products
+
+    ![screenshot](https://user-images.githubusercontent.com/122794277/275524067-ce16c9e9-27de-470b-b4ca-f43e41913a3e.png)
+
+    - To fix this, I corrected a syntax error in the product view, which was invalidating the category filter.
+
+- Webhook process not functioning correctly
+
+    ![screenshot](https://user-images.githubusercontent.com/122794277/276716621-37bac7ad-5ab1-4c86-8568-8fd1f47bdfca.png)
+
+    - Fixed - Stripe was not getting it's necessary keys from the environment variables as I had thought. dotenv was incorrectly implemented in checkout > views.py
+
+There was also a missing path in checkout > urls.py (cache_checkout_data)
+
+- Automate Test For Checkout Process Taking Variable From View
+
+    ![screenshot](https://user-images.githubusercontent.com/122794277/282067953-253c594d-a4ca-49c0-ae2f-e14a9adf1d9d.png)
+    ![screenshot](https://user-images.githubusercontent.com/122794277/282067976-25ca2683-25fb-4c24-9a4f-a56924c41014.png)
+
+    - Got around this issue by redeclaring the pid variable in the view itself. Use of environment variables means that the pid variable is never published
+
+- Text Area In Contact Response Form Indentation
+
+    ![screenshot](https://user-images.githubusercontent.com/122794277/282066638-058da0e1-3510-43aa-8efb-92051d7ecc17.png)
+
+    - Fixed this issue by using unicode in the HTML file for line breaks
+
+
+### GitHub **Issues**
+
+**Fixed Bugs**
+
+All previously closed/fixed bugs can be tracked [here](https://github.com/LewisMDillon/web-piano-academy/issues?q=is%3Aissue+is%3Aclosed+label%3Abug).
+
+
+**Open Issues**
+
+Any remaining open issues can be tracked [here](https://github.com/LewisMDillon/web-piano-academy/issues?q=is%3Aissue+label%3Abug+is%3Aopen).
+
+
+## Unfixed Bugs
+
+There are no remaining bugs that I am aware of.
