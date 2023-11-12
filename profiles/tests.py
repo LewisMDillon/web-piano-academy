@@ -123,7 +123,7 @@ class ProfilesViewTestCase(TestCase):
             )
 
         order1.save()
-  
+
     def test_profile_render_context(self):
         """
         Tests that the profile page is rendered properly
@@ -160,7 +160,7 @@ class ProfilesViewTestCase(TestCase):
 
         # Check whether the orders context item is passed in
         self.assertTrue(response.context['orders'])
- 
+
     def test_edit_profile_render_form(self):
         """
         Updates the test user's profile information.
@@ -177,10 +177,10 @@ class ProfilesViewTestCase(TestCase):
         # Check that the two users are correctly retrieved
         self.assertEqual(test_user_staff.username, 'testUserStaff')
         self.assertEqual(test_user.username, 'testUser')
-     
+
         # Log in as testUserStaff
         self.client.force_login(test_user_staff)
-       
+
         # update the profile information
         response = self.client.post(('/profile/'), {
             'default_street_address1': "test_street_updated",
