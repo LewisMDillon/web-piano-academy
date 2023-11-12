@@ -10,7 +10,7 @@ from django.utils import timezone
 
 class TestContact(TestCase):
     """Tests the Contact model in the contact app."""
-    
+
     def setUp(self):
         """
         Makes a sample Contact object
@@ -35,7 +35,8 @@ class TestContact(TestCase):
 
     def test_str(self):
         """Tests the string method on the contact object."""
-        # Retrieves the most recently created contact object and gets its string
+        # Retrieves the most recently created
+        # contact object and gets its string
         contact1 = Contact.objects.latest('pk')
         contact_string_name = str(contact1.name)
 
@@ -142,7 +143,7 @@ class ContactViewTestCase(TestCase):
         # (should be CreateContactTest that we just created)
         newTestContact = Contact.objects.latest('pk')
         newTestContactId = newTestContact.pk
-        
+
         # Check that the most recent contact object created is
         # not the original contact object, meaning a new one
         # was successfully created
@@ -210,7 +211,7 @@ class ContactViewTestCase(TestCase):
         self.assertTemplateUsed(
             response, 'contact/contact_success.html', 'base.html'
             )
-  
+
     def test_contact_detail_render_respond_delete(self):
         """
         Tests the url path by passing in the primary key of new test

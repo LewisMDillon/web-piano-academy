@@ -85,7 +85,6 @@ class ContactUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
             [email]
         )
 
-
     def form_valid(self, form):
         form.instance.author = self.request.user
         messages.info(
@@ -127,4 +126,3 @@ class ContactDeleteView(
         return super(
             ContactDeleteView, self
             ).delete(request, *args, **kwargs)
-
