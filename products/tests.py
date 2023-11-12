@@ -4,8 +4,6 @@ from .models import Category, Product
 from django.utils import timezone
 
 
-# Create your tests here.
-
 # ------------ MODEL TESTING ------------
 
 class TestCategory(TestCase):
@@ -64,7 +62,6 @@ class TestProduct(TestCase):
 
         # Cofirms the product string is correct.
         self.assertEqual((product_string), (product1.name))
-
 
 
 # ------------ VIEWS TESTING ------------
@@ -127,8 +124,7 @@ class ProductViewTestCase(TestCase):
             )
 
         product1.save()
-
-    
+  
     def test_courses_render_context(self):
         """
         Tests that the courses page is rendered properly
@@ -142,8 +138,7 @@ class ProductViewTestCase(TestCase):
 
         # Checks whether the context item is passed in
         self.assertTrue(response.context['products'])
-
-    
+ 
     def test_edit_product_render_form(self):
         """
         Checks that the edit product page cannot be accessed by non-superusers.
@@ -195,13 +190,14 @@ class ProductViewTestCase(TestCase):
             'base.html'
             )
 
-
         # Get the most recent product
         # (should be test_product that was just created)
         productToUpdate = Product.objects.latest('date_created')
        
         # update the product
-        response = self.client.post((f'/products/courses/edit/{productToUpdate.pk}/'), {
+        response = self.client.post((
+            f'/products/courses/edit/{productToUpdate.pk}/'
+            ), {
             'name': "test_product_updated",
             'description': "test_product_description_updated",
             'price': '9.99',
@@ -217,18 +213,22 @@ class ProductViewTestCase(TestCase):
         product_string_price = str(newTestProduct.price)
 
         # Check that the post has been successfuly updated
-        self.assertEqual((product_string_name), ("test_product_updated"))
-        self.assertEqual((product_string_description), ("test_product_description_updated"))
-        self.assertEqual((product_string_price), ("9.99"))
-
+        self.assertEqual(
+            (product_string_name), ("test_product_updated")
+            )
+        self.assertEqual(
+            (product_string_description), ("test_product_description_updated")
+            )
+        self.assertEqual(
+            (product_string_price), ("9.99")
+            )
 
     def test_add_product_render_form(self):
         """
         Checks that the add product page cannot be accessed by non-superusers.
         Checks that the page is rendered properly.
         Creates a new test product using the page form.
-        Tests that the product was created successfully
-        
+        Tests that the product was created successfully.      
         """
 
         # Get the most recently created user (testUserStaff)
@@ -295,10 +295,11 @@ class ProductViewTestCase(TestCase):
         # was successfully created
         self.assertNotEqual((originalProductId), (newTestProductId))
 
-        # Check that the most recently created object is our test product object
-        self.assertEqual('test_product_created', Product.objects.latest('pk').name)
-
-
+        # Check that the most recently created object 
+        # is our test product object
+        self.assertEqual(
+            'test_product_created', Product.objects.latest('pk').name
+            )
 
     def test_delete_product_render_form(self):
         """
@@ -356,4 +357,3 @@ class ProductViewTestCase(TestCase):
             # same one that we tried to delete, if not, that
             # means the deletion was successful
             self.assertNotEqual(deletedProductId, newLastProductId)
-        

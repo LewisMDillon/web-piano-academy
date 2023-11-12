@@ -1,15 +1,11 @@
-import datetime
-
 from django.test import TestCase
-from django.core import mail
 from django.contrib.auth.models import User
-from products.models import Product
-from django.utils.html import escape
 from django.utils import timezone
-
+from products.models import Product
 
 
 # ------------ VIEWS TESTING ------------
+
 
 class BasketViewTestCase(TestCase):
     """
@@ -56,7 +52,6 @@ class BasketViewTestCase(TestCase):
         user1.save()
         user2.save()
 
-
         name = "test_product"
         description = "test_product_description"
         price = '999.99'
@@ -69,8 +64,6 @@ class BasketViewTestCase(TestCase):
             )
 
         product1.save()
-
-
 
     def test_basket_render_context(self):
         """
@@ -98,7 +91,7 @@ class BasketViewTestCase(TestCase):
         product1 = Product.objects.latest('pk')
 
         # Try to add the test product to the basket
-        response = self.client.post((f'/basket/add/1/'), {
+        response = self.client.post(('/basket/add/1/'), {
             'product_id': 1,
             'quantity': 1,
             'redirect_url': '/',
@@ -107,13 +100,12 @@ class BasketViewTestCase(TestCase):
         # Check that the basket action executes successfully
         self.assertEqual(response.status_code, 200)
 
-
         # Check that the test item (id = 1) was added to the basket
         session = self.client.session
         self.assertEqual(session['basket'], {'1': 1})
 
         # Try to add the test product to the basket again
-        response = self.client.post((f'/basket/add/1/'), {
+        response = self.client.post(('/basket/add/1/'), {
             'product_id': 1,
             'quantity': 1,
             'redirect_url': '/',
@@ -123,12 +115,12 @@ class BasketViewTestCase(TestCase):
         self.assertEqual(response.status_code, 302)
         
         # Check that the exception is raised
-        self.assertRaises(Exception, msg=f'{product1.name} is already in your basket!')
+        self.assertRaises(
+            Exception, msg=f'{product1.name} is already in your basket!'
+            )
 
         # Check that a duplicate item was not added to the basket
         self.assertEqual(session['basket'], {'1': 1})
-
-
 
     def test_basket_remove(self):
         """
@@ -138,11 +130,8 @@ class BasketViewTestCase(TestCase):
         from the basket, checks that it is unsuccessful.
         """
 
-        # Get the most recently created product (test product)
-        product1 = Product.objects.latest('pk')
-
         # Try to add the test product to the basket
-        response = self.client.post((f'/basket/add/1/'), {
+        response = self.client.post(('/basket/add/1/'), {
             'product_id': 1,
             'quantity': 1,
             'redirect_url': '/',
@@ -173,4 +162,6 @@ class BasketViewTestCase(TestCase):
         self.assertEqual(response.status_code, 302)
 
         # Check that the error message is raised
-        self.assertRaises(Exception, msg="Oops, that didn't work, please try again.")
+        self.assertRaises(
+            Exception, msg="Oops, that didn't work, please try again."
+            )

@@ -5,13 +5,10 @@ from checkout.models import Order
 from django.utils import timezone
 
 
-# Create your tests here.
-
 # ------------ MODEL TESTING ------------
 
 class TestUserProfile(TestCase):
     """Tests the UserProfile model in the profiles app."""
-
 
     def setUp(self):
         """
@@ -35,7 +32,6 @@ class TestUserProfile(TestCase):
 
         user1.save()
 
-
     def test_str(self):
         """Tests the string method on the userprofile."""
         # Retrieves the most recently created profile and gets its string
@@ -44,7 +40,6 @@ class TestUserProfile(TestCase):
 
         # Cofirms the profile string is correct.
         self.assertEqual((profile_string), (profile1.user.username))
-
 
 
 # ------------ VIEWS TESTING ------------
@@ -95,7 +90,6 @@ class ProfilesViewTestCase(TestCase):
         user1.save()
         user2.save()
 
-
         order_number = 000000000000
         user_profile = UserProfile.objects.latest('pk')
         full_name = 'test_name'
@@ -112,32 +106,31 @@ class ProfilesViewTestCase(TestCase):
         stripe_pid = 'test_stripe_pid'
 
         order1 = Order.objects.create(
-            order_number = order_number,
-            user_profile = user_profile,
-            full_name = full_name,
-            email = email,
-            phone_number = phone_number,
-            country = country,
-            postcode = postcode,
-            town_or_city = town_or_city,
-            street_address1 = street_address1,
-            date = date,
-            order_total = order_total,
-            grand_total = grand_total,
-            original_basket = original_basket,
-            stripe_pid = stripe_pid
+            order_number=order_number,
+            user_profile=user_profile,
+            full_name=full_name,
+            email=email,
+            phone_number=phone_number,
+            country=country,
+            postcode=postcode,
+            town_or_city=town_or_city,
+            street_address1=street_address1,
+            date=date,
+            order_total=order_total,
+            grand_total=grand_total,
+            original_basket=original_basket,
+            stripe_pid=stripe_pid
             )
 
         order1.save()
-
-    
+  
     def test_profile_render_context(self):
         """
         Tests that the profile page is rendered properly
         with the correct context passed in.
         """
 
-         # Get the most recently created user (testUserStaff)
+        # Get the most recently created user (testUserStaff)
         test_user_staff = User.objects.latest('date_joined')
 
         # Get the second most recently created user (testUser)
@@ -167,8 +160,7 @@ class ProfilesViewTestCase(TestCase):
 
         # Check whether the orders context item is passed in
         self.assertTrue(response.context['orders'])
-
-    
+ 
     def test_edit_profile_render_form(self):
         """
         Updates the test user's profile information.
@@ -190,7 +182,7 @@ class ProfilesViewTestCase(TestCase):
         self.client.force_login(test_user_staff)
        
         # update the profile information
-        response = self.client.post((f'/profile/'), {
+        response = self.client.post(('/profile/'), {
             'default_street_address1': "test_street_updated",
             })
 

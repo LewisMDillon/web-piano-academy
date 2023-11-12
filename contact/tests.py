@@ -1,12 +1,9 @@
-import datetime
-
 from django.test import TestCase
 from django.core import mail
 from .models import Contact
 from django.contrib.auth.models import User
 from django.utils.html import escape
 from django.utils import timezone
-
 
 
 # ------------ MODEL TESTING ------------
@@ -93,7 +90,6 @@ class ContactViewTestCase(TestCase):
         user1.save()
         user2.save()
 
-
         name = "Test Test"
         email = "test@test.com"
         subject = 'Other'
@@ -111,7 +107,6 @@ class ContactViewTestCase(TestCase):
 
         contact1.save()
 
-
     def test_contact_render_context(self):
         """
         Tests that the contact page is rendered properly
@@ -122,7 +117,6 @@ class ContactViewTestCase(TestCase):
         self.assertTemplateUsed(
             response, 'contact/contact_form.html', 'base.html'
             )
-    
 
     def test_contact_create_render_form(self):
         """
@@ -154,13 +148,17 @@ class ContactViewTestCase(TestCase):
         # was successfully created
         self.assertNotEqual((originalContactId), (newTestContactId))
 
-        # Check that the most recently created object is our test contact object
-        self.assertEqual('CreateContactTest', Contact.objects.latest('pk').name)
+        # Check that the most recently created object is
+        # our test contact object
+        self.assertEqual(
+            'CreateContactTest', Contact.objects.latest('pk').name
+            )
 
     def test_contact_list_render_context(self):
         """
-        First, tests that the contact list page can only be accessed by superusers.
-        Then, tests that the page is rendered properly and the correct context is passed in
+        First, tests that the contact list page can only be
+        accessed by superusers. Then, tests that the page is
+        rendered properly and the correct context is passed in
         """
 
         # Get the most recently created user (testUserStaff)
@@ -202,7 +200,6 @@ class ContactViewTestCase(TestCase):
         # Check that the context item is passed in
         self.assertTrue(response.context['contacts'])
 
-    
     def test_contact_success_render(self):
         """
         Tests that the contact_success page is rendered properly
@@ -213,8 +210,7 @@ class ContactViewTestCase(TestCase):
         self.assertTemplateUsed(
             response, 'contact/contact_success.html', 'base.html'
             )
-
-    
+  
     def test_contact_detail_render_respond_delete(self):
         """
         Tests the url path by passing in the primary key of new test
@@ -287,8 +283,6 @@ class ContactViewTestCase(TestCase):
         # Check if the response email contains the correct subject & body text
         self.assertIn(escape('Other'), mail.outbox[0].subject)
         self.assertIn(escape('test-email-body-content'), mail.outbox[0].body)
-
-
 
         # ------------ Deleting an object ------------
 

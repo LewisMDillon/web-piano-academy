@@ -1,5 +1,8 @@
 from django.test import TestCase
 
+
+# ------------ VIEWS TESTING ------------
+
 class HomeViewTestCase(TestCase):
     """
     Test case for testing home views.
@@ -16,7 +19,6 @@ class HomeViewTestCase(TestCase):
             response, 'home/index.html', 'base.html'
             )
 
-
     def test_about_render(self):
         """
         Tests that the home page is rendered properly
@@ -27,7 +29,6 @@ class HomeViewTestCase(TestCase):
         self.assertTemplateUsed(
             response, 'home/about.html', 'base.html'
             )
-
 
     def test_render_404_error(self):
         """

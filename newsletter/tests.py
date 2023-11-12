@@ -1,12 +1,9 @@
-import datetime
-
 from django.core import mail
 from django.test import TestCase
 from django.contrib.auth.models import User
-from profiles.models import UserProfile
 from .models import Email
 from django.utils.html import escape
-from django.utils import timezone
+
 
 # ------------ MODEL TESTING ------------
 
@@ -90,8 +87,6 @@ class NewslettterViewTestCase(TestCase):
 
         email1.save()
 
-
-
     def test_newsletter_render_context(self):
         """
         Tests that the newsletter page is rendered properly
@@ -102,8 +97,6 @@ class NewslettterViewTestCase(TestCase):
         self.assertTemplateUsed(
             response, 'newsletter/email_form.html', 'base.html'
             )
-
-
 
     def test_email_create_render_form(self):
         """
@@ -148,13 +141,15 @@ class NewslettterViewTestCase(TestCase):
         # was successfully created
         self.assertNotEqual((originalEmailId), (newTestEmailId))
 
-
     def test_email_delete_render_form(self):
         """
-        First, logs in as user who is not the owner of the subscribed email address
-        & tries to delete the email. Next, checks that the email was not deleted.
-        Next, logs in as the email's owner and deletes the most recent 
-        email using the delete view. Lastly, checks that the email was deleted successfully.
+        First, logs in as user who is not the owner
+        of the subscribed email address & tries to 
+        delete the email. Next, checks that the email 
+        was not deleted. Next, logs in as the email's 
+        owner and deletes the most recent email using 
+        the delete view. Lastly, checks that the email 
+        was deleted successfully.
         """
 
         # Get the most recently created user (testUserStaff)

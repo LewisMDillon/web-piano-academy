@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .models import Faq
 
+
 # ------------ MODEL TESTING ------------
 
 class TestFaq(TestCase):
@@ -50,7 +51,6 @@ class FaqViewTestCase(TestCase):
             )
 
         faq1.save()
-
 
     def test_faq_render_context(self):
         """

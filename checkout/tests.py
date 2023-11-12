@@ -55,20 +55,20 @@ class TestOrder(TestCase):
         stripe_pid = 'test_stripe_pid'
 
         order1 = Order.objects.create(
-            order_number = order_number,
-            user_profile = user_profile,
-            full_name = full_name,
-            email = email,
-            phone_number = phone_number,
-            country = country,
-            postcode = postcode,
-            town_or_city = town_or_city,
-            street_address1 = street_address1,
-            date = date,
-            order_total = order_total,
-            grand_total = grand_total,
-            original_basket = original_basket,
-            stripe_pid = stripe_pid
+            order_number=order_number,
+            user_profile=user_profile,
+            full_name=full_name,
+            email=email,
+            phone_number=phone_number,
+            country=country,
+            postcode=postcode,
+            town_or_city=town_or_city,
+            street_address1=street_address1,
+            date=date,
+            order_total=order_total,
+            grand_total=grand_total,
+            original_basket=original_basket,
+            stripe_pid=stripe_pid
             )
 
         order1.save()
@@ -81,7 +81,6 @@ class TestOrder(TestCase):
 
         # Cofirms the email string is correct.
         self.assertEqual((order_string), (order1.full_name))
-
 
 
 # ------------ VIEWS TESTING ------------
@@ -145,7 +144,7 @@ class CheckoutViewTestCase(TestCase):
 
         product1.save()
 
-         # Get the most recently created product (test product)
+        # Get the most recently created product (test product)
         product1 = Product.objects.latest('pk')
 
         # Try to add the test product to the basket
@@ -159,7 +158,6 @@ class CheckoutViewTestCase(TestCase):
         session = self.client.session
         self.assertEqual(session['basket'], {'1': 1})
 
-
     def test_checkout_render_context(self):
         """
         Tests that the checkout page is rendered properly
@@ -170,7 +168,6 @@ class CheckoutViewTestCase(TestCase):
         self.assertTemplateUsed(
             response, 'checkout/checkout.html', 'base.html'
             )
-
 
     def test_checkout_no_products(self):
         """
@@ -201,9 +198,9 @@ class CheckoutViewTestCase(TestCase):
         self.assertTemplateNotUsed('checkout/checkout.html')
 
         # Check that the error message is raised
-        self.assertRaises(Exception, msg="You don't have anything in your basket!")
-
-
+        self.assertRaises(
+            Exception, msg="You don't have anything in your basket!"
+            )
 
     def test_checkout_process(self):
         """
@@ -218,7 +215,7 @@ class CheckoutViewTestCase(TestCase):
         # To get this to work a pid must be explicitly
         # declared in the checkout view. This test
         # will not override the pid variable from the view
-        response = self.client.post((f'/checkout/'), {
+        response = self.client.post(('/checkout/'), {
             'stripe_public_key': os.getenv("STRIPE_PUBLIC_KEY"),
             'stripe_secret_key': os.getenv("STRIPE_SECRET_KEY"),
             'full_name': 'test_full_name',
