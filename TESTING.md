@@ -369,3 +369,39 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on 'Unsubscribe' button | Unsubscribes user, redirects to homepage, displays success message | Pass | |
 
 
+## User Story Testing
+
+| User Story | Screenshot |
+| --- | --- |
+| As a user I can fill out a front-end registration form so that I can make an account and have a personal presence on the site | ![screenshot](documentation/features/sitepages/signup.png) |
+| As an admin I can hash & securely store users' passwords so that users' sensitive information remains secure | ![screenshot](documentation/features/sitepages/signup.png) |
+| As an admin I can save users' account details to a backend database so that users can create permanent accounts on my site | ![screenshot](documentation/features/sitepages/login.png) |
+| As a user I can see and edit my personal user profile so that I can see my saved user details and other information such as past orders | ![screenshot](documentation/features/sitepages/profile.png) |
+| As an admin I can send confirmation emails to registering users so that My registration process is more secure, and I validate all user emails when they register | ![screenshot](documentation/features/user/email-confirmation1.png) |
+| As a user I can log in & out of my account so that I can see my profile and access login-only areas of the site, as well as log out to keep my account secure | ![screenshot](documentation/features/sitepages/login.png) |
+| As a user I can navigate around the site using links in a navbar so that I can easily access any area of the site I wish to see | ![screenshot](documentation/features/user/login-navbar-links1.png) |
+| As a user I can see different nav links depending on my login state so that I can see only the relevant nav links I need, and links such as 'login' are removed if I am logged in | ![screenshot](documentation/features/user/login-navbar-links2.png) |
+| As a user I can use buttons on site pages to bring me back/forward a step or bring me to a specific page so that when on an area of the site which naturally leads to or follows on from another specific site page, I can click a button provided to take me there. | ![screenshot](documentation/features/sitepages/basket.png) |
+| As a user I can see prices of all products so that I have an accurate measure of the costs of all products that I view | ![screenshot](documentation/features/sitepages/courses.png) |
+| As a user I can use my credit/debit card to pay for products so that I can use the online payment system on the site and receive my products, without dealing with cash payments | ![screenshot](documentation/features/sitepages/checkout3.png) |
+| As an admin I can create orders & order numbers for user purchases so that orders can be organised & stored correctly, and reviewed if need be | ![screenshot](documentation/features/sitepages/checkout-success.png) |
+| As an admin I can initialise a secure chain of payment processes so that users cannot accidentally or intentionally interrupt the processing of their payment or their order creation after it has been initialised | ![screenshot](documentation/features/admin/webhooks.png) |
+| As a user I can receive purchase confirmation emails so that I have confirmation of my order, and a record of my purchase and important order information | ![screenshot](documentation/features/user/email-confirmation1.png) |
+| As a user I can add products to my shopping basket so that I can pre-select them for possible purchase | ![screenshot](documentation/features/user/basket-update.png) |
+| As a user I can remove items from the basket so that they are not added to my order when I go to the checkout page | ![screenshot](documentation/features/sitepages/basket.png) |
+| As a user I can see a running total of the price of all products in my basket so that I can, at a glance, see the total cost of my intended purchases | ![screenshot](documentation/features/user/basket-update.png) |
+| As a user I can see and interact with a list of products available on the site | ![screenshot](documentation/features/sitepages/courses.png) |
+| As an admin I can create/read/update/delete products in a back-end database so that I have control over what products exist and are displayed for purchase on the site | ![screenshot](documentation/features/admin/update-product.png) |
+| As a user I can search for and sort products so that I can easily find the most suitable product for my needs | ![screenshot](documentation/features/user/course-search.png) |
+| As a user I can see common error pages with user friendly messages and site-related styling so that I can more accurately understand why I have reached an error page, can still see all site related styling and have an option to return to the homepage | ![screenshot](documentation/features/sitepages/404.png) |
+| As a user I can see places where I can easily sign up for the site newsletter so that I can sign up without hassle | ![screenshot](documentation/features/user/newsletter1.png) |
+| As an admin I can store user emails so that I can send them the site newsletter | ![screenshot](documentation/features/admin/newsletter-confirmation-email.png) |
+| As an admin I can add products to the site's database using a front-end form so that I can easily create new site products in a user-friendly way. | ![screenshot](documentation/features/admin/create-product.png) |
+| As an admin I can edit products on the site's database using a front-end form so that I can easily edit site products in a user-friendly way. | ![screenshot](documentation/features/admin/update-product.png) |
+| As an admin I can delete products from site's database using a front-end form so that I can easily delete existing site products in a user-friendly way. | ![screenshot](documentation/features/admin/delete-product.png) |
+| As an admin I can keep an organised database of user profiles so that user profiles can be created and saved to the backend of the site. | ![screenshot](documentation/features/sitepages/profile.png) |
+| As an admin I can Automatically create profiles for users upon registration so that users have a profile which displays their basic details, without having to manually create one after registering on the site | ![screenshot](documentation/features/sitepages/profile.png) |
+| As a user I can create a profile after I make a purchase so that I can use the details provided during checkout to easily create a profile with all of my information pre-filled | ![screenshot](documentation/features/sitepages/profile.png) |
+| As a user I can see and edit my profile page so that my profile details are viewable, and I can change them to match any changes in my information | ![screenshot](documentation/features/sitepages/profile.png) |
+
+
