@@ -911,6 +911,11 @@ input[type=checkbox]:checked {
     color: red;
 }
 
+#contact-message {
+    word-wrap: break-word;
+    max-width: 50vw;
+}
+
 @media (max-width: 768px) {
     .contact-list-email,
     .contact-list-name,
