@@ -751,6 +751,10 @@ input[type=checkbox]:checked {
     margin: 0;
 }
 
+#mailing-list-button {
+    max-width: 250px;
+}
+
 
 /* -------- ALLAUTH FORMS -------- */
 
