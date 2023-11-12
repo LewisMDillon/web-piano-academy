@@ -50,3 +50,16 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 | checkout.css | n/a | ![screenshot](documentation/validation/css/checkout.png) | Pass: No Errors |
 | profile.css | n/a | ![screenshot](documentation/validation/css/profile.png) | Pass: No Errors |
 
+### JavaScript
+
+I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
+
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| stripe_elements.js | ![screenshot](documentation/validation/js/stripe-elements.png) | Undefined Stripe variable |
+| tooltips.js | ![screenshot](documentation/validation/js/tooltips.png) | Pass: No Errors |
+| navbar.js | ![screenshot](documentation/validation/js/navbar.png) | Pass: No Errors |
+| countryfield.js | ![screenshot](documentation/validation/js/countryfield.png) | Pass: No Errors |
+
+
+
