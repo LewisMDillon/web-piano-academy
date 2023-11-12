@@ -183,3 +183,17 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Opera | ![screenshot](documentation/browsers/opera.png) | Works as expected |
 | Safari | ![screenshot](documentation/browsers/safari.png) | Works as expected |
 
+## Responsiveness
+
+I've tested my deployed project on multiple devices to check for responsiveness issues.
+
+| Device | Screenhot | Notes |
+| --- | --- | --- |
+| Mobile (DevTools) | ![screenshot](documentation/responsiveness/mobile.png) | Works as expected |
+| Tablet (DevTools) | ![screenshot](documentation/responsiveness/tablet.png) | Works as expected |
+| Desktop | ![screenshot](documentation/responsiveness/desktop.png) | Works as expected |
+| XL Monitor | ![screenshot](documentation/responsiveness/xl.png) | Scaling starts to have minor issues |
+| 4k Monitor | ![screenshot](documentation/responsiveness/4k.png) | Noticeable scaling issues |
+| Oneplus Nord | ![screenshot](documentation/responsiveness/oneplus.png) | Works as expected |
+| iPhone15 | ![screenshot](documentation/responsiveness/iphone.png) | Works as expected |
+
