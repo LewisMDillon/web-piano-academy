@@ -405,3 +405,49 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a user I can see and edit my profile page so that my profile details are viewable, and I can change them to match any changes in my information | ![screenshot](documentation/features/sitepages/profile.png) |
 
 
+## Automated Testing
+
+I have conducted a series of automated tests on my application.
+
+I fully acknowledge and understand that, in a real-world scenario, an extensive set of additional tests would be more comprehensive.
+
+### Python (Unit Testing)
+
+I have used Django's built-in unit testing framework to test the application functionality.
+
+In order to run the tests, I ran the following command in the terminal each time:
+
+`python3 manage.py test name-of-app `
+
+To create the coverage report, I would then run the following commands:
+
+`coverage run --source=name-of-app manage.py test`
+
+`coverage report`
+
+To see the HTML version of the reports, and find out whether some pieces of code were missing, I ran the following commands:
+
+`coverage html`
+
+`python3 -m http.server`
+
+Below are the results from the various apps on my application that I've tested:
+
+| App | File | Coverage | Screenshot |
+| --- | --- | --- | --- |
+| basket | tests.py | 93% | ![screenshot](documentation/py-test/basket.png) |
+| checkout | tests.py | 74% | ![screenshot](documentation/py-test/checkout.png) |
+| contact | tests.py | 97% | ![screenshot](documentation/py-test/contact.png) |
+| faq | tests.py | 98% | ![screenshot](documentation/py-test/faq.png) |
+| home | tests.py | 100% | ![screenshot](documentation/py-test/home.png) |
+| newsletter | tests.py | 95% | ![screenshot](documentation/py-test/newsletter.png) |
+| products | tests.py | 88% | ![screenshot](documentation/py-test/products.png) |
+| profiles | tests.py | 96% | ![screenshot](documentation/py-test/profiles.png) |
+
+#### Unit Test Issues
+
+While testing the checkout process of the checkout app, I could not seem to redefine the `pid` variable for the purposes of the test. Even when explicitly redeclaring `pid = x`, the test would overwrite it with the value from the views.py. To circumvent this, I put the `stripe pid` into my environment variables and created a line of code in the checkout view, to be used for this specific test purpose only:
+
+![screenshot](documentation/unittest-code-line.png)
+
+
