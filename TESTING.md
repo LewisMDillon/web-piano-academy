@@ -38,3 +38,15 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | register | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fweb-piano-academy-16cd779294ab.herokuapp.com%2Faccounts%2Fsignup%2F) | ![screenshot](documentation/validation/html/register.png) | Pass: No Errors |
 | unsubscribe | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/validation/html/unsubscribe.png) | Pass: No Errors |
 
+
+### CSS
+
+I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
+
+
+| File | Jigsaw URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fweb-piano-academy-16cd779294ab.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/validation/css/style.png) | Pass: No Errors |
+| checkout.css | n/a | ![screenshot](documentation/validation/css/checkout.png) | Pass: No Errors |
+| profile.css | n/a | ![screenshot](documentation/validation/css/profile.png) | Pass: No Errors |
+
