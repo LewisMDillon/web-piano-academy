@@ -169,3 +169,17 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 
 
+## Browser Compatibility
+
+I've tested my deployed project on multiple browsers to check for compatibility issues.
+
+| Browser | Screenshot | Notes |
+| --- | --- | --- |
+| Brave | ![screenshot](documentation/browser/brave.png) | Works as expected |
+| Chrome | ![screenshot](documentation/browser/chrome.png) | Works as expected |
+| Edge | ![screenshot](documentation/browser/edge.png) | Works as expected |
+| Firefox | ![screenshot](documentation/browser/firefox.png) | Works as expected |
+| Internet Explorer | ![screenshot](documentation/browser/iex.png) | Multiple Broken Elements  |
+| Opera | ![screenshot](documentation/browser/opera.png) | Works as expected |
+| Safari | ![screenshot](documentation/browser/safari.png) | Works as expected |
+
