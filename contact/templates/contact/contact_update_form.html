@@ -64,7 +64,7 @@
                 <!-- <a class="btn black-button" href="mailto:{{ object.email }}" target="_blank">Respond To Message</a> -->
                 {% if object.responded %}
                 {% else %}
-                    <a class="btn black-button" onclick="responseForm()" target="_blank">Respond To Message <i class="fa-solid fa-caret-down"></i></a>
+                    <button class="btn black-button" onclick="responseForm()">Respond To Message <i class="fa-solid fa-caret-down"></i></button>
                 {% endif %}
                 <a class="btn btn-danger" href="{% url 'contact-delete' object.id %}">Delete Message</a>
             </div>
