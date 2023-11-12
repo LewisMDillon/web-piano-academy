@@ -197,3 +197,37 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Oneplus Nord | ![screenshot](documentation/responsiveness/oneplus.png) | Works as expected |
 | iPhone15 | ![screenshot](documentation/responsiveness/iphone.png) | Works as expected |
 
+## Lighthouse Audit
+
+I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
+
+On all pages, Lighthouse is flagging a warning 'Issues were logged in the Issues panel in Chrome Devtools'. This is caused by the built-in Stripe element used by the site.
+
+| Page | Mobile | Desktop | Notes |
+| --- | --- | --- | --- |
+| 400 | ![screenshot](documentation/lighthouse/mobile/400.png) | ![screenshot](documentation/lighthouse/desktop/400.png) | Some Minor Warnings |
+| 403 | ![screenshot](documentation/lighthouse/mobile/403.png) | ![screenshot](documentation/lighthouse/desktop/403.png) | Some Minor Warnings |
+| 404 | ![screenshot](documentation/lighthouse/mobile/404.png) | ![screenshot](documentation/lighthouse/desktop/404.png) | Some Minor Warnings |
+| 500 | ![screenshot](documentation/lighthouse/mobile/500.png) | ![screenshot](documentation/lighthouse/desktop/500.png) | Some Minor Warnings |
+| about | ![screenshot](documentation/lighthouse/mobile/about.png) | ![screenshot](documentation/lighthouse/desktop/about.png) | Some Minor Warnings |
+| add-product | ![screenshot](documentation/lighthouse/mobile/add-product.png) | ![screenshot](documentation/lighthouse/desktop/add-product.png) | Some Minor Warnings |
+| basket | ![screenshot](documentation/lighthouse/mobile/basket.png) | ![screenshot](documentation/lighthouse/desktop/basket.png) | Some Minor Warnings |
+| checkout | ![screenshot](documentation/lighthouse/mobile/checkout.png) | ![screenshot](documentation/lighthouse/desktop/checkout.png) | Warning about country input element with no label - this element is dynamically labelled by javascript |
+| checkout-success | ![screenshot](documentation/lighthouse/mobile/checkout-success.png) | ![screenshot](documentation/lighthouse/desktop/checkout-success.png) | Some Minor Warnings |
+| contact | ![screenshot](documentation/lighthouse/mobile/contact.png) | ![screenshot](documentation/lighthouse/desktop/contact.png) | Some Minor Warnings |
+| contact-confirm-delete | ![screenshot](documentation/lighthouse/mobile/contact-confirm-delete.png) | ![screenshot](documentation/lighthouse/desktop/contact-confirm-delete.png) | Some Minor Warnings |
+| contact-list | ![screenshot](documentation/lighthouse/mobile/contact-list.png) | ![screenshot](documentation/lighthouse/desktop/contact-list.png) | Some Minor Warnings |
+| contact-success | ![screenshot](documentation/lighthouse/mobile/contact-success.png) | ![screenshot](documentation/lighthouse/desktop/contact-success.png) | Some Minor Warnings |
+| contact-update-form | ![screenshot](documentation/lighthouse/mobile/contact-update-form.png) | ![screenshot](documentation/lighthouse/desktop/contact-update-form.png) | Some Minor Warnings |
+| courses | ![screenshot](documentation/lighthouse/mobile/courses.png) | ![screenshot](documentation/lighthouse/desktop/courses.png) | Some Minor Warnings |
+| edit-product | ![screenshot](documentation/lighthouse/mobile/edit-product.png) | ![screenshot](documentation/lighthouse/desktop/edit-product.png) | Some Minor Warnings |
+| email-form | ![screenshot](documentation/lighthouse/mobile/email-form.png) | ![screenshot](documentation/lighthouse/desktop/email-form.png) | Some Minor Warnings |
+| faq | ![screenshot](documentation/lighthouse/mobile/faq.png) | ![screenshot](documentation/lighthouse/desktop/faq.png) | Some Minor Warnings |
+| home | ![screenshot](documentation/lighthouse/mobile/home.png) | ![screenshot](documentation/lighthouse/desktop/home.png) | Some Minor Warnings |
+| login | ![screenshot](documentation/lighthouse/mobile/login.png) | ![screenshot](documentation/lighthouse/desktop/login.png) | Some Minor Warnings |
+| product-detail | ![screenshot](documentation/lighthouse/mobile/product-detail.png) | ![screenshot](documentation/lighthouse/desktop/product-detail.png) | Some Minor Warnings |
+| profile | ![screenshot](documentation/lighthouse/mobile/profile.png) | ![screenshot](documentation/lighthouse/desktop/profile.png) | Warning about country input element with no label - this element is dynamically labelled by javascript |
+| register | ![screenshot](documentation/lighthouse/mobile/register.png) | ![screenshot](documentation/lighthouse/desktop/register.png) | Some Minor Warnings |
+| unsubscribe | ![screenshot](documentation/lighthouse/mobile/unsubscribe.png) | ![screenshot](documentation/lighthouse/desktop/unsubscribe.png) | Some Minor Warnings |
+
+
