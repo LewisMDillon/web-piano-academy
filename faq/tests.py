@@ -6,7 +6,7 @@ from .models import Faq
 
 class TestFaq(TestCase):
     """Tests the Faq model in the faq app."""
-    
+
     def setUp(self):
         """
         Makes a sample Faq object

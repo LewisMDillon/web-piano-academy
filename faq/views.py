@@ -8,5 +8,5 @@ def faq(request):
     context = {
         'faqs': Faq.objects.all(),
     }
-    
+
     return render(request, 'faq/faq.html', context)
