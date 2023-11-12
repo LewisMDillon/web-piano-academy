@@ -33,8 +33,8 @@
                         {% if request.user.is_superuser %}
                             <br>
                             <small>
-                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                <a class="text-danger" href="#" data-toggle="modal"
+                                <a class="btn black-button" href="{% url 'edit_product' product.id %}">Edit</a>
+                                <a class="btn btn-danger" href="#" data-toggle="modal"
                                     data-target="#modal-delete-{{ product.id }}">Delete</a>
                             </small>
                         <div class="modal fade text-black" id="modal-delete-{{ product.id }}" tabindex="-1"
