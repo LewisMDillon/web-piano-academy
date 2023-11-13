@@ -74,96 +74,96 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 ### Basket App
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/apps.py) | ![screenshot](documentation/validation/python/basket/apps.png) | Pass: No Errors |
-| contexts.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/contexts.py) | ![screenshot](documentation/validation/python/basket/contexts.png) | Pass: No Errors |
-| tests.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/tests.py) | ![screenshot](documentation/validation/python/basket/tests.png) | Pass: No Errors |
-| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/urls.py) | ![screenshot](documentation/validation/python/basket/urls.png) | Pass: No Errors |
-| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/views.py) | ![screenshot](documentation/validation/python/basket/views.png) | Pass: No Errors |
+| apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/basket/apps.py) | ![screenshot](documentation/validation/python/basket/apps.png) | Pass: No Errors |
+| contexts.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/basket/contexts.py) | ![screenshot](documentation/validation/python/basket/contexts.png) | Pass: No Errors |
+| tests.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/basket/tests.py) | ![screenshot](documentation/validation/python/basket/tests.png) | Pass: No Errors |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/basket/urls.py) | ![screenshot](documentation/validation/python/basket/urls.png) | Pass: No Errors |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/basket/views.py) | ![screenshot](documentation/validation/python/basket/views.png) | Pass: No Errors |
 
 ### Checkout App
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/admin.py) | ![screenshot](documentation/validation/python/checkout/admin.png) | Pass: No Errors |
-| apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/apps.py) | ![screenshot](documentation/validation/python/checkout/apps.png) | Pass: No Errors |
-| forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/forms.py) | ![screenshot](documentation/validation/python/checkout/forms.png) | Pass: No Errors |
-| init.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/__init__.py) | ![screenshot](documentation/validation/python/checkout/init.png) | Pass: No Errors |
-| models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/models.py) | ![screenshot](documentation/validation/python/checkout/models.png) | Pass: No Errors |
-| signals.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/signals.py) | ![screenshot](documentation/validation/python/checkout/signals.png) | Pass: No Errors |
-| tests.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/tests.py) | ![screenshot](documentation/validation/python/checkout/tests.png) | Pass: No Errors |
-| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/urls.py) | ![screenshot](documentation/validation/python/checkout/urls.png) | Pass: No Errors |
-| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/views.py) | ![screenshot](documentation/validation/python/checkout/views.png) | Pass: No Errors |
-| webhook_handler.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/webhook_handler.py) | ![screenshot](documentation/validation/python/checkout/webhook-handler.png) | Pass: No Errors |
-| webhooks.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/webhooks.py) | ![screenshot](documentation/validation/python/checkout/webhooks.png) | Pass: No Errors |
+| admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/checkout/admin.py) | ![screenshot](documentation/validation/python/checkout/admin.png) | Pass: No Errors |
+| apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/checkout/apps.py) | ![screenshot](documentation/validation/python/checkout/apps.png) | Pass: No Errors |
+| forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/checkout/forms.py) | ![screenshot](documentation/validation/python/checkout/forms.png) | Pass: No Errors |
+| init.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/checkout/__init__.py) | ![screenshot](documentation/validation/python/checkout/init.png) | Pass: No Errors |
+| models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/checkout/models.py) | ![screenshot](documentation/validation/python/checkout/models.png) | Pass: No Errors |
+| signals.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/checkout/signals.py) | ![screenshot](documentation/validation/python/checkout/signals.png) | Pass: No Errors |
+| tests.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/checkout/tests.py) | ![screenshot](documentation/validation/python/checkout/tests.png) | Pass: No Errors |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/checkout/urls.py) | ![screenshot](documentation/validation/python/checkout/urls.png) | Pass: No Errors |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/checkout/views.py) | ![screenshot](documentation/validation/python/checkout/views.png) | Pass: No Errors |
+| webhook_handler.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/checkout/webhook_handler.py) | ![screenshot](documentation/validation/python/checkout/webhook-handler.png) | Pass: No Errors |
+| webhooks.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/checkout/webhooks.py) | ![screenshot](documentation/validation/python/checkout/webhooks.png) | Pass: No Errors |
 
 
 ### Config App
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| asgi.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/asgi.py) | ![screenshot](documentation/validation/python/config/asgi.png) | Pass: No Errors |
-| settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/settings.py) | ![screenshot](documentation/validation/python/config/settings.png) | Pass: No Errors |
-| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/urls.py) | ![screenshot](documentation/validation/python/config/urls.png) | Pass: No Errors |
-| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/views.py) | ![screenshot](documentation/validation/python/config/views.png) | Pass: No Errors |
-| wsgi.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/wsgi.py) | ![screenshot](documentation/validation/python/config/wsgi.png) | Pass: No Errors |
+| asgi.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/config/asgi.py) | ![screenshot](documentation/validation/python/config/asgi.png) | Pass: No Errors |
+| settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/config/settings.py) | ![screenshot](documentation/validation/python/config/settings.png) | Pass: No Errors |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/config/urls.py) | ![screenshot](documentation/validation/python/config/urls.png) | Pass: No Errors |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/config/views.py) | ![screenshot](documentation/validation/python/config/views.png) | Pass: No Errors |
+| wsgi.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/config/wsgi.py) | ![screenshot](documentation/validation/python/config/wsgi.png) | Pass: No Errors |
 
 ### Contact App
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/admin.py) | ![screenshot](documentation/validation/python/contact/admin.png) | Pass: No Errors |
-| apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/apps.py) | ![screenshot](documentation/validation/python/contact/apps.png) | Pass: No Errors |
-| models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/models.py) | ![screenshot](documentation/validation/python/contact/models.png) | Pass: No Errors |
-| tests.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/tests.py) | ![screenshot](documentation/validation/python/contact/tests.png) | Pass: No Errors |
-| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/urls.py) | ![screenshot](documentation/validation/python/contact/urls.png) | Pass: No Errors |
-| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/views.py) | ![screenshot](documentation/validation/python/contact/views.png) | Pass: No Errors |
+| admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/contact/admin.py) | ![screenshot](documentation/validation/python/contact/admin.png) | Pass: No Errors |
+| apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/contact/apps.py) | ![screenshot](documentation/validation/python/contact/apps.png) | Pass: No Errors |
+| models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/contact/models.py) | ![screenshot](documentation/validation/python/contact/models.png) | Pass: No Errors |
+| tests.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/contact/tests.py) | ![screenshot](documentation/validation/python/contact/tests.png) | Pass: No Errors |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/contact/urls.py) | ![screenshot](documentation/validation/python/contact/urls.png) | Pass: No Errors |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/contact/views.py) | ![screenshot](documentation/validation/python/contact/views.png) | Pass: No Errors |
 
 ### Faq App
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/admin.py) | ![screenshot](documentation/validation/python/faq/admin.png) | Pass: No Errors |
-| apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/apps.py) | ![screenshot](documentation/validation/python/faq/apps.png) | Pass: No Errors |
-| models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/models.py) | ![screenshot](documentation/validation/python/faq/models.png) | Pass: No Errors |
-| tests.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/tests.py) | ![screenshot](documentation/validation/python/faq/tests.png) | Pass: No Errors |
-| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/urls.py) | ![screenshot](documentation/validation/python/faq/urls.png) | Pass: No Errors |
-| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/views.py) | ![screenshot](documentation/validation/python/faq/views.png) | Pass: No Errors |
+| admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/faq/admin.py) | ![screenshot](documentation/validation/python/faq/admin.png) | Pass: No Errors |
+| apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/faq/apps.py) | ![screenshot](documentation/validation/python/faq/apps.png) | Pass: No Errors |
+| models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/faq/models.py) | ![screenshot](documentation/validation/python/faq/models.png) | Pass: No Errors |
+| tests.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/faq/tests.py) | ![screenshot](documentation/validation/python/faq/tests.png) | Pass: No Errors |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/faq/urls.py) | ![screenshot](documentation/validation/python/faq/urls.png) | Pass: No Errors |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/faq/views.py) | ![screenshot](documentation/validation/python/faq/views.png) | Pass: No Errors |
 
 ### Home App
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/apps.py) | ![screenshot](documentation/validation/python/home/apps.png) | Pass: No Errors |
-| tests.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/tests.py) | ![screenshot](documentation/validation/python/home/tests.png) | Pass: No Errors |
-| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/urls.py) | ![screenshot](documentation/validation/python/home/urls.png) | Pass: No Errors |
-| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/views.py) | ![screenshot](documentation/validation/python/home/views.png) | Pass: No Errors |
+| apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/home/apps.py) | ![screenshot](documentation/validation/python/home/apps.png) | Pass: No Errors |
+| tests.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/home/tests.py) | ![screenshot](documentation/validation/python/home/tests.png) | Pass: No Errors |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/home/urls.py) | ![screenshot](documentation/validation/python/home/urls.png) | Pass: No Errors |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/home/views.py) | ![screenshot](documentation/validation/python/home/views.png) | Pass: No Errors |
 
 ### Newsletter App
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/admin.py) | ![screenshot](documentation/validation/python/newsletter/admin.png) | Pass: No Errors |
-| apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/apps.py) | ![screenshot](documentation/validation/python/newsletter/apps.png) | Pass: No Errors |
-| models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/models.py) | ![screenshot](documentation/validation/python/newsletter/models.png) | Pass: No Errors |
-| tests.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/tests.py) | ![screenshot](documentation/validation/python/newsletter/tests.png) | Pass: No Errors |
-| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/urls.py) | ![screenshot](documentation/validation/python/newsletter/urls.png) | Pass: No Errors |
-| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/views.py) | ![screenshot](documentation/validation/python/newsletter/views.png) | Pass: No Errors |
+| admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/newsletter/admin.py) | ![screenshot](documentation/validation/python/newsletter/admin.png) | Pass: No Errors |
+| apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/newsletter/apps.py) | ![screenshot](documentation/validation/python/newsletter/apps.png) | Pass: No Errors |
+| models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/newsletter/models.py) | ![screenshot](documentation/validation/python/newsletter/models.png) | Pass: No Errors |
+| tests.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/newsletter/tests.py) | ![screenshot](documentation/validation/python/newsletter/tests.png) | Pass: No Errors |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/newsletter/urls.py) | ![screenshot](documentation/validation/python/newsletter/urls.png) | Pass: No Errors |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/newsletter/views.py) | ![screenshot](documentation/validation/python/newsletter/views.png) | Pass: No Errors |
 
 ### Products App
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/admin.py) | ![screenshot](documentation/validation/python/products/admin.png) | Pass: No Errors |
-| apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/apps.py) | ![screenshot](documentation/validation/python/products/apps.png) | Pass: No Errors |
-| forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/forms.py) | ![screenshot](documentation/validation/python/products/forms.png) | Pass: No Errors |
-| models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/models.py) | ![screenshot](documentation/validation/python/products/models.png) | Pass: No Errors |
-| tests.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/tests.py) | ![screenshot](documentation/validation/python/products/tests.png) | Pass: No Errors |
-| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/urls.py) | ![screenshot](documentation/validation/python/products/urls.png) | Pass: No Errors |
-| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/views.py) | ![screenshot](documentation/validation/python/products/views.png) | Pass: No Errors |
+| admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/products/admin.py) | ![screenshot](documentation/validation/python/products/admin.png) | Pass: No Errors |
+| apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/products/apps.py) | ![screenshot](documentation/validation/python/products/apps.png) | Pass: No Errors |
+| forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/products/forms.py) | ![screenshot](documentation/validation/python/products/forms.png) | Pass: No Errors |
+| models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/products/models.py) | ![screenshot](documentation/validation/python/products/models.png) | Pass: No Errors |
+| tests.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/products/tests.py) | ![screenshot](documentation/validation/python/products/tests.png) | Pass: No Errors |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/products/urls.py) | ![screenshot](documentation/validation/python/products/urls.png) | Pass: No Errors |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/products/views.py) | ![screenshot](documentation/validation/python/products/views.png) | Pass: No Errors |
 
 ### Profiles App
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/admin.py) | ![screenshot](documentation/validation/python/profiles/admin.png) | Pass: No Errors |
-| apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/apps.py) | ![screenshot](documentation/validation/python/profiles/apps.png) | Pass: No Errors |
-| forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/forms.py) | ![screenshot](documentation/validation/python/profiles/forms.png) | Pass: No Errors |
-| models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/models.py) | ![screenshot](documentation/validation/python/profiles/models.png) | Pass: No Errors |
-| tests.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/tests.py) | ![screenshot](documentation/validation/python/profiles/tests.png) | Pass: No Errors |
-| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/urls.py) | ![screenshot](documentation/validation/python/profiles/urls.png) | Pass: No Errors |
-| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/views.py) | ![screenshot](documentation/validation/python/profiles/views.png) | Pass: No Errors |
+| admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/profiles/admin.py) | ![screenshot](documentation/validation/python/profiles/admin.png) | Pass: No Errors |
+| apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/profiles/apps.py) | ![screenshot](documentation/validation/python/profiles/apps.png) | Pass: No Errors |
+| forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/profiles/forms.py) | ![screenshot](documentation/validation/python/profiles/forms.png) | Pass: No Errors |
+| models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/profiles/models.py) | ![screenshot](documentation/validation/python/profiles/models.png) | Pass: No Errors |
+| tests.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/profiles/tests.py) | ![screenshot](documentation/validation/python/profiles/tests.png) | Pass: No Errors |
+| urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/profiles/urls.py) | ![screenshot](documentation/validation/python/profiles/urls.png) | Pass: No Errors |
+| views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/LewisMDillon/web-piano-academy/main/profiles/views.py) | ![screenshot](documentation/validation/python/profiles/views.png) | Pass: No Errors |
 
 ### Root Level Files
 | File | CI URL | Screenshot | Notes |
