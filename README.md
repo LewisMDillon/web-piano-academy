@@ -477,6 +477,8 @@ provided by Code Institute.
 I have incorporated a newsletter sign-up form on my application, to allow users to supply their
 email address if they are interested in learning more. 
 
+Users can also unsubscribe from the newsletter by following the link in their subscription confirmation email.
+
 
 ## Testing
 
