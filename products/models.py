@@ -19,6 +19,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    # Number prefixes used to allow for sorting
     LEVEL_CHOICES = (
         ('1-Beginner', '1-Beginnner'),
         ('2-Intermediate', '2-Intermediate'),

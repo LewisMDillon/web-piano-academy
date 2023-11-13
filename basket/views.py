@@ -12,11 +12,13 @@ def view_basket(request):
 
 def add_to_basket(request, item_id):
 
+    # Function for adding items to the basket
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url', reverse('view_basket'))
     basket = request.session.get('basket', {})
 
+    # checks if item is already in basket
     if item_id in list(basket.keys()):
         messages.error(request, f'{product.name} is already in your basket!')
     else:
@@ -29,6 +31,7 @@ def add_to_basket(request, item_id):
 
 def adjust_basket(request, item_id):
 
+    # Function for adjusting items in basket
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     basket = request.session.get('basket', {})
@@ -44,6 +47,7 @@ def adjust_basket(request, item_id):
 
 def remove_from_basket(request, item_id):
 
+    # Function for removing items from basket
     try:
         basket = request.session.get('basket', {})
 
@@ -52,5 +56,6 @@ def remove_from_basket(request, item_id):
         request.session['basket'] = basket
         return redirect(reverse('view_basket'))
     except Exception as e:
+        # This runs if user tries to remove an item that is not in the basket
         messages.error(request, "Oops, that didn't work, please try again.")
         return redirect(reverse('home'))

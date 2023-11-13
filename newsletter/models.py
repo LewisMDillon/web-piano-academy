@@ -6,6 +6,7 @@ class Email(models.Model):
     class Meta:
         verbose_name_plural = 'Email Addresses'
 
+    # Checks if the email already exists
     email = models.EmailField(
         max_length=254,
         unique=True,

@@ -6,11 +6,13 @@ from products.models import Product
 
 def basket_contents(request):
 
+    # declare the basket items list
     basket_items = []
     total = 0
     product_count = 0
     basket = request.session.get('basket', {})
 
+    # populate the basket list
     for item_id, quantity in basket.items():
         product = get_object_or_404(Product, pk=item_id)
         total += quantity * product.price
@@ -23,6 +25,7 @@ def basket_contents(request):
 
     grand_total = total
 
+    # get the basket totals
     context = {
         'basket_items': basket_items,
         'total': total,

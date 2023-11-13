@@ -27,6 +27,7 @@ class MailingListCreateView(CreateView):
     email_list = Email.objects.all()
     fields = ['email']
 
+    # Prefills the email field if possible
     def get_initial(self):
         if self.request.user.is_authenticated:
             # Get the initial dictionary from the superclass method

@@ -23,6 +23,7 @@
             <div class="row">
                 <div class="col">
                     {% if basket_items %}
+                    <!-- Checks if there are items in the basket -->
                         <div class="table-responsive rounded">
                             <table class="table table-sm table-borderless">
                                 <thead class="text-black">
@@ -35,12 +36,14 @@
                                 </thead>
 
                                 {% for item in basket_items %}
+                                <!-- Displays all items in the basket -->
                                     <tr>
                                         <td class="p-3 w-25">
                                             <img class="img-fluid rounded" src="{{ item.product.image_url }}" alt="{{ item.product.name }}">
                                         </td>
                                         <td class="py-3">
                                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                            <!-- Checks if course has a subtitle -->
                                             {% if item.product.subtitle %}
                                                 <p class="my-0">{{ item.product.subtitle }}</p>
                                             {% endif %}
@@ -77,6 +80,7 @@
                             </table>
                         </div>
                     {% else %}
+                        <!-- Displays if basket is empty -->
                         <p class="lead mb-5">Your basket is empty.</p>
                         <a href="{% url 'courses' %}" class="btn white-button rounded-0 btn-lg">
                             <span class="icon">

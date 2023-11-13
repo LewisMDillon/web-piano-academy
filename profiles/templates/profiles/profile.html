@@ -21,6 +21,7 @@
             <div class="row">
                 <div class="col-12 col-lg-6">
                     <p>Your Details</p>
+                    <!-- Form created from model -->
                     <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                         {% csrf_token %}
                         {{ form|crispy }}
@@ -40,6 +41,7 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <!-- Populates the order history with past orders -->
                                 {% for order in orders %}
                                     <tr>
                                         <td>

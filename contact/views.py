@@ -73,6 +73,7 @@ class ContactUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     fields = ["responded"]
     template_name_suffix = "_update_form"
 
+    # Sets up the response email
     def _send_email(self):
         """Send the user a confirmation email"""
         email = self.object.email
@@ -85,6 +86,7 @@ class ContactUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
             [email]
         )
 
+    # Checks form validity & sends the email
     def form_valid(self, form):
         form.instance.author = self.request.user
         messages.info(
@@ -94,6 +96,7 @@ class ContactUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         self._send_email()
         return super().form_valid(form)
 
+    # Checks if user is staff
     def test_func(self):
         if self.request.user.is_staff:
             return True
@@ -115,6 +118,7 @@ class ContactDeleteView(
         'Message Deleted.'
     )
 
+    # Checks if user is staff
     def test_func(self):
         contact = self.get_object()
         if self.request.user.is_staff:

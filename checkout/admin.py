@@ -8,6 +8,7 @@ class OrderLineItemAdminInline(admin.TabularInline):
 
 
 class OrderAdmin(admin.ModelAdmin):
+    # Customises the django admin interface
     inlines = (OrderLineItemAdminInline,)
     readonly_fields = (
         'order_number',

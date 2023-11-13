@@ -35,6 +35,7 @@
                     </div>
                 </div>
                 {% for item in basket_items %}
+                <!-- Gets all items in the user's basket -->
                 <div class="row">
                     <div class="col-2 mb-1">
                         <a href="{% url 'product_detail' item.product.id %}">
@@ -73,6 +74,7 @@
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
+                    <!-- Tooltip Content -->
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Address Details
                             <button class="tooltip-button" aria-label="tooltip button" type="button" data-toggle="tooltip" data-placement="right"
@@ -136,6 +138,7 @@
         </div>
     </div>
 </div>
+<!-- Loading Overlay -->
 <div id="loading-overlay">
     <h1 class="text-light logo-font loading-spinner">
         <span class="icon">
@@ -150,7 +153,9 @@
 {{ stripe_public_key|json_script:"id_stripe_public_key" }}
 {{ client_secret|json_script:"id_client_secret" }}
 
+<!-- Stripe Javascript -->
 <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+<!-- Tooltip Javascript -->
 <script src="{% static 'checkout/js/tooltips.js' %}"></script>
 
 {% endblock %}

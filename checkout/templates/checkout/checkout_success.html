@@ -60,6 +60,7 @@
                         </div>
 
                         {% for item in order.lineitems.all %}
+                        <!-- Diplays all items -->
                         <div class="row">
                             <div class="col-12 col-md-4">
                                 <p class="small mb-0 text-black font-weight-bold">
@@ -178,6 +179,8 @@
             <div class="row">
                 <div class="col-12 text-center">
                     {% if from_profile %}
+                    <!-- Checks if user came to this page from their profile
+                    meaning that this is an old order confirmation -->
                         <a href="{% url 'profile' %}" class="btn black-button rounded-0 my-2">
                             <span class="icon mr-2">
                                 <i class="fas fa-angle-left"></i>

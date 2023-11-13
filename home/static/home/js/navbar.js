@@ -1,5 +1,6 @@
 /* jshint esversion: 11, jquery: true */
 
+// Darkens the navbar on page scroll
 document.onreadystatechange = function () {
   let lastScrollPosition = 0;
   const navbar = document.querySelector('.navbar');

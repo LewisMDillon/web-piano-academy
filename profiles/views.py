@@ -24,7 +24,7 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
-        'on_profile_page': True
+        'on_profile_page': True  # Used for order confirmation page
     }
 
     return render(request, template, context)

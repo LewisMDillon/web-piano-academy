@@ -56,6 +56,7 @@
 
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-md fixed-top" id="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'home' %}" id="logo"><img src="https://web-piano-academy.s3.eu-west-1.amazonaws.com/static/img/piano-logo-orange.png"
@@ -109,6 +110,7 @@
             </ul>
           </li>
 
+          <!-- Logged-in user links -->
           {% if user.is_authenticated %}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">My Account</a>
@@ -117,12 +119,14 @@
               <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
             </ul>
           </li>
+          <!-- Non logged-in user links -->
           {% else %}
           <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}">Register</a></li>
           <li><a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
           
           {% endif %}
 
+          <!-- Superuser links -->
           {% if user.is_superuser %}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Admin</a>
@@ -135,6 +139,7 @@
           </li>
           {% endif %}
         </ul>
+          <!-- Basket display -->
           <div class="list-inline-item">
             <a class="{% if grand_total %}text-info font-weight-bolder{% else %}text-black{% endif %} nav-link"
               href="{% url 'view_basket' %}" id="navbar-basket-link">
@@ -154,6 +159,7 @@
     </div>
   </nav>
 
+  <!-- Message Container -->
   <main class="container">
     <div class="row" id="message-container-outer">
       <div class="col-md-8">
@@ -186,6 +192,7 @@
 
   <hr class="footer-separator">
 
+  <!-- Footer -->
   <footer class="container py-5" id="footer-container">
     <div class="row">
       <div class="col-6 col-md-2 mb-3">
@@ -200,12 +207,14 @@
       </div>
 
       <div class="col-6 col-md-2 mb-3">
+        <!-- Logged-in user links -->
         {% if user.is_authenticated %}
           <h5>My Account</h5>
           <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="{% url 'profile' %}" class="nav-link p-0 text-body-secondary">My Profile</a></li>
             <li class="nav-item mb-2"><a href="{% url 'account_logout' %}" class="nav-link p-0 text-body-secondary">Logout</a></li>
           </ul>
+        <!-- Non logged-in user links -->
         {% else %}
           <h5>Account</h5>
           <ul class="nav flex-column">
@@ -216,6 +225,7 @@
       </div>
 
       <div class="col-md-5 offset-md-1 mb-3">
+        <!-- Newsletter subscription button -->
         <form>
           <h5>Subscribe to our newsletter</h5>
           <p>Exciting news and exclusive deals!</p>
@@ -249,6 +259,7 @@
   </script>
 
   <script>
+    // Shows Bootstrap toasts
     $('.toast').toast('show');
   </script>
 

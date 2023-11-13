@@ -16,6 +16,7 @@
             <div class="row mt-1 mb-2 mx-5">
                 <div class="col-12 col-md-6" id="sorting-container">
                     <div class="sort-select-wrapper w-50">
+                        <!-- Sort Selector -->
                         <select id="sort-selector" aria-label="Sort Selector"
                             class="custom-select custom-select-sm rounded-0 border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                             <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
@@ -47,6 +48,7 @@
                 <div class="product-container col-10 offset-1">
                     <div class="row mt-1 mb-2"></div>
                     <div class="row">
+                        <!-- Populates the page with products -->
                         {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="card h-100 border-0">
@@ -76,6 +78,7 @@
                                             <p class="mb-0 course-price">€{{ product.price }}</p>
                                         </div>
                                     </div>
+                                    <!-- Displays Edit and Delete buttons for superusers -->
                                     {% if request.user.is_superuser %}
                                     <div class="product-admin-links">
                                         <small>
@@ -88,6 +91,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Delete confirmation modal -->
                         {% if request.user.is_superuser %}
                         <div class="modal fade text-black" id="modal-delete-{{ product.id }}" tabindex="-1"
                             aria-labelledby="modal-label-{{ product.id }}" aria-hidden="true">
@@ -123,12 +127,14 @@
 
     {% block extra_postloadjs %}
     <script>
+        // JS for back to top link
         $('.btt-link').click(function (e) {
             window.scrollTo(0, 0);
         });
     </script>
 
     <script>
+        // JS for sort selector
         $('#sort-selector').change(function () {
             let selector = $(this);
             let currentUrl = new URL(window.location);

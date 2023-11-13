@@ -8,12 +8,11 @@
 <div class="default-page-container">
     <div id="message-detail-container-outer">
         <h1 class="text-center default-page-header">Message Details</h1>
-        <!-- RESERVATION DETAILS -->
         <div id="message-detail-container">
             <br>
             <small class="text-muted">Message sent on: <strong>{{ object.date_created }}</strong></small>
             <!-- DETAILS TABLE -->
-            <table class="table" id="reservation-detail-table">
+            <table class="table">
                 <thead>
                     <tr>
                         <th scope="col"></th>
@@ -51,12 +50,15 @@
             <div class="text-center my-5" id="message-detail-button-container">
                 {% if object.responded %}
                 {% else %}
+                    <!-- Displays the response form on click -->
                     <button class="btn black-button" onclick="responseForm()">Respond To Message <i class="fa-solid fa-caret-down"></i></button>
                 {% endif %}
+                <!-- Deletes the message -->
                 <a class="btn btn-danger" href="{% url 'contact-delete' object.id %}">Delete Message</a>
             </div>
         </div>
     </div>
+    <!-- Response form -->
     <div id="formDiv" style="display: none;">
         <div class="custom-form-outer-container"> 
             <div class="custom-form-inner-container">
@@ -71,6 +73,7 @@
                         <label for="subject">Subject:</label>
                         <input type="text" id="subject" placeholder="Subject" readonly value="{{ object.subject }}">
                     </div>
+                    <!-- Unicode line breaks used here to satisfy textarea styling quirks -->
                     <textarea id="email_body" name="email_body" rows="10" cols="50">Dear {{ object.name }},&#10;&#10;...&#10;&#10;&#10;Web Piano Academy&#10;https://web-piano-academy-16cd779294ab.herokuapp.com/</textarea>
                     
                     <input class="btn black-button" id="responded-update-button" type="submit"
@@ -82,6 +85,7 @@
 </div>
 
 <script>
+    // Shows/hides the form
     function responseForm() {
       var form = document.getElementById("formDiv");
       if (form.style.display === "none") {
@@ -90,6 +94,7 @@
         form.style.display = "none";
       }
 
+      // Sets responded status to True
       let checkBox = document.getElementById("id_responded")
       checkBox.checked = true;
     }
