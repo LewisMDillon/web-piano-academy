@@ -811,6 +811,16 @@ input[type=checkbox]:checked {
     max-width: 250px;
 }
 
+.footer-credit-icon {
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+.footer-credit-text {
+    font-size: 16px;
+    padding-top: 3px;
+}
+
 
 /* -------- ALLAUTH FORMS -------- */
 
