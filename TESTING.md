@@ -187,7 +187,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 I've tested my deployed project on multiple devices to check for responsiveness issues.
 
-| Device | Screenhot | Notes |
+| Device | Screenshot | Notes |
 | --- | --- | --- |
 | Mobile (DevTools) | ![screenshot](documentation/responsiveness/mobile.png) | Works as expected |
 | Tablet (DevTools) | ![screenshot](documentation/responsiveness/tablet.png) | Works as expected |
@@ -268,7 +268,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on Login link in footer | Redirection to Login page | Pass | |
 | | Click on My Profile link in footer | Redirection to User Profile page | Pass | |
 | | Click on Logout link in footer | Redirection to Logout page | Pass | |
-| | Click on 'Subcribe to our mailing list' button in footer | Redirection to Newsletter Subscription page | Pass | |
+| | Click on 'Subscribe to our mailing list' button in footer | Redirection to Newsletter Subscription page | Pass | |
 | Register | | | | |
 | | Enter valid email address (twice) | Field will only accept email address format | Pass | |
 | | Enter valid password (twice) | Field will only accept password format | Pass | |
