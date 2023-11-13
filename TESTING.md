@@ -198,7 +198,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Desktop | ![screenshot](documentation/responsiveness/desktop.png) | Works as expected |
 | XL Monitor | ![screenshot](documentation/responsiveness/xl.png) | Scaling starts to have minor issues |
 | 4k Monitor | ![screenshot](documentation/responsiveness/4k.png) | Noticeable scaling issues |
-| Oneplus Nord | ![screenshot](documentation/responsiveness/oneplus.png) | Works as expected |
+| Oneplus Nord | ![screenshot](documentation/responsiveness/oneplus.jpg) | Works as expected |
 | iPhone15 | ![screenshot](documentation/responsiveness/iphone.png) | Works as expected |
 
 ## Lighthouse Audit
