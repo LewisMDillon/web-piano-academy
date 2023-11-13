@@ -36,6 +36,10 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | product-detail | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fweb-piano-academy-16cd779294ab.herokuapp.com%2Fproducts%2Fcourses%2F12%2F) | ![screenshot](documentation/validation/html/product-detail.png) | Pass: No Errors |
 | profile | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/validation/html/profile.png) | Pass: No Errors |
 | register | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fweb-piano-academy-16cd779294ab.herokuapp.com%2Faccounts%2Fsignup%2F) | ![screenshot](documentation/validation/html/register.png) | Pass: No Errors |
+| toast-error | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/validation/html/toast-error.png) |
+| toast-info | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/validation/html/toast-info.png) |
+| toast-success | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/validation/html/toast-success.png) |
+| toast-warning | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/validation/html/toast-warning.png) |
 | unsubscribe | [W3C - Validated By Input](https://validator.w3.org/#validate_by_input) | ![screenshot](documentation/validation/html/unsubscribe.png) | Pass: No Errors |
 
 
