@@ -52,7 +52,7 @@
                                             <p class="my-0">${{ item.product.price }}</p>
                                         </td>
                                         <td class="py-3">
-                                            <a href="{% url 'remove_from_basket' item.product.id %}">Remove This Item</a>
+                                            <a class="btn white-button small-button" href="{% url 'remove_from_basket' item.product.id %}">Remove This Item</a>
                                         </td>
                                     </tr>
                                 {% endfor %}
