@@ -3,7 +3,7 @@
 
 ![screenshot](documentation/mockup.png)
 
-Web Piano Academy is a fully functioning e-commerce web application. The site allows users to view and purchase digital piano courses online. Users can easily create personal accounts and profiles and see information on the site, and the courses themselves. The site also enables administrators to add, edit and remove products, as well as view and rspond to contact enquiries.
+Web Piano Academy is a fully functioning e-commerce web application. The site allows users to view and purchase digital piano courses online. Users can easily create personal accounts and profiles and see information on the site, and the courses themselves. The site also enables administrators to add, edit and remove products, as well as view and respond to contact enquiries.
 
 ## UX
 
@@ -41,7 +41,7 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 
 - **Courses Page**
 
-    - Courses page. Displays the site products availiable for the user to purchase. Displays images of products and their essential information including title, description, price, category & level. Courses are displayed in a pleasing responsive grid layout, making it easy for a user to browse the courses. Courses utilise a mouse-hover animation to add to the interactivity of the page. Courses can also be filtered and sorted by name, price and other criteria.
+    - Courses page. Displays the site products available for the user to purchase. Displays images of products and their essential information including title, description, price, category & level. Courses are displayed in a pleasing responsive grid layout, making it easy for a user to browse the courses. Courses utilise a mouse-hover animation to add to the interactivity of the page. Courses can also be filtered and sorted by name, price and other criteria.
     Administrators viewing this page can see links under each course to edit or delete the course.
 
 ![screenshot](documentation/features/sitepages/courses.png)
@@ -54,7 +54,7 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 
 - **FAQ Page**
 
-    - FAQ Page. Displays the most frequently asked questions about the site. Lets user's know essential information and quells worries that they may have about the site and its products. Animation and accordion serve to make the information engaging and clean.
+    - FAQ Page. Displays the most frequently asked questions about the site. Lets users know essential information and quells worries that they may have about the site and its products. Animation and accordion serve to make the information engaging and clean.
 
 ![screenshot](documentation/features/sitepages/faq.png)
 
@@ -66,7 +66,7 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 
 - **Contact Success Page**
 
-    - Contact Success Page. Users see this page after sending a contact message via the contact page. This page serves to confirm to the user that their message has been sent successfully. A short message informs the user that their contact message has been received, an that one of the team will respond as soon as possible.
+    - Contact Success Page. Users see this page after sending a contact message via the contact page. This page serves to confirm to the user that their message has been sent successfully. A short message informs the user that their contact message has been received, and that one of the team will respond as soon as possible.
 
 ![screenshot](documentation/features/sitepages/contact-success.png)
 
@@ -78,7 +78,7 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 
 - **Contact Details Page - Admin Only**
 
-    - Contact Details Page. Admins can see details of a contact message left by the user. All of the contact message's information can be seen, including email, name, subject, message, and whether this contact message has been respondd to. Contact messages can be responded to or deleted via the large buttons at the bottom of the page. A link navigates back to the contact requests page.
+    - Contact Details Page. Admins can see details of a contact message left by the user. All of the contact message's information can be seen, including email, name, subject, message, and whether this contact message has been respond to. Contact messages can be responded to or deleted via the large buttons at the bottom of the page. A link navigates back to the contact requests page.
 
 ![screenshot](documentation/features/sitepages/contact-details.png)
 
@@ -90,19 +90,19 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 
 - **Signup Page**
 
-    - Signup Page. Displays a signup form that new users can use to register an account on the site. Simple input fields for email, uername and password make it easy for users to sign up for an account, an confirmation inputs insure that users do not accidentally register with incorrect information. A sign in link at the top of the page lets users who already have an account easily find the login page.
+    - Signup Page. Displays a signup form that new users can use to register an account on the site. Simple input fields for email, username and password make it easy for users to sign up for an account, an confirmation inputs insure that users do not accidentally register with incorrect information. A sign in link at the top of the page lets users who already have an account easily find the login page.
 
 ![screenshot](documentation/features/sitepages/signup.png)
 
 - **Login Page**
 
-    - Login Page. Displays a login form that existing users can use to log in to the site. Two simple input fields for username and password make it easy for users to log in to their account. A 'remember me' checkbox allows users to chooe to have their login information stored for faster login in future. A Forgot Password link takes users to another page where they can recover their password. A sign up link at the top of the page lets users who do not yet have an account easily find the register page.
+    - Login Page. Displays a login form that existing users can use to log in to the site. Two simple input fields for username and password make it easy for users to log in to their account. A 'remember me' checkbox allows users to choose to have their login information stored for faster login in future. A Forgot Password link takes users to another page where they can recover their password. A sign up link at the top of the page lets users who do not yet have an account easily find the register page.
 
 ![screenshot](documentation/features/sitepages/login.png)
 
 - **Logout Page**
 
-    - Logout Page. Displays a logout confirmation message wih two buttons allowing th user to confirm the action and logout, or to return to the previous page and stay logged in.
+    - Logout Page. Displays a logout confirmation message with two buttons allowing the user to confirm the action and logout, or to return to the previous page and stay logged in.
 
 ![screenshot](documentation/features/sitepages/logout.png)
 
@@ -120,7 +120,7 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 
 - **Checkout Page**
 
-    - Checkout page. Displays an order summary of the items that are being prepared for purchase with accompanying item details. Displays a total cost of the order to the user. The user also sees a form to fill in their personal details. For logged in users, these details will be pre-filled if the user has provided that information in the past. A tooltip explains to users why their address details might be nedd despite ordring a digital product. A checkbox allows users to save entered information to their profile. A payment input form exists at the bottom of the page for a user to enter their payment card information. A message below this warns the user that advancing will complete the purchase and incur a charge to their card.
+    - Checkout page. Displays an order summary of the items that are being prepared for purchase with accompanying item details. Displays a total cost of the order to the user. The user also sees a form to fill in their personal details. For logged in users, these details will be pre-filled if the user has provided that information in the past. A tooltip explains to users why their address details might be needed despite ordering a digital product. A checkbox allows users to save entered information to their profile. A payment input form exists at the bottom of the page for a user to enter their payment card information. A message below this warns the user that advancing will complete the purchase and incur a charge to their card.
 
 ![screenshot](documentation/features/sitepages/checkout1.png)
 ![screenshot](documentation/features/sitepages/checkout2.png)
@@ -181,7 +181,7 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 
 - **Toasts**
 
-    - Users see helpful popup messages when performing actions on the site. These messages inform the user of the success or failure of their actions, as well as providing information about an action taken, or steps that the user mus take in order to correct an action.
+    - Users see helpful popup messages when performing actions on the site. These messages inform the user of the success or failure of their actions, as well as providing information about an action taken, or steps that the user must take in order to correct an action.
 
 ![screenshot](documentation/features/user/toast1.png)
 ![screenshot](documentation/features/user/toast2.png)
@@ -295,13 +295,13 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 
 - **Contact Details**
 
-    - Admins can see details of a contact message left by the user. All of the contact message's information can be seen, including email, name, subject, message, and whether this contact message has been respondd to. Contact messages can be responded to or deleted via the large buttons at the bottom of the page. A link navigates back to the contact requests page.
+    - Admins can see details of a contact message left by the user. All of the contact message's information can be seen, including email, name, subject, message, and whether this contact message has been respond to. Contact messages can be responded to or deleted via the large buttons at the bottom of the page. A link navigates back to the contact requests page.
 
 ![screenshot](documentation/features/admin/contact-details.png)
 
 - **Contact Message Delete**
 
-    - Admins can delete contact messages from the database using a front end delete function insice the contact message details page.
+    - Admins can delete contact messages from the database using a front end delete function inside the contact message details page.
 
 ![screenshot](documentation/features/admin/contact-delete.png)
 
@@ -325,7 +325,7 @@ All user stories can be found in a linked GitHub project [here](https://github.c
 ### Future Features
 
 - Subscription Payments
-    - Possible subscription payment model which would include access to all courses for a recurring fee. Could implement this via django groups with subscriber accounts given priveleges to view subscriber-only areas of the site. Would also need to implement this in the stripe backend and update webhooks.
+    - Possible subscription payment model which would include access to all courses for a recurring fee. Could implement this via django groups with subscriber accounts given privileges to view subscriber-only areas of the site. Would also need to implement this in the stripe backend and update webhooks.
 - Newsletter Template and Front-End Customisation
     - A system in which an admin could easily customise and send out a newsletter to all subscribers. Would need a front-end form which could take text & images, and would need to add the functionality into the newsletter views.
 - Digital Music Sheet Sales
