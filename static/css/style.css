@@ -88,6 +88,7 @@ a:hover {
     color: #fff;
     background-color: black;
     border-color: grey;
+    border-radius: 4px !important;
 }
 
 .white-button {
@@ -536,6 +537,10 @@ a:hover {
 
 .qty_input {
     display: none;
+}
+
+.small-button {
+    font-size: small;
 }
 
 
