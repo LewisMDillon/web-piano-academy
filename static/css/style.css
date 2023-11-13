@@ -101,6 +101,10 @@ a:hover {
     border: 1px solid #ed8500 !important;
 }
 
+.white-button:hover {
+    border: 1px solid #ed8500 !important;
+}
+
 /* -------- NAVBAR -------- */
 
 @media (min-width: 768px) {

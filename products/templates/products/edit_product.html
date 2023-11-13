@@ -12,24 +12,27 @@
 {% block content %}
     <div class="default-page-container">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center mx-3">
                 <div class="col-12 col-md-6">
                     <h2 class="default-page-header">Edit A Course</h2>
                     <!-- Displays the product being edited -->
                     <h3>Currently Editing: {{ product.name }}</h3>
+                    {% if product.subtitle %}
+                        <h5> - {{ product.subtitle }}</h5>
+                    {% endif %}
                     <hr>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-12 col-md-6">
+            <div class="row justify-content-center mx-3">
+                <div class="col-12 col-md-6 mb-4">
                     <!-- Form created from model -->
                     <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ form | crispy }}
                         <div class="text-right">
-                            <a class="btn white-button rounded-0" href="{% url 'courses' %}">Cancel</a>
-                            <button class="btn black-button rounded-0" type="submit">Update Product</button>
+                            <a class="btn white-button" href="{% url 'courses' %}">Cancel</a>
+                            <button class="btn black-button" type="submit">Update Course</button>
                         </div>
                     </form>
                 </div>            
